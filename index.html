@@ -1452,19 +1452,305 @@ function switchProj(code, name, status, el) {
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
 <!-- C244 PENDING PAGE -->
-<div id="c244-page" style="display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 116px);background:var(--bg)">
-  <div style="text-align:center;padding:40px;max-width:480px">
-    <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--deep);margin-bottom:8px">C244 - Ashoka University</div>
-    <div style="font-size:13px;color:var(--txt3);font-family:'Outfit',sans-serif;margin-bottom:28px;letter-spacing:.05em;text-transform:uppercase;font-weight:600">Data Update Pending</div>
-    <div style="background:var(--white);border:1.5px solid var(--bdr);border-radius:14px;padding:32px 36px;box-shadow:var(--sh2)">
-      <div style="font-size:44px;margin-bottom:14px">&#9203;</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--txt);margin-bottom:10px">No data loaded yet</div>
-      <div style="font-size:12.5px;color:var(--txt3);line-height:1.75;font-family:'Outfit',sans-serif">Project Manager: Aftab Ansari | Project data for C244 has not been uploaded to ApexView yet. Once the project files are linked, this page will auto-populate with the full risk register view.</div>
+<div id="c244-page" style="display:none">
+
+<!-- C244 SNAPSHOT -->
+<div class="snapshot">
+  <div class="snap-col">
+    <div class="snap-lbl">Client</div>
+    <div class="snap-val">Ashoka University</div>
+    <div class="snap-sub">PMC: Colliers International</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Project Manager</div>
+    <div class="snap-val">Aftab Ansari</div>
+    <div class="snap-sub">C244 &middot; In-House &amp; Subcon</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Total Scope</div>
+    <div class="snap-val">1,697.6 MT</div>
+    <div class="snap-sub">MTO01-08 net (MTO09 cancelled)</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Scope Pipeline - 1,697.6 MT</div>
+    <div class="pipe">
+      <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">1,697.6 MT pending - fabrication not started</div>
+    </div>
+    <div class="pipe-legend">
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div>
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--amber)"></div>In-House &amp; Subcon</div>
     </div>
   </div>
 </div>
 
+<div class="page" style="max-width:960px;margin:0 auto;padding:32px 24px 60px">
 
+  <!-- C244 CHAIRMAN BRIEF -->
+  <div class="situation">
+    <div class="sit-headline">
+      C244 RM is ordered but <span class="amber">delivery ETAs are July</span> -<br>
+      June production is at risk before it has started.
+    </div>
+    <div class="sit-body">
+      All POs for C244 were placed in April 2026 - only 41-45 days before the June production start, placing both In-House (Indent 932) and Subcon (Indent 933) in the RED procurement zone. Of the 300 MT In-House June plan, <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('c244-sec-rm')"><strong>83% is covered by received or in-transit material</strong></a> - but 51.2 MT has ETAs in July and will miss June entirely. For the 118 MT Subcon plan, receipts already cover the plan quantity at 176.5 MT received - but the key structural profiles (RHS columns) are arriving at the subcon fabricator in July, meaning <a class="bl red" href="javascript:void(0)" onclick="smoothScrollTo('c244-sec-rm')"><strong>subcon fabrication cannot start until July</strong></a>. In addition, <strong>ECN-002 was raised on 7 May 2026</strong> for MEP revision and stair profile changes, and 7+ RFI responses remain pending from Ashoka University - blocking MTO completeness for staircase and lift core phases.
+    </div>
+    <div class="sit-actions">
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c244-sec-rm')">&#9654; RM Coverage</button>
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c244-sec-actions')">&#9654; Actions</button>
+    </div>
+  </div>
+
+  <!-- C244 METRIC CARDS -->
+  <div class="big3" id="c244-sec-cards">
+    <div class="big-card blue">
+      <div class="big-num">2</div>
+      <div class="big-label">ECNs raised to date</div>
+      <div class="big-sub">ECN-002 raised 7 May 2026 - MEP revision and stair profile change. Manhour register not yet available. Source: ECN-002.docx, data_warehouse/C244.</div>
+    </div>
+    <div class="big-card amber">
+      <div class="big-num">51.2 MT</div>
+      <div class="big-label">In-House RM at risk for June</div>
+      <div class="big-sub">51.2 MT of Indent 932 (beams) has ETAs in July - this material is ordered but cannot be used for June production. Source: Dummy_C244_PO_Tracker.xlsx, Indent 932.</div>
+    </div>
+    <div class="big-card red">
+      <div class="big-num">7+</div>
+      <div class="big-label">RFI responses pending from client</div>
+      <div class="big-sub">Staircase and lift core drawings not yet received from Ashoka University / Colliers. Blocking MTO completeness for MTO-07 phases (146 MT). Source: email trail Jan-May 2026.</div>
+    </div>
+  </div>
+
+  <!-- C244 BLOCKED ITEMS -->
+  <div id="c244-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
+  <div class="blocked-list">
+
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#128197;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">June In-House - 51.2 MT ordered but ETAs are July - will miss June production</div>
+        <div class="blocked-desc">Indent 932 (In-House beams) POs were placed 17 Apr 2026 - only 45 days before June start, landing in the RED procurement zone. Of the 300 MT plan, 248.8 MT (83%) will arrive on or before 30 June. The remaining 51.2 MT has ETAs ranging 06-Jul to 16-Jul and cannot be used for June fabrication. The steel is ordered and on its way - but mills cannot deliver in time. Source: Dummy_C244_PO_Tracker.xlsx, Indent 932 rows.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c244-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">51.2 MT</div>
+        <div class="blocked-mt-lbl">at risk - June</div>
+      </div>
+    </div>
+
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#127968;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">June Subcon - Column profiles (Indent 933) arriving July - subcon fabrication cannot start in June</div>
+        <div class="blocked-desc">Indent 933 (Subcon columns, phases 1,3,5,7,9,11,13) POs placed 21 Apr - 41 days before June start. While 176.5 MT has been received against the 118 MT plan (plan quantity covered), the key RHS column profiles (RHS 250x400 ETA 20-Jul, RHS 400x600 ETA 05-Jul, HR Plate 8mm ETA 04-Jul) are arriving at the subcon fabricator in July. Subcon column fabrication will not start before July. Source: Dummy_C244_PO_Tracker.xlsx, Indent 933 rows.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c244-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">118 MT</div>
+        <div class="blocked-mt-lbl">subcon - July start</div>
+      </div>
+    </div>
+
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#128196;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">7+ RFI responses pending - staircase and lift core drawings not received from Ashoka University</div>
+        <div class="blocked-desc">Drawing requests sent from January 2026. Staircase (MTO-07, ~146 MT) and lift core drawings remain unreleased by the client. Without these, MTO completeness cannot be achieved and the procurement chain for those phases cannot be triggered. Each day without these drawings pushes the earliest production start for those phases further out. Source: email trail Jan-May 2026, ECN-002 reference to stair drawing revision.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c244-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">146 MT</div>
+        <div class="blocked-mt-lbl">staircase - pending drawings</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- C244 RM BARS -->
+  <div id="c244-sec-rm" class="sec-hdr"><div class="sec-hdr-title">Raw material coverage - June and July 2026</div></div>
+  <div class="rm-card">
+    <div class="rm-hdr">
+      <div>
+        <div class="rm-hdr-title">In-House and Subcon RM coverage vs plan</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: Dummy_C244_PO_Tracker.xlsx &middot; Indent 932 (In-House) &middot; Indent 933 (Subcon) &middot; Production Plan June-July 2026</div>
+      </div>
+    </div>
+
+    <!-- June In-House -->
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl" style="font-size:14px">June</div>
+        <div class="rm-month-sub">In-House<br>Plan: 300 MT<br>Indent: 932</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:79"></div>
+          <div class="rm-seg amb" style="flex:169"></div>
+          <div style="flex:51;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">79.0 MT received</strong> &middot;
+          <strong style="color:var(--amber)">169.8 MT in transit (ETA &#8804;30 Jun)</strong> &middot;
+          <strong style="color:var(--txt3)">51.2 MT ETA July - will miss June</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--amber)">83%</div>
+        <div class="rm-val-lbl">of plan covered</div>
+      </div>
+    </div>
+
+    <!-- June Subcon -->
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl" style="font-size:14px">June</div>
+        <div class="rm-month-sub">Subcon<br>Plan: 118 MT<br>Indent: 933</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:118"></div>
+          <div style="flex:1;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">176.5 MT received</strong> (plan quantity covered) &middot;
+          <strong style="color:var(--txt3)">Key RHS column profiles arriving July - subcon fabrication starts July</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--amber)">RM&#10003;</div>
+        <div class="rm-val-lbl">ETA risk</div>
+      </div>
+    </div>
+
+    <!-- July In-House -->
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl" style="font-size:14px">July</div>
+        <div class="rm-month-sub">In-House<br>Plan: 300 MT<br>Indent: 932</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:79"></div>
+          <div class="rm-seg amb" style="flex:170"></div>
+          <div style="flex:51;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">79.0 MT received</strong> &middot;
+          <strong style="color:var(--amber)">Balance arriving Jun-Jul</strong> &middot;
+          <strong style="color:var(--txt3)">Procurement zone: AMBER (75 days before July start)</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--grn)">AMBER</div>
+        <div class="rm-val-lbl">watch zone</div>
+      </div>
+    </div>
+
+    <div class="rm-legend">
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--grn)"></div>Received at plant</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--amber)"></div>In transit - ETA before month end</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--deep-pale2)"></div>ETA post-month or quantity at risk</div>
+    </div>
+  </div>
+
+  <!-- C244 ACTIONS -->
+  <div id="c244-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions for C244</div></div>
+  <div class="action-list">
+
+    <div class="action-item">
+      <div class="action-num">1</div>
+      <div class="action-body">
+        <div class="action-title">Expedite ESSAR (Indent 932 Row 14) - 87 MT HR Plate 16mm ETA 08 July</div>
+        <div class="action-desc">The single largest at-risk item for C244 June In-House is 87 MT of HR Plate 16mm from ESSAR (Indent 932, Row 14) with ETA 08-Jul. This one line item accounts for the majority of the June shortfall. Contact ESSAR to request partial dispatch or expedited delivery. Even bringing forward 40-50 MT would meaningfully improve June output.</div>
+        <div class="action-contact">Escalate to: <strong>Aftab Ansari</strong> (C244 PM) + <strong>Procurement</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C244 - Expedite HR Plate 16mm Delivery - ESSAR Indent 932';const b='Dear Team,\n\nFor C244 Ashoka University, Indent 932 Row 14 (HR Plate 16mm, 87 MT) currently has ETA 08 July 2026. This is causing a June production gap.\n\nPlease contact ESSAR immediately to request:\n1. Partial dispatch of 40-50 MT before 30 June\n2. Revised ETA confirmation\n\nRegards\nAftab Ansari\nC244 PM, JSSL';window.location.href='mailto:aftab.a@jssl.in?cc=ppc.head@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Aftab Ansari + Procurement</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-item">
+      <div class="action-num">2</div>
+      <div class="action-body">
+        <div class="action-title">Confirm with subcon fabricator (Santosh Budanur) that July slot is locked</div>
+        <div class="action-desc">Subcon column fabrication (phases 1,3,5,7,9,11,13) will start in July when RHS profiles arrive. The subcon fabricator needs to have a confirmed production slot for these phases. Confirm with Santosh Budanur that July capacity is reserved and that material arrival dates (04-Jul to 20-Jul) are communicated to his team so fabrication starts same week as delivery.</div>
+        <div class="action-contact">Escalate to: <strong>Aftab Ansari</strong> (C244 PM) + <strong>Subcon Fabricator</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C244 - Confirm July Fabrication Slot - Subcon Columns';const b='Aftab,\n\nPlease confirm with the subcon fabricator (Santosh Budanur) that July fabrication slots are locked for C244 column phases 1,3,5,7,9,11,13.\n\nKey material ETAs:\n- RHS 400x600: 05-Jul\n- HR Plate 8mm: 04-Jul\n- RHS 250x400: 20-Jul\n\nFabrication should start same week as material arrival.\n\nRegards';window.location.href='mailto:aftab.a@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Aftab Ansari</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-item">
+      <div class="action-num">3</div>
+      <div class="action-body">
+        <div class="action-title">Chase Ashoka University / Colliers for staircase and lift core drawings</div>
+        <div class="action-desc">Staircase (MTO-07, ~146 MT) and lift core drawings have been pending from the client since January 2026. Without these, the MTO chain and procurement for those phases cannot start. Each week of delay pushes the staircase phases further into August-September. Issue a formal written request to Colliers (PMC) and Ashoka University referencing the original drawing request dates and the impact on the production schedule.</div>
+        <div class="action-contact">Send via: <strong>Aftab Ansari</strong> (C244 PM) to Colliers + Ashoka University</div>
+        <div class="action-btn-row">
+          <a class="action-btn escalate" href="javascript:void(0)" onclick="(function(){const s='C244 - Formal Request for Staircase and Lift Core Drawings - Ashoka University';const b='Dear Sir/Madam,\n\nJSSL has been awaiting staircase and lift core structural drawings for C244 - Ashoka University since January 2026.\n\nImpact:\n- MTO-07 (Staircase ~146 MT) cannot be raised without approved staircase drawings\n- Lift core phases similarly blocked\n- Every week of delay pushes these phases into August-September production\n\nWe request release of these drawings at the earliest to allow JSSL to initiate the procurement chain.\n\nRegards\nAftab Ansari\nProject Manager - C244\nJSSL';window.location.href='mailto:davneet.singh@colliers.com?cc=aftab.a@jssl.in,devendra.gupta@ashoka.edu.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#128394; Write to Colliers + Ashoka</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- C244 EVIDENCE TIMELINE -->
+  <div id="c244-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events - C244 Ashoka University</div></div>
+  <div class="proof-strip">
+    <div class="proof-hdr">
+      <div class="proof-hdr-title">How C244 has progressed from award to current state</div>
+      <div class="proof-hdr-sub">Every date below is documented</div>
+    </div>
+    <div class="proof-body">
+      <div class="proof-timeline">
+        <div class="proof-line"></div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">December 2025 - First input drawings received from client</div>
+          <div class="proof-step-body">JSSL receives initial structural drawings from Ashoka University / Colliers. Design Office begins GA drawing preparation.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot amber"></div>
+          <div class="proof-step-title">20 January 2026 - JSSL issues GA drawings for client approval</div>
+          <div class="proof-step-body">GA drawings submitted to Colliers for return approval. First RFI also raised - staircase drawings, column termination levels, MEP coordination details still pending from client.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot amber"></div>
+          <div class="proof-step-title">February - March 2026 - Multiple reminders sent to client</div>
+          <div class="proof-step-body">JSSL sends Reminders 2 through 5 for pending drawing inputs. Staircase and lift core drawings remain unreleased by Ashoka University / Colliers.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">3 April 2026 - MTOs 01-03 released</div>
+          <div class="proof-step-body">First 3 MTOs released by Design Office - columns, beams, periphery beams. Staircase and lift core MTOs still blocked pending client drawings.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">9 April 2026 - Indents 932, 933, 934 raised</div>
+          <div class="proof-step-body">PPC raises indents for In-House beams (932) and Subcon columns (933, 934). POs placed 17-21 April - only 41-45 days before June production start. Both In-House and Subcon enter the RED procurement zone for June.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot red"></div>
+          <div class="proof-step-title">7 May 2026 - ECN-002 raised by client</div>
+          <div class="proof-step-body">Ashoka University issues ECN-002: MEP revision and stair profile change. This is the 2nd ECN on C244. Manhour impact being compiled. Affected phases and tonnage under review.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot red"></div>
+          <div class="proof-step-title">22 May 2026 - Today - RM ordered, delivery arriving July</div>
+          <div class="proof-step-body">Total ordered: 1,726.8 MT. Received: 467.1 MT. In transit: 548.0 MT. June production at risk due to July ETAs. Staircase and lift core drawings still pending. Fabrication has not started.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">C244 &middot; Ashoka University, Sonipat &middot; JSW Severfield Structures Ltd &middot; 22 May 2026</div>
+</div>
+</div>
 <!-- MOBILE DRAWER -->
 <div class="mob-drawer" id="mobDrawer">
   <div class="mob-drawer-overlay" onclick="closeMobDrawer()"></div>
