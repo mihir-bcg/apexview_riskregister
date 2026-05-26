@@ -119,7 +119,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .blocked-body{min-width:0}
 .blocked-title{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:3px}
 .blocked-desc{font-size:12px;color:var(--txt3);line-height:1.6}
-/* action row - hidden until hover */
+/* action row — hidden until hover */
 .blocked-actions{display:flex;gap:7px;margin-top:11px;padding-top:10px;border-top:1px solid var(--bdr);opacity:0;transform:translateY(4px);transition:opacity .18s,transform .18s;pointer-events:none}
 .blocked-item:hover .blocked-actions{opacity:1;transform:translateY(0);pointer-events:all}
 .ba-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:all .15s;white-space:nowrap}
@@ -306,8 +306,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 
 
 /* ══════════════════════════════════════════════════════════════
-   MOBILE - iPhone 16 reference (393px viewport)
-   All rules scoped to max-width:430px - desktop untouched
+   MOBILE — iPhone 16 reference (393px viewport)
+   All rules scoped to max-width:430px — desktop untouched
 ══════════════════════════════════════════════════════════════ */
 @media (max-width: 430px) {
 
@@ -600,17 +600,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
           <span class="proj-opt-name">Ashoka University</span>
           <span class="proj-opt-dot" style="background:var(--amber)"></span>
         </div>
-      
-        <div class='proj-opt' onclick='switchProj("C229","DLF Office","red",this)'>
-          <span class='proj-opt-code'>C229</span>
-          <span class='proj-opt-name'>DLF Office, Gurugram</span>
-          <span class='proj-opt-dot' style='background:var(--red)'></span>
-        </div>
-        <div class='proj-opt' onclick='switchProj("C229","DLF Office","red",this)'>
-          <span class='proj-opt-code'>C229</span>
-          <span class='proj-opt-name'>DLF Office, Gurugram</span>
-          <span class='proj-opt-dot' style='background:var(--red)'></span>
-        </div></div>
+      </div>
     </div>
   </div>
   <button class="mob-menu-btn" id="hambBtn" onclick="openMobDrawer()" aria-label="Menu">
@@ -898,7 +888,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <strong>To:</strong> DLF Project Coordinator, B.L. Kashyap &amp; Sons Ltd<br>
       <strong>CC:</strong> Ajay Kumar (C218 Project Manager, JSSL) &middot; Deepak (JSSL Reporting)<br>
       <strong>Subject:</strong> Formal Record of Client-Caused Rework Burden - C218 DLF Downtown Phase 2<br>
-      <strong>Ref:</strong> DN/C218/2026/001 &nbsp;|&nbsp; Date: 15 May 2026<br><br>
+      <strong>Ref:</strong> DN/C218/2026/001 &nbsp;|&nbsp; Date: 26 May 2026<br><br>
 
       Dear Sir/Madam,<br><br>
 
@@ -944,7 +934,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       By activity: Modelling <strong>2,401 hrs</strong> &middot; Editing <strong>2,793 hrs</strong> &middot; Checking <strong>1,711 hrs</strong> &middot; RFI/Coordination <strong>121 hrs</strong> &middot; Miscellaneous <strong>1,956 hrs</strong><br><br>
 
       <strong>3. ASSEMBLY HOLDS</strong><br>
-      As of 15 May 2026, <strong>1,202 steel members</strong> are on assembly hold across DT8 and MOIG zones. Of these, <strong>635 members were in active production</strong> when the hold was placed - meaning labour had already been expended before DLF's revision was received. JSSL requests return approvals on all outstanding held items by 22 May 2026.<br><br>
+      As of 26 May 2026, <strong>1,202 steel members</strong> are on assembly hold across DT8 and MOIG zones. Of these, <strong>635 members were in active production</strong> when the hold was placed - meaning labour had already been expended before DLF's revision was received. JSSL requests return approvals on all outstanding held items by 22 May 2026.<br><br>
 
       <strong>4. DELETED STEEL</strong><br>
       <strong>286 members (123.1 MT)</strong> were fully fabricated before DLF removed them from the structural design entirely - comprising 169 members (78.7 MT) from the Assembly Hold Register and 117 members (44.3 MT) from VF005 Annexure III, all confirmed fabrication-completed prior to deletion.<br><br>
@@ -1004,7 +994,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     </div>
   </div>
 
-  <div class="page-footer">C218 · DLF Downtown Ph.2, Mall of India · JSW Severfield Structures Ltd · 15 May 2026</div>
+  <div class="page-footer">C218 · DLF Downtown Ph.2, Mall of India · JSW Severfield Structures Ltd · 26 May 2026</div>
 </div>
 
 <div class="toast-wrap" id="toastWrap"></div>
@@ -1353,7 +1343,7 @@ function switchAmTab(which, btn) {
 document.querySelectorAll('.hbc-seg').forEach(seg => {
   seg.addEventListener('mouseenter', function(e) {
     const tip = document.getElementById('hbcTooltip');
-    tip.innerHTML = `<strong>${this.dataset.label} - ${this.dataset.count} members (${this.dataset.pct}%)</strong><br>${this.dataset.desc}`;
+    tip.innerHTML = `<strong>${this.dataset.label} — ${this.dataset.count} members (${this.dataset.pct}%)</strong><br>${this.dataset.desc}`;
     tip.style.display = 'block';
   });
   seg.addEventListener('mousemove', function(e) {
@@ -1410,33 +1400,44 @@ document.addEventListener('click', function(e) {
 function switchProj(code, name, status, el) {
   document.getElementById('projCode').textContent = code;
   document.getElementById('projName').textContent = name;
-  var mc = document.getElementById('mobProjCode');
-  var mn = document.getElementById('mobProjName');
+  // Update mobile bar
+  const mc = document.getElementById('mobProjCode');
+  const mn = document.getElementById('mobProjName');
   if (mc) mc.textContent = code;
   if (mn) mn.textContent = name;
   document.getElementById('projDot').style.background = status === 'red' ? 'var(--red)' : 'var(--amber)';
-  document.querySelectorAll('.proj-opt').forEach(function(o){ o.classList.remove('active'); });
-  if (el) el.classList.add('active');
+  document.querySelectorAll('.proj-opt').forEach(o => o.classList.remove('active'));
+  el.classList.add('active');
   document.getElementById('projDD').classList.remove('show');
   document.getElementById('projSel').classList.remove('open');
-  // Hide all project pages and show main content
-  var snap = document.querySelector('.snapshot');
-  var page = document.querySelector('.page');
-  var c244 = document.getElementById('c244-page');
-  var c229 = document.getElementById('c229-page');
-  if (snap) snap.style.display = '';
-  if (page) page.style.display = '';
-  if (c244) c244.style.display = 'none';
-  if (c229) c229.style.display = 'none';
-  // Show selected project page
   if (code === 'C244') {
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
     if (snap) snap.style.display = 'none';
     if (page) page.style.display = 'none';
-    if (c244) c244.style.display = 'block';
+    let c244 = document.getElementById('c244-page');
+    if (c244) {
+      c244.style.display = 'flex';
+    } else {
+      const el = document.getElementById('c244-page');
+      if (el) el.style.display = 'flex';
+    }
   } else if (code === 'C229') {
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
     if (snap) snap.style.display = 'none';
     if (page) page.style.display = 'none';
-    if (c229) c229.style.display = 'block';
+    const c244el = document.getElementById('c244-page');
+    if (c244el) c244el.style.display = 'none';
+    const c229el = document.getElementById('c229-page');
+    if (c229el) c229el.style.display = 'block';
+  } else {
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
+    if (snap) snap.style.display = '';
+    if (page) page.style.display = '';
+    const c244 = document.getElementById('c244-page');
+    if (c244) c244.style.display = 'none';
   }
 }
 </script>
@@ -1459,289 +1460,152 @@ function switchProj(code, name, status, el) {
 
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
-
-<!-- C229 DLF OFFICE PAGE -->
-
-<!-- C229 DLF OFFICE PAGE -->
+<!-- C229 PAGE -->
 <div id="c229-page" style="display:none">
-  <div class="snapshot">
-    <div class="snap-col">
-      <div class="snap-lbl">Client</div>
-      <div class="snap-val">DLF Limited</div>
-      <div class="snap-sub">DLF City Center Ltd.</div>
-    </div>
-    <div class="snap-col">
-      <div class="snap-lbl">Project Manager</div>
-      <div class="snap-val">Ajay Kumar Singh</div>
-      <div class="snap-sub">C229 - JSSL Design Office</div>
-    </div>
-    <div class="snap-col">
-      <div class="snap-lbl">Total Scope</div>
-      <div class="snap-val">11,024 MT</div>
-      <div class="snap-sub">Net of cancellations per MTO Register</div>
-    </div>
-    <div class="snap-col">
-      <div class="snap-lbl">Scope Pipeline - 11,024 MT</div>
-      <div class="pipe">
-        <div class="pipe-seg" style="width:40.6%;background:var(--grn)">4,476 MT produced</div>
-        <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">6,548 MT pending</div>
-      </div>
-      <div class="pipe-legend">
-        <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--grn)"></div>Produced</div>
-        <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div>
-      </div>
-    </div>
-  </div>
+<div style="background:var(--white);border-bottom:1.5px solid var(--bdr);padding:14px 32px;display:grid;grid-template-columns:1fr 1fr 1fr 2.5fr;gap:0;align-items:start">
+<div style="padding:0 28px 0 0"><div class="snap-lbl">Client</div><div class="snap-val">DLF Limited</div><div class="snap-sub">DT7 Office Complex</div></div>
+<div style="padding:0 28px 0 0"><div class="snap-lbl">Project Manager</div><div class="snap-val">PM: Updating</div><div class="snap-sub">C229 - JSSL Design Office</div></div>
+<div style="padding:0 28px 0 0"><div class="snap-lbl">Total Scope</div><div class="snap-val">Scope: TBC</div><div class="snap-sub">MTO register pending upload</div></div>
+<div><div class="snap-lbl">Scope Pipeline</div><div class="pipe"><div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">Scope pending - data being compiled</div></div><div class="pipe-legend"><div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div></div></div>
+</div>
+<div class="page">
 
-  <div class="page">
+<div class="situation">
+<div class="sit-headline">DLF DT7 has accumulated <span class="red">6,352 hours</span> of Design Office rework<br>across <span class="amber">19 change events</span> since project start.</div>
+<div class="sit-body" id="c229-briefText">Since project kick-off, DLF has issued 19 drawing revision events against C229 - DLF DT7 Office Complex, consuming <strong>6,352 Design Office man-hours</strong> across modelling, editing, checking and RFI coordination. These are client-attributable changes that represent direct productivity loss to JSSL. Raw material procurement data is not yet available - once the PO Tracker is uploaded, RM coverage bars will appear. Assembly holds were tracked and all released as of October 2025 - no active holds currently exist for this project.</div>
+<div class="sit-actions">
+<button class="sit-btn primary" onclick="(function(){var txt=document.getElementById('c229-briefText').innerText;try{navigator.clipboard.writeText(txt);}catch(e){}})()">&#128203; Copy this briefing</button>
+<button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-cards')">&#9654; See Rework Metrics</button>
+<button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-notice')">&#128394; Issue Formal Notice</button>
+</div>
+</div>
 
-    <div class="situation">
-      <div class="sit-headline">
-        DLF City Center has accumulated <span class="red">6,352 hours</span> of Design Office rework across 15 change events since January 2025.
-      </div>
-      <div class="sit-body" id="c229-briefText">
-        Since January 2025, DLF City Center Ltd. has issued <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-cards')"><strong>15 change events consuming 6,352 Design Office hours</strong></a> across modelling, editing, checking and coordination. The most impacted item was a connection revision (DCN 3, March 2025) requiring full redesign of connection documentation across multiple phases. A total of <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-holds')"><strong>720 steel members were placed on hold</strong></a> due to DLF drawing revisions - all holds were resolved by October 2025. No raw material coverage data is available for this project as a PO Tracker has not been uploaded to the data warehouse. A formal variation form (VF001, February 2026) has been raised recording 14 cancelled members and 344 modified members.
-      </div>
-      <div class="sit-actions">
-        <button class="sit-btn primary" onclick="(function(){var t=document.getElementById('c229-briefText');try{navigator.clipboard.writeText(t.innerText)}catch(e){}showToast('C229 briefing copied to clipboard')})()" >&#128203; Copy this briefing</button>
-        <button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-notice')">&#128394; Issue Formal Notice to DLF</button>
-      </div>
-    </div>
+<div class="big3" id="c229-sec-cards">
+<div class="big-card red">
+<div class="big-num">6,352 hrs</div>
+<div class="big-label">Design hours lost to rework</div>
+<div class="big-sub">19 change events since project start. Modelling, editing, checking and RFI coordination all impacted by DLF revising drawings after JSSL detailing had begun. Source: C229-Man-hour Details.xls</div>
+</div>
+<div class="big-card amber">
+<div class="big-num">19</div>
+<div class="big-label">Change events raised to date</div>
+<div class="big-sub">Includes GFC Issue 20 (11 Apr 2025), GFC Issue 21 (14 Apr 2025), Mail Issue 29 (Jun 2025), T07C08 Column revision, and further GFC re-issues through Aug-Oct 2025. Mix of formal DCN and informal revisions.</div>
+</div>
+<div class="big-card blue">
+<div class="big-num">0</div>
+<div class="big-label">Active assembly holds</div>
+<div class="big-sub">Hold register recorded holds across phases 1-8. All items released by 3 Oct 2025. No members currently frozen. Widget will re-activate when new holds are logged. Source: C229_DLF_OFFICE_Assembly_Hold_List-2025-10-03.xls</div>
+</div>
+</div>
 
-    <div class="big3" id="c229-sec-cards">
-      <div class="big-card red">
-        <div class="big-num">6,352 hrs</div>
-        <div class="big-label">Design hours lost to rework</div>
-        <div class="big-sub">Across 15 change events since January 2025. Breakdown: Modelling 1,781 hrs, Editing 1,960 hrs, Checking 1,322 hrs, RFI/Coordination 156 hrs, Miscellaneous 1,133 hrs.</div>
-      </div>
-      <div class="big-card amber">
-        <div class="big-num">720</div>
-        <div class="big-label">Members placed on hold</div>
-        <div class="big-sub">720 members placed on hold by DLF across all phases. 577 pre-production and 143 post-production holds. All holds resolved by October 2025. Source: C229 Assembly Hold Register.</div>
-      </div>
-      <div class="big-card blue">
-        <div class="big-num">14</div>
-        <div class="big-label">Members cancelled by DLF</div>
-        <div class="big-sub">14 steel members formally cancelled per Variation Form VF001 (16 Feb 2026). These were built or partially built before cancellation was confirmed. Source: JSSLC229 DT7VF001.</div>
-      </div>
-    </div>
+<div id="c229-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
+<div class="blocked-list">
+<div class="blocked-item high">
+<div class="blocked-icon icon-amber">&#9888;</div>
+<div class="blocked-body">
+<div class="blocked-title">RM procurement status unknown - PO Tracker not yet uploaded to data warehouse</div>
+<div class="blocked-desc">No PO Tracker file has been found for C229 in data_warehouse/C229/. Without it, JSSL cannot confirm how much raw material has been ordered, received, or is in transit. Upload the C229 PO Tracker to data_warehouse/C229/ and re-run this refresh script to unlock RM coverage bars. Source: data_warehouse/C229/ folder scan as of 26 May 2026.</div>
+<div class="blocked-actions"><button class="ba-btn internal" onclick="smoothScrollTo('c229-sec-actions')">&#9654; See Actions</button></div>
+</div>
+<div class="blocked-right"><div class="blocked-mt amber">-</div><div class="blocked-mt-lbl">RM unknown</div></div>
+</div>
+</div>
 
-    <div id="c229-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
-    <div class="blocked-list">
-      <div class="blocked-item high">
-        <div class="blocked-icon icon-amber">&#128202;</div>
-        <div class="blocked-body">
-          <div class="blocked-title">PO Tracker not in data warehouse - RM coverage status unknown for current production months</div>
-          <div class="blocked-desc">The data warehouse does not yet contain a PO Tracker for C229. Without it, JSSL cannot compute raw material received, in transit, or unordered figures for current production months. Upload the C229 PO Tracker to data_warehouse/C229/ to unlock RM coverage bars and blocked item MT computations. Source: data_warehouse scan - no PO Tracker file found in C229 folder as of 26 May 2026.</div>
-        </div>
-        <div class="blocked-right">
-          <div class="blocked-mt amber" style="font-size:14px">RM Unknown</div>
-          <div class="blocked-mt-lbl">tracker not uploaded</div>
-        </div>
-      </div>
-    </div>
+<div id="c229-sec-holds" class="sec-hdr"><div class="sec-hdr-title">Assembly hold status</div></div>
+<div class="hold-bar-card">
+<div class="hbc-insight"><strong>No active assembly holds for C229.</strong> The hold register (last updated 3 Oct 2025) documented holds across phases 1-8 - stud additions, column location revisions, beam framings, GFC re-issues. All items have been released. Once new holds are placed on C229 members, this widget will populate from the updated hold list file in data_warehouse/C229/.</div>
+</div>
 
-    <div id="c229-sec-holds" class="sec-hdr"><div class="sec-hdr-title">720 members on hold - all resolved by October 2025</div></div>
-    <div class="hold-bar-card">
-      <div class="hbc-bar-wrap">
-        <div class="hbc-bar">
-          <div class="hbc-seg" style="flex:577;background:#c8d8f0"></div>
-          <div class="hbc-seg" style="flex:143;background:var(--grn)"></div>
-        </div>
-        <div class="hbc-labels">
-          <div class="hbc-lbl-seg" style="flex:577">
-            <span class="hbc-count" style="color:var(--deep)">577</span>
-            <span class="hbc-name">Pre-Production Hold</span>
-          </div>
-          <div class="hbc-lbl-seg" style="flex:143">
-            <span class="hbc-count" style="color:var(--grn)">143</span>
-            <span class="hbc-name">During/Post-Production (resolved)</span>
-          </div>
-        </div>
-      </div>
-      <div class="hbc-insight">
-        All 720 assembly holds have been released as of October 2025. 143 members were in active fabrication when the hold was placed - labour had already been invested at time of hold. 577 members were held before production started. Outcome breakdown: 354 members modified (revised design), 364 members no change (hold placed but design identical), 2 active holds still open. Source: C229 Assembly Hold Register (Oct 2025 update).
-      </div>
-      <button class="hbc-expand-btn" id="c229-hbcExpandBtn" onclick="(function(){var p=document.getElementById('c229-hbcOutcome');var b=document.getElementById('c229-hbcExpandBtn');var o=p.classList.toggle('open');b.innerHTML=o?'&#8722; Hide outcome breakdown':'&#43; See outcome breakdown'})()">
-        &#43; See outcome breakdown
-      </button>
-      <div class="hbc-outcome" id="c229-hbcOutcome">
-        <div class="hbc-outcome-grid">
-          <div class="hbc-outcome-card mod">
-            <div class="hbc-oc-num mod">354</div>
-            <div class="hbc-oc-lbl">Modified</div>
-            <div class="hbc-oc-sub">Rework required after DLF issued revised design</div>
-          </div>
-          <div class="hbc-outcome-card nc">
-            <div class="hbc-oc-num nc">364</div>
-            <div class="hbc-oc-lbl">No Change</div>
-            <div class="hbc-oc-sub">Hold placed, production stopped - revised design was identical</div>
-          </div>
-          <div class="hbc-outcome-card del">
-            <div class="hbc-oc-num del">2</div>
-            <div class="hbc-oc-lbl">Still Active</div>
-            <div class="hbc-oc-sub">2 members still on active hold - return approval pending from DLF</div>
-          </div>
-        </div>
-        <div class="hbc-callout">
-          <strong>364 members held for zero design reason.</strong> DLF placed these members on hold - halting fabrication. When the revised drawing arrived, no change was required. JSSL lost fabrication time and bay capacity with no design justification. Source: C229 Assembly Hold Register, Remark column.
-        </div>
-      </div>
-    </div>
+<div id="c229-sec-rm" class="sec-hdr"><div class="sec-hdr-title">How much of our planned production is actually ready to run</div></div>
+<div class="rm-card">
+<div class="rm-hdr"><div><div class="rm-hdr-title">Raw material coverage - PO Tracker not uploaded</div><div style="font-size:11px;color:var(--txt3);margin-top:2px">Upload C229 PO Tracker to data_warehouse/C229/ to unlock RM bars</div></div></div>
+<div style="padding:28px 22px;text-align:center;color:var(--txt3);font-size:12px;font-family:'Outfit',sans-serif;line-height:1.7">No PO Tracker found for C229 in the data warehouse.<br>Once uploaded, this section shows received, in-transit and gap MT per production month.</div>
+</div>
 
-    <div id="c229-sec-rm" class="sec-hdr"><div class="sec-hdr-title">Raw material coverage</div></div>
-    <div class="rm-card">
-      <div class="rm-hdr">
-        <div>
-          <div class="rm-hdr-title">RM coverage data not available - PO Tracker not in data warehouse</div>
-          <div style="font-size:11px;color:var(--txt3);margin-top:2px">Upload C229 PO Tracker to data_warehouse/C229/ to populate this section. Project is active in production plan.</div>
-        </div>
-      </div>
-      <div style="padding:24px 22px;text-align:center;color:var(--txt3);font-size:12px">
-        RM coverage bars will appear here once the PO Tracker is uploaded to the data warehouse.
-      </div>
-    </div>
+<div id="c229-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions to take right now</div></div>
+<div class="action-list">
+<div class="action-item">
+<div class="action-num">1</div>
+<div class="action-body">
+<div class="action-title">Upload the C229 PO Tracker to the data warehouse to unlock RM visibility</div>
+<div class="action-desc">data_warehouse/C229/ contains the manhour register and hold list only. The PO Tracker - showing indents, received MT, in-transit MT and ETAs - is missing. Upload the latest C229 PO Tracker and re-run the refresh script to generate RM coverage bars and blocked production cards for this project.</div>
+<div class="action-contact">Owner: <strong>C229 Project Manager</strong> + <strong>PPC / Procurement</strong></div>
+<div class="action-btn-row">
+<a class="action-btn mail" href="javascript:void(0)" onclick="(function(){var s='C229 - PO Tracker Upload Required for ApexView Dashboard';var b='Please upload the latest C229 PO Tracker (indent numbers, PO dates, received MT, in-transit MT, ETAs) to the ApexView data warehouse at data_warehouse/C229/ and notify once done.\n\nRegards';window.location.href='mailto:deepak.mishra@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Request Upload</a>
+</div>
+</div>
+</div>
+<div class="action-item">
+<div class="action-num">2</div>
+<div class="action-body">
+<div class="action-title">Issue a formal rework notice to DLF for the 6,352 hours accumulated on C229</div>
+<div class="action-desc">19 change events have consumed 6,352 DO hours. This needs to be formally communicated to DLF to build the evidence trail for a variation claim at project close. The manhour register documents each event with dates and descriptions - the formal notice draft below can be issued immediately.</div>
+<div class="action-contact">Send via: <strong>C229 Project Manager</strong> to DLF DT7 Project Coordinator - CC: Deepak Mishra</div>
+<div class="action-btn-row">
+<a class="action-btn escalate" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-notice')">&#128394; See Formal Notice</a>
+</div>
+</div>
+</div>
+<div class="action-item">
+<div class="action-num">3</div>
+<div class="action-body">
+<div class="action-title">Update Master Planning with PM name and confirmed scope MT for C229</div>
+<div class="action-desc">The Project Manager for C229 is showing as 'PM: Updating' because the Master Planning sheet could not be read during this refresh. Update Col C for project code C229 with the correct PM name, and confirm total scope MT. This enables PM name in action email buttons and scope pipeline bar.</div>
+<div class="action-contact">Owner: <strong>Project Admin</strong></div>
+<div class="action-btn-row">
+<a class="action-btn mail" href="javascript:void(0)" onclick="(function(){var s='C229 - Master Planning Update Required';var b='Please update 20260120_Master_Planning_Sheet_vS3.xlsx with:\n1. PM name for project code C229\n2. Total confirmed scope MT for C229\n\nThis is required for the ApexView risk dashboard.\n\nRegards';window.location.href='mailto:deepak.mishra@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Request Update</a>
+</div>
+</div>
+</div>
+</div>
 
-    <div id="c229-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions to take right now</div></div>
-    <div class="action-list">
-      <div class="action-item">
-        <div class="action-num">1</div>
-        <div class="action-body">
-          <div class="action-title">Upload C229 PO Tracker to data warehouse to unlock RM coverage visibility</div>
-          <div class="action-desc">The C229 project is active in the production plan but has no PO Tracker in the data warehouse. Without it, the Chairman has no visibility into whether raw material is ordered, in transit, or missing for current production months. The C229 PO Tracker must be saved to data_warehouse/C229/ and the dashboard refreshed. This is a data gap - not a project risk - but it prevents risk monitoring entirely.</div>
-          <div class="action-contact">Escalate to: <strong>Ajay Kumar Singh</strong> (C229 PM) + <strong>PPC Head</strong></div>
-          <div class="action-btn-row">
-            <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){var s='C229 - PO Tracker Upload Required - '+TODAY_STR;var b='Ajay,\n\nC229 DLF Office does not have a PO Tracker in the ApexView data warehouse. Please share the latest C229 PO Tracker (matching format of C218 tracker) so it can be uploaded to data_warehouse/C229/.\n\nRequired by: '+IN_5_DAYS+'\n\nRegards';window.location.href='mailto:ajay.singh@jssl.in?cc=ppc.head@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Ajay - Upload PO Tracker</a>
-          </div>
-        </div>
-      </div>
-      <div class="action-item">
-        <div class="action-num">2</div>
-        <div class="action-body">
-          <div class="action-title">Compile and submit DO rework variation claim for C229 - 6,352 hours are recoverable</div>
-          <div class="action-desc">The 15 DLF change events since January 2025 have consumed 6,352 Design Office hours. This is a documented, recoverable cost. The Commercial team must quantify this at JSSL billing rate and raise a formal variation claim against the C229 contract. The VF001 (Feb 2026) is already in the data warehouse - this provides the formal starting point. DO NOT wait for project close - variation claims weaken with time and DLF will dispute figures raised 12-18 months later.</div>
-          <div class="action-contact">Escalate to: <strong>Ajay Kumar Singh</strong> (C229 PM) + <strong>Commercial Team</strong></div>
-          <div class="action-btn-row">
-            <a class="action-btn escalate" href="javascript:void(0)" onclick="(function(){var s='C229 - DO Rework Variation Claim - '+TODAY_STR;var b='Ajay,\n\nC229 has accumulated 6,352 Design Office hours in rework across 15 DLF change events since January 2025. VF001 (Feb 2026) is already filed. Please initiate the formal variation claim for these recoverable hours. Commercial team to quantify at applicable DO rate.\n\nRegards';window.location.href='mailto:ajay.singh@jssl.in?cc=deepak.mishra@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#128394; Initiate Variation Claim</a>
-          </div>
-        </div>
-      </div>
-      <div class="action-item">
-        <div class="action-num">3</div>
-        <div class="action-body">
-          <div class="action-title">Send monthly delay update to DLF City Center - start the evidence trail</div>
-          <div class="action-desc">C229 does not yet have a monthly communication trail to DLF documenting the cumulative rework burden. Starting today, a monthly factual update should be sent to the DLF project coordinator covering: DCN count, DO hours consumed, hold events raised and resolved, and any open variation claims. This monthly trail is the evidence base for the variation claim at project close. The longer JSSL waits to start, the weaker the claim.</div>
-          <div class="action-contact">Send via: <strong>Ajay Kumar Singh</strong> (C229 PM) to DLF City Center project coordinator</div>
-          <div class="action-btn-row">
-            <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){var s='C229 - Monthly Project Update - '+TODAY_STR;var b='Dear Sir/Madam,\n\nThis is the JSSL monthly project update for C229 - DLF Office, Gurugram.\n\nSTATUS AS OF '+TODAY_STR+':\n1. DESIGN CHANGES - 15 change events since January 2025 have consumed 6,352 Design Office hours.\n2. ASSEMBLY HOLDS - 720 hold events raised, all resolved by October 2025. 364 holds had no change to the design.\n3. VARIATION FORM - VF001 raised 16 Feb 2026 recording 14 cancelled and 344 modified members.\n4. RAW MATERIAL - Status not available as PO Tracker not yet loaded into JSSL project tracking system.\n\nRequests:\n- Confirmation of current drawing issue status for all pending phases.\n- Acknowledgement of VF001 variation form.\n\nRegards\nAjay Kumar Singh\nProject Manager - C229\nJSSL';window.location.href='mailto:ajay.singh@jssl.in?cc=deepak.mishra@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Send Monthly Update to DLF</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<div id="c229-sec-notice" class="sec-hdr"><div class="sec-hdr-title">Formal notice to be issued to DLF - C229</div></div>
+<div class="notice-card">
+<div class="notice-label">Draft Notice - DN/C229/2026/001</div>
+<div class="notice-body" id="c229-noticeText">
+<strong>To:</strong> DLF Limited - DT7 Project Coordinator<br>
+<strong>CC:</strong> C229 Project Manager (JSSL) &middot; Deepak Mishra (JSSL Reporting)<br>
+<strong>Subject:</strong> Formal Record of Design Office Rework Burden - C229 DLF DT7 Office Complex<br>
+<strong>Ref:</strong> DN/C229/2026/001 &nbsp;|&nbsp; Date: 26 May 2026<br><br>
+Dear Sir/Madam,<br><br>
+This notice formally records the cumulative impact of client-issued drawing revisions on JSSL's Design Office operations for C229 - DLF DT7 Office Complex.<br><br>
+<strong>DESIGN OFFICE REWORK - CUMULATIVE BURDEN</strong><br>
+Since project commencement, DLF has issued 19 drawing revision and change events against this project:<br><br>
+<table style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px">
+<thead><tr style="background:rgba(39,74,155,.08)"><th style="padding:6px 10px;text-align:left;border:1px solid var(--bdr);color:var(--txt)">Category</th><th style="padding:6px 10px;text-align:center;border:1px solid var(--bdr);color:var(--txt)">Events</th><th style="padding:6px 10px;text-align:right;border:1px solid var(--bdr);color:var(--txt)">Total Man-Hours</th></tr></thead>
+<tbody>
+<tr><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">GFC Re-issues and Drawing Markups</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:center;color:var(--txt2)">16</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">4,392 hrs</td></tr>
+<tr style="background:rgba(39,74,155,.03)"><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">Connection, stud and RCC wall change events</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:center;color:var(--txt2)">3</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,960 hrs</td></tr>
+<tr><td style="padding:6px 10px;border:1px solid var(--bdr);font-weight:700;color:var(--txt)">Total</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:center;font-weight:700;color:var(--txt)">19</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;font-weight:700;color:var(--red)">6,352 hrs</td></tr>
+</tbody></table>
+Key events: GFC Issue 20 (11 Apr 2025) - column locations, framing, wall revisions; GFC Issue 21 (14 Apr 2025) - multiple phase revisions; Mail Issue 29 (Jun 2025) - beam and column revisions; T07C08 column revision (Jun 2025); multiple GFC re-issues Aug-Oct 2025.<br><br>
+JSSL reserves all rights in connection with the above and will raise formal variation claims for recoverable costs at the appropriate stage.<br><br>
+For JSW Severfield Structures Ltd<br>
+Project Manager - C229
+</div>
+<div class="notice-footer">
+<div class="notice-note">&#9432; Issue this notice to protect JSSL's position</div>
+<button class="copy-btn" id="c229CopyNoticeBtn" onclick="(function(){var txt=document.getElementById('c229-noticeText').innerText;var btn=document.getElementById('c229CopyNoticeBtn');try{navigator.clipboard.writeText(txt);}catch(e){}btn.classList.add('copied');btn.innerHTML='&#10003; Copied';setTimeout(function(){btn.classList.remove('copied');btn.innerHTML='&#128203; Copy Notice';},2500);})()">&#128203; Copy Notice</button>
+</div>
+</div>
 
-    <div id="c229-sec-notice" class="sec-hdr"><div class="sec-hdr-title">Formal notice to be issued to DLF City Center</div></div>
-    <div class="notice-card">
-      <div class="notice-label">Draft Notice - DN/C229/2026/001</div>
-      <div class="notice-body" id="c229-noticeText">
-        <strong>To:</strong> DLF City Center Ltd. Project Coordinator<br>
-        <strong>CC:</strong> Ajay Kumar Singh (C229 Project Manager, JSSL) - Deepak Mishra (JSSL Reporting)<br>
-        <strong>Subject:</strong> Formal Record of Client-Caused Rework Burden - C229 DLF Office, Gurugram<br>
-        <strong>Ref:</strong> DN/C229/2026/001 &nbsp;|&nbsp; <span id="c229-noticeDate">26 May 2026</span><br><br>
+<div id="c229-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events - C229 DLF DT7</div></div>
+<div class="proof-strip">
+<div class="proof-hdr"><div class="proof-hdr-title">Key events from manhour register</div><div class="proof-hdr-sub">Source: C229-Man-hour Details.xls - data_warehouse/C229/</div></div>
+<div class="proof-body"><div class="proof-timeline"><div class="proof-line"></div>
+<div class="proof-step"><div class="proof-dot blue"></div><div class="proof-step-title">23 Jan 2025 - First GFC revision issued by DLF</div><div class="proof-step-body">DLF issues first revised GFC. JSSL Design Office begins rework on drawings already in progress.</div></div>
+<div class="proof-step"><div class="proof-dot amber"></div><div class="proof-step-title">11 Apr 2025 - GFC Issue 20 - large-scale revision affecting phases 1-8</div><div class="proof-step-body">DLF issues GFC Issue 20, affecting column locations, framing, wall locations and structural GA across multiple phases. Holds placed on affected members. Significant rework triggered.</div></div>
+<div class="proof-step"><div class="proof-dot amber"></div><div class="proof-step-title">14 Apr 2025 - GFC Issue 21 - follow-on revision within days</div><div class="proof-step-body">DLF issues GFC markup Issue 21, further column and beam revisions across multiple phases within days of Issue 20.</div></div>
+<div class="proof-step"><div class="proof-dot red"></div><div class="proof-step-title">Jun-Jul 2025 - Mail Issue 29 and T07C08 column revision</div><div class="proof-step-body">DLF issues Mail Issue 29 (column and beam revisions, phases 5-8) and T07C08 column revision. Fabricated beams and columns affected.</div></div>
+<div class="proof-step"><div class="proof-dot amber"></div><div class="proof-step-title">Aug-Oct 2025 - Final GFC revisions and all holds released by 3 Oct 2025</div><div class="proof-step-body">Further GFC revisions issued (RCC wall shifts, fin plate additions, flange plate additions). All outstanding holds released by 3 Oct 2025. Total: 19 change events, 6,352 man-hours.</div></div>
+<div class="proof-step"><div class="proof-dot blue"></div><div class="proof-step-title">26 May 2026 - Status today</div><div class="proof-step-body">All holds released. Manhour register: 6,352 hours across 19 events. <strong>PO Tracker upload pending - RM status unknown.</strong> Formal notice to DLF not yet issued - draft ready above.</div></div>
+</div></div></div>
 
-        Dear Sir/Madam,<br><br>
-
-        This notice formally records the cumulative impact of client-issued drawing revisions and change orders on JSSL's Design Office and production operations for the above project, from January 2025 to date.<br><br>
-
-        <strong>1. DESIGN OFFICE REWORK - CUMULATIVE BURDEN</strong><br>
-        Since January 2025, DLF City Center Ltd. has issued 15 change events against this project. The cumulative impact on JSSL's Design Office:<br><br>
-
-        <table style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px">
-          <thead>
-            <tr style="background:rgba(39,74,155,.08)">
-              <th style="padding:6px 10px;text-align:left;border:1px solid var(--bdr);color:var(--txt)">Activity</th>
-              <th style="padding:6px 10px;text-align:right;border:1px solid var(--bdr);color:var(--txt)">Man-Hours</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">Modelling</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,781 hrs</td></tr>
-            <tr style="background:rgba(39,74,155,.03)"><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">Editing</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,960 hrs</td></tr>
-            <tr><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">Checking</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,322 hrs</td></tr>
-            <tr style="background:rgba(39,74,155,.03)"><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">RFI / Coordination</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">156 hrs</td></tr>
-            <tr><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">Miscellaneous</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,133 hrs</td></tr>
-            <tr><td style="padding:6px 10px;border:1px solid var(--bdr);font-weight:700;color:var(--txt)">Total (15 events)</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;font-weight:700;color:var(--red)">6,352 hrs</td></tr>
-          </tbody>
-        </table>
-
-        <strong>2. ASSEMBLY HOLDS</strong><br>
-        720 steel members were placed on assembly hold due to DLF drawing revisions. All holds have been resolved as of October 2025. Of these, 143 members were in active production when the hold was placed, meaning JSSL had already expended labour and bay time. 364 holds resulted in no design change - production was stopped unnecessarily. JSSL reserves the right to claim for idle capacity costs on all post-production holds.<br><br>
-
-        <strong>3. CANCELLED MEMBERS</strong><br>
-        14 members were formally cancelled per Variation Form VF001 dated 16 February 2026. These members were fabricated or partially fabricated before cancellation was confirmed by DLF.<br><br>
-
-        JSSL reserves all rights in connection with the above and will raise formal variation claims for recoverable costs in accordance with the contract.<br><br>
-
-        For JSW Severfield Structures Ltd<br>
-        Ajay Kumar Singh | Project Manager - C229
-      </div>
-      <div class="notice-footer">
-        <div class="notice-note">&#9432; Issue this notice to protect JSSL position on C229</div>
-        <button class="copy-btn" id="c229-copyNoticeBtn" onclick="(function(){var t=document.getElementById('c229-noticeText');var b=document.getElementById('c229-copyNoticeBtn');try{navigator.clipboard.writeText(t.innerText)}catch(e){}b.classList.add('copied');b.innerHTML='&#10003; Copied';setTimeout(function(){b.classList.remove('copied');b.innerHTML='&#128203; Copy Notice'},2500);showToast('C229 notice copied - ready to send')})()">&#128203; Copy Notice</button>
-      </div>
-    </div>
-
-    <div id="c229-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events - C229</div></div>
-    <div class="proof-strip">
-      <div class="proof-hdr">
-        <div class="proof-hdr-title">A chronology of DLF-caused delays on C229</div>
-        <div class="proof-hdr-sub">Every date below is documented</div>
-      </div>
-      <div class="proof-body">
-        <div class="proof-timeline">
-          <div class="proof-line"></div>
-          <div class="proof-step">
-            <div class="proof-dot blue"></div>
-            <div class="proof-step-title">January 2025 - First DLF change event</div>
-            <div class="proof-step-body">DCN 1 received: revised GFC affecting column location, MTO, and column orientation. <strong>387 DO hours consumed</strong> in the first change event.</div>
-          </div>
-          <div class="proof-step">
-            <div class="proof-dot amber"></div>
-            <div class="proof-step-title">March 2025 - Revised connection (DCN 3) - largest single event</div>
-            <div class="proof-step-body">DCN 3 issued: full connection revision (DOC001). <strong>684 DO hours in a single event</strong>. This is the largest single change event on C229 to date.</div>
-          </div>
-          <div class="proof-step">
-            <div class="proof-dot amber"></div>
-            <div class="proof-step-title">April 2025 - Hold events begin</div>
-            <div class="proof-step-body">First assembly holds placed on Phase 1 columns (1GC3, 1GC6, 1GC7, etc.) due to column weight exceeding crane capacity - a design issue. 5 Phase 1 columns held and eventually revised.</div>
-          </div>
-          <div class="proof-step">
-            <div class="proof-dot red"></div>
-            <div class="proof-step-title">September 2025 - DCN 15 - major multi-area revision</div>
-            <div class="proof-step-body">DCN 15 issued: revision of tertiary beams affecting columns and beams due to multiple changes in stair, ramp areas. <strong>2,243 DO hours in a single event</strong> - the single largest change event on C229. 368 MT of steel disrupted.</div>
-          </div>
-          <div class="proof-step">
-            <div class="proof-dot blue"></div>
-            <div class="proof-step-title">October 2025 - All holds resolved</div>
-            <div class="proof-step-body">Final hold releases issued. All 720 members on the hold register have been resolved - either modified, no change, or cancelled. Project proceeds to next phases.</div>
-          </div>
-          <div class="proof-step">
-            <div class="proof-dot blue"></div>
-            <div class="proof-step-title">February 2026 - VF001 raised</div>
-            <div class="proof-step-body">Variation Form VF001 (JSSLC229 DT7VF001, 16 Feb 2026) raised formally recording 14 cancelled and 344 modified members. This is JSSL's formal record with DLF of the impact of change events.</div>
-          </div>
-          <div class="proof-step">
-            <div class="proof-dot red"></div>
-            <div class="proof-step-title">Today - 26 May 2026</div>
-            <div class="proof-step-body">6,352 DO hours accumulated across 15 change events. Variation claim not yet raised. PO Tracker not in data warehouse - RM coverage unknown.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-footer">C229 - DLF Office, Gurugram - JSW Severfield Structures Ltd - 26 May 2026</div>
-  </div>
+<div class="page-footer">C229 - DLF DT7 Office Complex - JSW Severfield Structures Ltd - 26 May 2026</div>
+</div>
 </div>
 <!-- C244 PENDING PAGE -->
-<div id="c244-page" style="display:none">
+<div id="c244-page" style="display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 116px);background:var(--bg)">
   <div style="text-align:center;padding:40px;max-width:480px">
     <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--deep);margin-bottom:8px">C244 - Ashoka University</div>
     <div style="font-size:13px;color:var(--txt3);font-family:'Outfit',sans-serif;margin-bottom:28px;letter-spacing:.05em;text-transform:uppercase;font-weight:600">Data Update Pending</div>
@@ -1786,14 +1650,8 @@ function switchProj(code, name, status, el) {
           <span class="mob-proj-opt-name">Ashoka University</span>
           <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
         </div>
-
-
-        <div class='mob-proj-opt' id='mobOpt-C229'
-             onclick='mobSwitchProj("C229","DLF Office, Gurugram","red",this)'>
-          <span class='mob-proj-opt-code'>C229</span>
-          <span class='mob-proj-opt-name'>DLF Office, Gurugram</span>
-          <span class='mob-proj-opt-dot' style='background:var(--red)'></span>
-        </div>              </div>
+        <div class='mob-proj-opt' id='mobOpt-C229' onclick='mobSwitchProj("C229","DLF DT7 Office","red",this)'><span class='mob-proj-opt-code'>C229</span><span class='mob-proj-opt-name'>DLF DT7 Office</span><span class='mob-proj-opt-dot' style='background:var(--red)'></span></div>
+      </div>
     </div>
   </div>
 </div>
