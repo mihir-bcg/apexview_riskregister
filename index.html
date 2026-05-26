@@ -605,16 +605,9 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
           <span class="proj-opt-name">DLF Office, Delhi</span>
           <span class="proj-opt-dot" style="background:var(--amber)"></span>
         </div>
-        <div class="proj-opt" onclick="switchProj('C229','DLF Office','amber',this)">
-          <span class="proj-opt-code">C229</span>
-          <span class="proj-opt-name">DLF Office, Delhi</span>
-          <span class="proj-opt-dot" style="background:var(--amber)"></span>
-        </div>
-        <div class="proj-opt" onclick="switchProj('C229','DLF Office','amber',this)">
-          <span class="proj-opt-code">C229</span>
-          <span class="proj-opt-name">DLF Office, Delhi</span>
-          <span class="proj-opt-dot" style="background:var(--amber)"></span>
-        </div>
+        
+        
+        
       </div>
     </div>
   </div>
@@ -1425,26 +1418,8 @@ function switchProj(code, name, status, el) {
   el.classList.add('active');
   document.getElementById('projDD').classList.remove('show');
   document.getElementById('projSel').classList.remove('open');
-    if (code === 'C229') {
-    var snap = document.querySelector('.snapshot');
-    var page = document.querySelector('.page');
-    if (snap) snap.style.display = 'none';
-    if (page) page.style.display = 'none';
-    var c218p = document.getElementById('c218-page'); if (c218p) c218p.style.display = 'none';
-    var c244p = document.getElementById('c244-page'); if (c244p) c244p.style.display = 'none';
-    var c229p = document.getElementById('c229-page'); if (c229p) c229p.style.display = 'block';
-    return;
-  }
-    if (code === 'C229') {
-    var snap = document.querySelector('.snapshot');
-    var page = document.querySelector('.page');
-    if (snap) snap.style.display = 'none';
-    if (page) page.style.display = 'none';
-    var c218p = document.getElementById('c218-page'); if (c218p) c218p.style.display = 'none';
-    var c244p = document.getElementById('c244-page'); if (c244p) c244p.style.display = 'none';
-    var c229p = document.getElementById('c229-page'); if (c229p) c229p.style.display = 'block';
-    return;
-  }
+  
+  
     if (code === 'C229') {
     var snap = document.querySelector('.snapshot');
     var page = document.querySelector('.page');
@@ -1497,6 +1472,7 @@ function switchProj(code, name, status, el) {
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
 <!-- C244 PENDING PAGE -->
+<!-- C229 PROJECT PAGE -->
 <!-- C229 PROJECT PAGE -->
 <!-- C229 PROJECT PAGE -->
 <!-- C229 PROJECT PAGE -->
@@ -1794,18 +1770,9 @@ function switchProj(code, name, status, el) {
           <span class="mob-proj-opt-name">DLF Office, Delhi</span>
           <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
         </div>
-        <div class="mob-proj-opt" id="mobOpt-C229"
-             onclick="mobSwitchProj('C229','DLF Office','amber',this)">
-          <span class="mob-proj-opt-code">C229</span>
-          <span class="mob-proj-opt-name">DLF Office, Delhi</span>
-          <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
-        </div>
-        <div class="mob-proj-opt" id="mobOpt-C229"
-             onclick="mobSwitchProj('C229','DLF Office','amber',this)">
-          <span class="mob-proj-opt-code">C229</span>
-          <span class="mob-proj-opt-name">DLF Office, Delhi</span>
-          <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
-        </div>
+        
+        
+        
       </div>
     </div>
   </div>
@@ -1813,6 +1780,7 @@ function switchProj(code, name, status, el) {
 
 </body>
 </html>
+
 
 
 
