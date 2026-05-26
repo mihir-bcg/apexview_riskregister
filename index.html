@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>ApexRiskRegister v16 Â· C218</title>
+<title>Apex Risk Register | JSSL</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:'Glacial Indifference';src:url('https://db.onlinewebfonts.com/t/752081dc8e4cf2c2ab944fcaed9ba1df.woff2') format('woff2');font-weight:400}
@@ -20,7 +20,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
 
-/* â”€â”€ TOPBAR â”€â”€ */
+/* ── TOPBAR ── */
 .topbar{background:var(--white);border-bottom:1.5px solid var(--bdr);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
 .top-left{display:flex;align-items:center;gap:0}
 .jssl-logo{height:40px;width:auto;object-fit:contain;flex-shrink:0}
@@ -47,14 +47,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .proj-opt-name{font-size:10.5px;font-weight:600;color:var(--txt2);flex:1}
 .proj-opt-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .top-right{display:flex;align-items:center;gap:10px}
-.status-chip{display:flex;align-items:center;gap:6px;padding:5px 14px;border-radius:20px;font-size:11px;font-weight:600}
-.chip-red{background:rgba(217,48,37,.09);border:1px solid rgba(217,48,37,.25);color:var(--red)}
-.chip-dot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
-.chip-dot.red{background:var(--red)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 .date-chip{font-size:11px;color:var(--txt3);background:var(--deep-pale);padding:5px 14px;border-radius:20px;font-family:'DM Mono',monospace}
+.data-chip{font-size:10px;color:var(--grn);background:rgba(26,153,84,.07);border:1px solid rgba(26,153,84,.2);padding:4px 12px;border-radius:20px;font-family:'DM Mono',monospace;white-space:nowrap}
+.data-chip{font-size:10px;color:var(--txt3);background:rgba(26,153,84,.08);border:1px solid rgba(26,153,84,.2);padding:4px 12px;border-radius:20px;font-family:'DM Mono',monospace;white-space:nowrap}
 
-/* â”€â”€ SNAPSHOT BOX â”€â”€ */
+/* ── SNAPSHOT BOX ── */
 .snapshot{background:var(--white);border-bottom:1.5px solid var(--bdr);padding:14px 32px;display:grid;grid-template-columns:1fr 1fr 1fr 2.5fr;gap:0;align-items:start}
 .snap-col{padding:0 28px 0 0}
 .snap-col:last-child{padding-right:0;padding-left:0}
@@ -70,7 +68,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .pipe-leg-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
 .page{max-width:960px;margin:0 auto;padding:32px 24px 60px}
 
-/* â”€â”€ SITUATION BANNER â”€â”€ */
+/* ── SITUATION BANNER ── */
 .situation{background:var(--deep);border-radius:14px;padding:28px 32px;margin-bottom:28px;box-shadow:var(--sh2)}
 .sit-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:14px}
 .sit-tag{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'Outfit',sans-serif}
@@ -88,7 +86,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .sit-btn.ghost:hover{background:rgba(255,255,255,.2)}
 .sit-btn.fired{background:rgba(26,153,84,.2);color:#7fffc0;border:1px solid rgba(26,153,84,.3);cursor:default}
 
-/* â”€â”€ BIG 3 NUMBERS â”€â”€ */
+/* ── BIG 3 NUMBERS ── */
 .big3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
 .big-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:22px 24px;box-shadow:var(--sh);position:relative;overflow:hidden}
 .big-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:12px 12px 0 0}
@@ -102,12 +100,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .big-label{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:4px}
 .big-sub{font-size:11px;color:var(--txt3);line-height:1.5}
 
-/* â”€â”€ SECTION HEADER â”€â”€ */
+/* ── SECTION HEADER ── */
 .sec-hdr{display:flex;align-items:center;gap:10px;margin:32px 0 14px}
 .sec-hdr-title{font-family:'DM Serif Display',serif;font-size:18px;color:var(--txt)}
 .sec-hdr::after{content:'';flex:1;height:1px;background:var(--bdr)}
 
-/* â”€â”€ WHAT'S BLOCKED â”€â”€ */
+/* ── WHAT'S BLOCKED ── */
 .blocked-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .blocked-item{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:18px 20px;box-shadow:var(--sh);display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:16px;transition:box-shadow .18s,border-color .18s;position:relative}
 .blocked-item:hover{box-shadow:var(--sh2);border-color:var(--bdr2)}
@@ -121,7 +119,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .blocked-body{min-width:0}
 .blocked-title{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:3px}
 .blocked-desc{font-size:12px;color:var(--txt3);line-height:1.6}
-/* action row - hidden until hover */
+/* action row — hidden until hover */
 .blocked-actions{display:flex;gap:7px;margin-top:11px;padding-top:10px;border-top:1px solid var(--bdr);opacity:0;transform:translateY(4px);transition:opacity .18s,transform .18s;pointer-events:none}
 .blocked-item:hover .blocked-actions{opacity:1;transform:translateY(0);pointer-events:all}
 .ba-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:all .15s;white-space:nowrap}
@@ -136,7 +134,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .blocked-mt.amber{color:var(--amber)}
 .blocked-mt-lbl{font-size:10px;color:var(--txt3);margin-top:2px}
 
-/* â”€â”€ PROOF STRIP â”€â”€ */
+/* ── PROOF STRIP ── */
 .proof-strip{background:var(--white);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:28px}
 .proof-hdr{padding:16px 22px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between}
 .proof-hdr-title{font-size:13px;font-weight:600;color:var(--txt)}
@@ -154,12 +152,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .proof-step-body{font-size:11.5px;color:var(--txt3);line-height:1.6}
 .proof-step-body strong{color:var(--txt);font-weight:600}
 
-/* â”€â”€ REVISION CHART â”€â”€ */
+/* ── REVISION CHART ── */
 .chart-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:20px 22px;box-shadow:var(--sh);margin-bottom:28px}
 .chart-title{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:3px}
 .chart-sub{font-size:11px;color:var(--txt3);margin-bottom:16px;line-height:1.5}
 
-/* â”€â”€ RM ZONE BAR â”€â”€ */
+/* ── RM ZONE BAR ── */
 .rm-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:28px}
 .rm-hdr{padding:16px 22px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between}
 .rm-hdr-title{font-size:13px;font-weight:600;color:var(--txt)}
@@ -182,7 +180,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .rm-leg{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--txt3)}
 .rm-leg-dot{width:8px;height:8px;border-radius:50%}
 
-/* â”€â”€ WHAT DLF MUST DO â”€â”€ */
+/* ── WHAT DLF MUST DO ── */
 .action-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .action-item{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:18px 20px;box-shadow:var(--sh);display:flex;align-items:flex-start;gap:16px}
 .action-num{width:32px;height:32px;border-radius:50%;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:16px;flex-shrink:0;margin-top:1px}
@@ -192,7 +190,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .action-deadline{font-size:10px;font-weight:600;color:var(--red);margin-top:6px;font-family:'DM Mono',monospace}
 .action-right{flex-shrink:0}
 
-/* â”€â”€ NOTICE CARD â”€â”€ */
+/* ── NOTICE CARD ── */
 .notice-card{background:var(--deep-pale);border:1px solid var(--bdr2);border-left:4px solid var(--deep);border-radius:10px;padding:20px 22px;margin-bottom:28px}
 .notice-label{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .notice-label::after{content:'';flex:1;height:1px;background:var(--bdr2)}
@@ -204,13 +202,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .copy-btn:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
 .copy-btn.copied{background:var(--grn);color:#fff;border-color:var(--grn)}
 
-/* â”€â”€ CHANGES COUNT VISUAL â”€â”€ */
+/* ── CHANGES COUNT VISUAL ── */
 .changes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
 .chg-card{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:16px 18px;box-shadow:var(--sh);text-align:center}
 .chg-num{font-family:'DM Serif Display',serif;font-size:36px;color:var(--red);line-height:1;margin-bottom:4px}
 .chg-lbl{font-size:11px;font-weight:500;color:var(--txt2);line-height:1.4}
 
-/* â”€â”€ HOLDS VISUAL â”€â”€ */
+/* ── HOLDS VISUAL ── */
 .holds-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:20px 22px;box-shadow:var(--sh);margin-bottom:28px}
 .hold-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--bdr)}
 .hold-row:last-child{border-bottom:none}
@@ -219,9 +217,9 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .hold-bar{height:10px;border-radius:4px;background:var(--red)}
 .hold-days{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;color:var(--red);width:56px;text-align:right;flex-shrink:0}
 
-/* â”€â”€ FOOTER â”€â”€ */
+/* ── FOOTER ── */
 
-/* â”€â”€ ACTION MODAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── ACTION MODAL ─────────────────────────────────────────────────────────── */
 .am-overlay{display:none;position:fixed;inset:0;background:rgba(15,20,40,.55);z-index:1000;align-items:center;justify-content:center;padding:24px}
 .am-overlay.open{display:flex}
 .am-box{background:var(--white);border-radius:14px;width:100%;max-width:740px;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 12px 48px rgba(39,74,155,.22);position:relative;z-index:1001}
@@ -259,7 +257,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 
 .page-footer{text-align:center;padding:24px;font-size:10px;color:var(--txt3);border-top:1px solid var(--bdr);margin-top:8px}
 
-/* â”€â”€ TOAST â”€â”€ */
+/* ── TOAST ── */
 .toast-wrap{position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:7px}
 .toast{background:var(--white);border:1.5px solid var(--bdr2);border-left:3px solid var(--grn);padding:10px 16px;border-radius:8px;font-size:12px;color:var(--txt);min-width:260px;box-shadow:var(--sh2);display:flex;align-items:center;gap:8px;animation:slideIn .25s ease}
 @keyframes slideIn{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
@@ -267,7 +265,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-thumb{background:rgba(39,74,155,.15);border-radius:3px}
 
-/* â”€â”€ HOLD STATUS BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── HOLD STATUS BAR ─────────────────────────────────────────────────────── */
 .hold-bar-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:22px 24px;box-shadow:var(--sh);margin-bottom:28px}
 .hbc-bar-wrap{position:relative}
 .hbc-bar{display:flex;height:40px;border-radius:8px;overflow:hidden;cursor:pointer;gap:2px;margin-bottom:10px}
@@ -281,7 +279,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .hbc-insight strong{color:var(--red);font-weight:700}
 .hbc-tooltip{display:none;position:absolute;background:var(--white);border:1.5px solid var(--bdr2);border-radius:8px;padding:10px 14px;box-shadow:0 6px 20px rgba(39,74,155,.15);z-index:500;max-width:280px;font-size:11px;color:var(--txt2);line-height:1.6;pointer-events:none;top:-110px;left:0}
 
-/* â”€â”€ REVISED ACTION ITEMS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── REVISED ACTION ITEMS ─────────────────────────────────────────────────── */
 .action-btn-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .action-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:all .15s;text-decoration:none;white-space:nowrap}
 .action-btn.mail{background:var(--deep-pale2);color:var(--deep);border:1.5px solid var(--bdr2)}
@@ -294,7 +292,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .action-contact strong{color:var(--txt2);font-weight:600}
 
 
-/* â”€â”€ SCROLL TO TOP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── SCROLL TO TOP ────────────────────────────────────────────────────────── */
 .scroll-top{display:none;position:fixed;bottom:28px;right:28px;width:40px;height:40px;border-radius:50%;background:var(--deep);color:#fff;border:none;font-size:16px;cursor:pointer;box-shadow:0 4px 14px rgba(39,74,155,.35);z-index:500;align-items:center;justify-content:center;transition:all .2s;line-height:1}
 .scroll-top:hover{background:var(--deep-dk);transform:translateY(-2px);box-shadow:0 6px 18px rgba(39,74,155,.45)}
 .scroll-top.visible{display:flex}
@@ -307,13 +305,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .sit-body a.bl.amb:hover{border-bottom-color:rgba(255,213,128,.8)}
 
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   MOBILE - iPhone 16 reference (393px viewport)
-   All rules scoped to max-width:430px - desktop untouched
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ══════════════════════════════════════════════════════════════
+   MOBILE — iPhone 16 reference (393px viewport)
+   All rules scoped to max-width:430px — desktop untouched
+══════════════════════════════════════════════════════════════ */
 @media (max-width: 430px) {
 
-  /* â”€â”€ TOPBAR â”€â”€ */
+  /* ── TOPBAR ── */
   .topbar{padding:0 14px;height:auto;min-height:52px;flex-wrap:nowrap;gap:8px}
   .top-left{gap:0;flex:1;min-width:0;overflow:hidden}
   .jssl-logo{height:30px}
@@ -323,11 +321,11 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .apex-sub{font-size:6.5px}
   .top-divider2{display:none}
   .proj-wrap{display:none}
-  .top-right{flex-shrink:0;gap:6px}
-  .status-chip{padding:4px 8px;font-size:9px}
+  .top-right{display:none}
+  .mob-menu-btn{display:flex !important;flex-shrink:0;margin-left:auto}
   .date-chip{font-size:9px;padding:4px 8px}
 
-  /* â”€â”€ SNAPSHOT â”€â”€ */
+  /* ── SNAPSHOT ── */
   .snapshot{grid-template-columns:1fr 1fr;gap:0;padding:12px 16px;row-gap:12px}
   .snap-col{padding:0 12px 0 0}
   .snap-col:nth-child(2){padding:0 0 0 12px;border-left:1px solid var(--bdr)}
@@ -337,25 +335,25 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .pipe{height:18px;margin:5px 0 5px}
   .pipe-seg{font-size:7.5px}
 
-  /* â”€â”€ PAGE â”€â”€ */
+  /* ── PAGE ── */
   .page{padding:18px 14px 60px}
 
-  /* â”€â”€ BRIEF â”€â”€ */
+  /* ── BRIEF ── */
   .situation{padding:20px 18px;border-radius:10px}
   .sit-headline{font-size:20px;line-height:1.3;margin-bottom:12px}
   .sit-body{font-size:12.5px;line-height:1.75;margin-bottom:16px}
   .sit-actions{flex-direction:column;gap:8px}
   .sit-btn{width:100%;justify-content:center;padding:10px 16px}
 
-  /* â”€â”€ BIG 3 CARDS â”€â”€ */
+  /* ── BIG 3 CARDS ── */
   .big3{grid-template-columns:1fr;gap:10px}
-  .big-num{font-size:36px}
+  .big-num{font-size:32px;word-break:break-word}
 
-  /* â”€â”€ SECTION HEADER â”€â”€ */
+  /* ── SECTION HEADER ── */
   .sec-hdr{margin:22px 0 12px}
-  .sec-hdr-title{font-size:15px}
+  .sec-hdr-title{font-size:14px;word-break:break-word}
 
-  /* â”€â”€ BLOCKED ITEMS â”€â”€ */
+  /* ── BLOCKED ITEMS ── */
   .blocked-item{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:10px 12px;padding:14px 16px}
   .blocked-right{grid-column:2;grid-row:1;text-align:right}
   .blocked-body{grid-column:1/-1}
@@ -363,14 +361,14 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .blocked-actions{opacity:1;transform:none;pointer-events:all;flex-wrap:wrap}
   .ba-btn{font-size:10px;padding:6px 12px}
 
-  /* â”€â”€ HOLD BAR â”€â”€ */
+  /* ── HOLD BAR ── */
   .hold-bar-card{padding:16px}
   .hbc-bar{height:32px}
   .hbc-count{font-size:10px}
-  .hbc-name{font-size:8px}
+  .hbc-name{font-size:7.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .hbc-insight{font-size:11px}
 
-  /* â”€â”€ RM BARS â”€â”€ */
+  /* ── RM BARS ── */
   .rm-month-row{grid-template-columns:70px 1fr;gap:10px;padding:12px 16px}
   .rm-month-val{display:none}
   .rm-month-lbl{font-size:16px}
@@ -380,55 +378,196 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .rm-legend{padding:10px 16px;gap:10px}
   .rm-leg{font-size:10px}
 
-  /* â”€â”€ ACTION ITEMS â”€â”€ */
+  /* ── ACTION ITEMS ── */
   .action-item{flex-direction:column;gap:10px;padding:16px}
   .action-num{width:28px;height:28px;font-size:14px}
   .action-title{font-size:12px}
   .action-desc{font-size:11px}
   .action-contact{font-size:10px}
   .action-btn-row{flex-wrap:wrap}
-  .action-btn{font-size:10px;padding:6px 12px}
+  .action-btn{font-size:10px;padding:6px 10px;min-width:0}
 
-  /* â”€â”€ NOTICE CARD â”€â”€ */
+  /* ── NOTICE CARD ── */
   .notice-card{padding:14px 16px}
   .notice-body{font-size:11.5px;line-height:1.75}
   .notice-footer{flex-direction:column;gap:8px;align-items:flex-start}
   .copy-btn{width:100%;justify-content:center}
-  .notice-body table{font-size:10px}
+  .notice-body table{font-size:10px;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .notice-body table th,
   .notice-body table td{padding:5px 7px}
 
-  /* â”€â”€ PROOF TIMELINE â”€â”€ */
+  /* ── PROOF TIMELINE ── */
   .proof-strip{border-radius:8px}
   .proof-hdr{padding:12px 16px;flex-direction:column;align-items:flex-start;gap:4px}
   .proof-body{padding:14px 16px}
   .proof-timeline{padding-left:22px}
   .proof-step-title{font-size:11.5px}
-  .proof-step-body{font-size:11px}
+  .proof-step-body{font-size:11px;word-break:break-word}
 
-  /* â”€â”€ MODAL â”€â”€ */
-  .am-overlay{padding:10px}
-  .am-box{max-height:95vh;border-radius:10px}
-  .am-hdr{padding:14px 40px 12px 16px}
-  .am-title{font-size:13px}
-  .am-body{padding:14px 14px}
-  .am-step{grid-template-columns:90px 1fr 76px}
-  .am-cell{padding:8px 10px;font-size:10.5px}
+  /* ── MODAL ── */
+  /* ── ACTION MODAL MOBILE ── */
+  .am-overlay{padding:0;align-items:flex-end;padding-top:60px}
+  .am-box{height:75vh;border-radius:14px 14px 0 0;width:100%;max-width:100%;display:flex;flex-direction:column}
+  .am-hdr{padding:14px 48px 12px 16px}
+  .am-title{font-size:13px;line-height:1.35}
+  .am-close{top:12px;right:12px;font-size:18px;padding:6px 8px;
+    background:var(--deep-pale);border-radius:50%;color:var(--txt)}
+  .am-body{padding:10px;gap:10px;min-height:0;flex:1 1 0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+  /* Tab switcher - mobile only */
+  .am-tab-bar{display:flex;gap:0;border:1.5px solid var(--bdr2);border-radius:8px;overflow:hidden;flex-shrink:0}
+  .am-tab{flex:1;padding:8px 10px;font-size:11px;font-weight:700;text-align:center;
+    cursor:pointer;color:var(--txt3);background:var(--white);border:none;
+    font-family:'Outfit',sans-serif;transition:all .15s}
+  .am-tab.active.internal{background:var(--deep);color:#fff}
+  .am-tab.active.external{background:var(--red);color:#fff}
+  /* Track visibility - controlled by tab */
+  .am-track{max-height:none}
+  .am-track.mob-hidden{display:none}
+  /* Stack WHO / WHAT / WHEN vertically on mobile */
+  .am-step{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--bdr)}
+  .am-cell{padding:8px 12px;font-size:11px;border-right:none !important;border-bottom:1px solid var(--bdr)}
+  .am-cell:last-child{border-bottom:none}
+  .am-cell.who{background:var(--deep-pale2);font-size:10px;font-weight:700;
+    color:var(--deep);padding:6px 12px}
+  .am-cell.when{font-size:10px;padding:6px 12px;background:rgba(39,74,155,.02)}
   .am-track-hdr{padding:8px 12px;font-size:9px}
-  .am-copy-strip{padding:10px 16px}
-  .am-copy-note{font-size:9px}
-  .am-copy-btn{font-size:9px;padding:5px 12px}
+  .am-copy-strip{padding:10px 12px;flex-direction:column;align-items:stretch;gap:8px}
+  .am-copy-note{font-size:9px;text-align:center}
+  .am-copy-btn{font-size:10px;padding:8px 12px;justify-content:center;width:100%}
 
-  /* â”€â”€ SCROLL TOP â”€â”€ */
+  /* ── MOBILE PROJ DROPDOWN FIX ── */
+  .mob-proj-bar{display:flex}
+  .proj-dd{position:fixed;top:auto;left:10px;right:10px;min-width:auto;z-index:500}
+
+  /* ── SCROLL TOP ── */
   .scroll-top{width:36px;height:36px;font-size:14px;bottom:20px;right:16px}
 
-  /* â”€â”€ PAGE FOOTER â”€â”€ */
+  /* ── PAGE FOOTER ── */
   .page-footer{padding:16px;font-size:9px;text-align:center;line-height:1.6}
 }
+
+
+/* ── HOLD OUTCOME BREAKDOWN ──────────────────────────────────────────────── */
+.hbc-expand-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:5px 14px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--bdr2);background:var(--white);color:var(--deep);font-family:'Outfit',sans-serif;transition:all .15s}
+.hbc-expand-btn:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
+.hbc-outcome{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--bdr)}
+.hbc-outcome.open{display:block}
+.hbc-outcome-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px}
+.hbc-outcome-card{border-radius:8px;padding:14px 16px;text-align:center}
+.hbc-outcome-card.mod{background:rgba(224,123,0,.07);border:1px solid rgba(224,123,0,.2)}
+.hbc-outcome-card.del{background:rgba(217,48,37,.07);border:1px solid rgba(217,48,37,.2)}
+.hbc-outcome-card.nc{background:var(--deep-pale);border:1px solid var(--bdr2)}
+.hbc-oc-num{font-family:'DM Serif Display',serif;font-size:28px;line-height:1;margin-bottom:4px}
+.hbc-oc-num.mod{color:var(--amber)}
+.hbc-oc-num.del{color:var(--red)}
+.hbc-oc-num.nc{color:var(--deep)}
+.hbc-oc-lbl{font-size:11px;font-weight:600;color:var(--txt);margin-bottom:3px}
+.hbc-oc-sub{font-size:9.5px;color:var(--txt3);line-height:1.5}
+.hbc-oc-zone{font-family:'DM Mono',monospace;font-size:8.5px;color:var(--txt3);margin-top:5px}
+.hbc-callout{background:rgba(217,48,37,.05);border:1px solid rgba(217,48,37,.18);border-left:3px solid var(--red);border-radius:6px;padding:10px 14px;font-size:11px;color:var(--txt2);line-height:1.65}
+.hbc-callout strong{color:var(--red);font-weight:700}
+@media(max-width:430px){
+  .hbc-outcome-grid{grid-template-columns:1fr;gap:8px}
+}
+
+
+/* ── MOBILE PROJECT BAR (hidden on desktop) ─────────────────────────────── */
+.mob-proj-bar{display:none;align-items:center;justify-content:space-between;
+  background:var(--white);border-bottom:1px solid var(--bdr);
+  padding:8px 16px;gap:10px}
+.mob-proj-info{display:flex;align-items:center;gap:8px;flex:1}
+.mob-proj-code{font-size:11px;font-weight:800;color:var(--deep)}
+.mob-proj-name{font-size:11px;font-weight:600;color:var(--txt2)}
+.mob-proj-change{display:flex;align-items:center;gap:5px;padding:5px 12px;
+  border-radius:6px;background:var(--deep-pale2);border:1.5px solid var(--bdr2);
+  font-size:10px;font-weight:700;color:var(--deep);cursor:pointer;
+  font-family:'Outfit',sans-serif;white-space:nowrap}
+.mob-proj-change:active{background:var(--deep);color:#fff}
+
+
+/* ── MOBILE HAMBURGER MENU ───────────────────────────────────────────────── */
+.mob-menu-btn{display:none;flex-direction:column;justify-content:center;
+  align-items:center;gap:5px;width:40px;height:40px;cursor:pointer;
+  flex-shrink:0;background:none;border:none;padding:0}
+.mob-menu-btn span{display:block;width:22px;height:2.5px;background:var(--deep);
+  border-radius:2px;transition:all .2s}
+.mob-drawer{display:flex;position:fixed;top:0;left:0;right:0;bottom:0;
+  z-index:600;pointer-events:none;visibility:hidden}
+.mob-drawer.open{pointer-events:all;visibility:visible}
+.mob-drawer-overlay{position:absolute;inset:0;background:rgba(15,20,40,.4);
+  opacity:0;transition:opacity .25s}
+.mob-drawer.open .mob-drawer-overlay{opacity:1}
+.mob-drawer-panel{position:absolute;top:0;right:0;width:80%;max-width:300px;
+  height:100%;background:var(--white);box-shadow:-4px 0 24px rgba(39,74,155,.18);
+  transform:translateX(100%);transition:transform .25s ease;
+  display:flex;flex-direction:column;overflow-y:auto}
+.mob-drawer.open .mob-drawer-panel{transform:translateX(0)}
+.mob-drawer-hdr{display:flex;align-items:center;justify-content:space-between;
+  padding:16px 18px;border-bottom:1px solid var(--bdr)}
+.mob-drawer-title{font-family:'DM Serif Display',serif;font-size:15px;color:var(--deep)}
+.mob-drawer-close{font-size:20px;color:var(--txt3);cursor:pointer;
+  background:none;border:none;padding:2px 6px;line-height:1}
+.mob-drawer-body{padding:18px;display:flex;flex-direction:column;gap:16px}
+.mob-drawer-section{display:flex;flex-direction:column;gap:6px}
+.mob-drawer-label{font-size:8.5px;font-weight:700;color:var(--txt3);
+  text-transform:uppercase;letter-spacing:.1em}
+.mob-drawer-val{font-size:12px;font-weight:600;color:var(--txt);
+  font-family:'DM Mono',monospace;background:var(--deep-pale);
+  padding:6px 10px;border-radius:6px}
+.mob-drawer-divider{height:1px;background:var(--bdr)}
+/* Project options in drawer */
+.mob-proj-opt{display:flex;align-items:center;gap:10px;padding:10px 12px;
+  border-radius:8px;cursor:pointer;border:1.5px solid var(--bdr);
+  transition:all .15s;background:var(--white)}
+.mob-proj-opt:hover,.mob-proj-opt.active{background:var(--deep-pale);
+  border-color:var(--deep)}
+.mob-proj-opt-code{font-size:11px;font-weight:800;color:var(--deep);
+  width:36px;flex-shrink:0}
+.mob-proj-opt-name{font-size:11px;font-weight:600;color:var(--txt2);flex:1}
+.mob-proj-opt-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+
+
+/* ── PASSWORD GATE ───────────────────────────────────────────────────────── */
+#pwGate{position:fixed;inset:0;background:#f0f3fa;z-index:9999;
+  display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif}
+#pwGate.unlocked{display:none}
+.pw-box{background:#fff;border:1px solid #dde3f0;border-radius:14px;
+  padding:36px 32px;box-shadow:0 8px 32px rgba(39,74,155,.12);
+  text-align:center;width:100%;max-width:360px}
+.pw-logo{font-family:'DM Serif Display',serif;font-size:22px;
+  color:#274a9b;margin-bottom:4px}
+.pw-sub{font-size:11px;color:#8a9bbf;text-transform:uppercase;
+  letter-spacing:.1em;margin-bottom:28px}
+.pw-input{width:100%;box-sizing:border-box;padding:10px 14px;
+  border:1.5px solid #dde3f0;border-radius:8px;font-size:14px;
+  font-family:'Outfit',sans-serif;color:#1a2540;outline:none;
+  text-align:center;letter-spacing:.08em;margin-bottom:12px;
+  transition:border-color .15s}
+.pw-input:focus{border-color:#274a9b}
+.pw-btn{width:100%;padding:10px;background:#274a9b;color:#fff;
+  border:none;border-radius:8px;font-size:13px;font-weight:700;
+  cursor:pointer;font-family:'Outfit',sans-serif;transition:background .15s}
+.pw-btn:hover{background:#1e3a80}
+.pw-err{font-size:11px;color:#d93025;margin-top:8px;min-height:16px}
 
 </style>
 </head>
 <body>
+
+<!-- PASSWORD GATE -->
+<div id="pwGate">
+  <div class="pw-box">
+    <div class="pw-logo">ApexView</div>
+    <div class="pw-sub">Risk Register &nbsp;·&nbsp; JSSL</div>
+    <input class="pw-input" id="pwInput" type="password"
+      placeholder="Enter password"
+      onkeydown="if(event.key==='Enter')checkPw()"
+      autocomplete="current-password">
+    <button class="pw-btn" onclick="checkPw()">Unlock</button>
+    <div class="pw-err" id="pwErr"></div>
+  </div>
+</div>
+
 
 <!-- TOPBAR -->
 <div class="topbar">
@@ -439,13 +578,16 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <div class="apex">ApexView</div>
       <div class="apex-sub">Risk Register</div>
     </div>
-    <div class="top-divider2"></div>
+  </div>
+  <div class="top-right">
+    <div class="data-chip" id="dataAsOf">Data as of 26 May 2026</div>
+    <div class="date-chip" id="istDateChip"></div>
     <div class="proj-wrap">
       <div class="proj-sel" id="projSel" onclick="toggleProjDD()">
         <span class="proj-code" id="projCode">C218</span>
         <span class="proj-name" id="projName">DLF Downtown Ph.2, Mall of India</span>
         <span class="proj-status-dot" id="projDot" style="background:var(--red)"></span>
-        <span class="proj-arrow" id="projArrow">â–¼</span>
+        <span class="proj-arrow" id="projArrow">&#9660;</span>
       </div>
       <div class="proj-dd" id="projDD">
         <div class="proj-opt active" onclick="switchProj('C218','DLF Downtown Ph.2, Mall of India','red',this)">
@@ -453,18 +595,22 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
           <span class="proj-opt-name">DLF Downtown Ph.2, Mall of India</span>
           <span class="proj-opt-dot" style="background:var(--red)"></span>
         </div>
-        <div class="proj-opt" onclick="switchProj('C244','Ashoka University',  'amber',this)">
+        <div class="proj-opt" onclick="switchProj('C244','Ashoka University','amber',this)">
           <span class="proj-opt-code">C244</span>
           <span class="proj-opt-name">Ashoka University</span>
+          <span class="proj-opt-dot" style="background:var(--amber)"></span>
+        </div>
+        <div class="proj-opt" onclick="switchProj('C229','DLF Office','amber',this)">
+          <span class="proj-opt-code">C229</span>
+          <span class="proj-opt-name">DLF Office, Delhi</span>
           <span class="proj-opt-dot" style="background:var(--amber)"></span>
         </div>
       </div>
     </div>
   </div>
-  <div class="top-right">
-    <div class="status-chip chip-red"><div class="chip-dot red"></div>Action Required</div>
-    <div class="date-chip" id="istDateChip"></div>
-  </div>
+  <button class="mob-menu-btn" id="hambBtn" onclick="openMobDrawer()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </div>
 
 <!-- SNAPSHOT BOX -->
@@ -476,19 +622,19 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   </div>
   <div class="snap-col">
     <div class="snap-lbl">Project Manager</div>
-    <div class="snap-val">Ajay Kumar Singh</div>
-    <div class="snap-sub">C218 Â· JSSL Design Office</div>
+    <div class="snap-val">Ajay Kumar</div>
+    <div class="snap-sub">C218 · JSSL Design Office</div>
   </div>
   <div class="snap-col">
     <div class="snap-lbl">Total Scope</div>
-    <div class="snap-val">26,900 MT</div>
+    <div class="snap-val">26,300 MT</div>
     <div class="snap-sub">HPT: 12 hrs/MT</div>
   </div>
   <div class="snap-col">
-    <div class="snap-lbl">Scope Pipeline - 26,900 MT</div>
+    <div class="snap-lbl">Scope Pipeline - 26,300 MT</div>
     <div class="pipe">
-      <div class="pipe-seg" style="width:32.2%;background:var(--grn)">6,063 MT produced</div>
-      <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">20,837 MT pending</div>
+      <div class="pipe-seg" style="width:32.2%;background:var(--grn)">8,465 MT produced</div>
+      <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">17,835 MT pending</div>
     </div>
     <div class="pipe-legend">
       <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--grn)"></div>Produced</div>
@@ -506,7 +652,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       and accumulated <span class="red">8,982 hours</span> of wasted rework.
     </div>
     <div class="sit-body" id="briefText">
-      Drawings for June production phases were either not released or released too late - JSSL could not raise MTOs and POs within the 90-day procurement window, leaving <a class="bl red" href="javascript:void(0)" onclick="smoothScrollTo('sec-blocked')"><strong>360.6 MT unordered</strong></a> with no recovery path this month. Our <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('sec-rm')"><strong>June plan is only 61% covered</strong></a> in raw material - the 39% gap is directly traceable to drawings not being available within the required procurement window. Since January 2025, DLF has issued <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('sec-cards')"><strong>24 change events consuming 8,982 Design Office hours</strong></a> and disrupting <strong>1,702.8 MT</strong> of steel in production. Of the <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('sec-holds')"><strong>1,202 members currently on hold</strong></a>, 635 were already in active fabrication when DLF issued their revision - labour spent, bays occupied, dispatch delayed. A further <strong>123.1 MT of fully fabricated steel was deleted</strong> by DLF after JSSL had already built it.
+      Drawings for June production phases were either not released or released too late - JSSL could not raise MTOs and POs within the 90-day 'drawing received-to-steel delivered' window, leaving <a class="bl red" href="javascript:void(0)" onclick="smoothScrollTo('sec-blocked')"><strong>360.6 MT unordered</strong></a> with no recovery path this month. Our <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('sec-rm')"><strong>June plan is only 61% covered</strong></a> in raw material - the 39% gap is directly traceable to drawings not being available within the required 90-day 'drawing received-to-steel delivered' window. Since January 2025, DLF has issued <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('sec-cards')"><strong>24 change events consuming 8,982 Design Office hours</strong></a> and disrupting <strong>1,702.8 MT</strong> of steel in production. Across the project, <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('sec-holds')"><strong>1,202 members were put on hold</strong></a> due to DLF drawing changes - of these, 635 had already been in active fabrication when the revision was issued, meaning labour was spent and bays were occupied before the change even arrived. A further <strong>123.1 MT of fully fabricated steel was deleted</strong> by DLF after JSSL had already built it.
     </div>
     <div class="sit-actions">
       <button class="sit-btn primary" onclick="copyBrief()">&#128203; Copy this briefing</button>
@@ -538,10 +684,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   <div id="sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
   <div class="blocked-list">
     <div class="blocked-item crit">
-      <div class="blocked-icon icon-red">ðŸš«</div>
+      <div class="blocked-icon icon-red">🚫</div>
       <div class="blocked-body">
-        <div class="blocked-title">June - 360.6 MT of steel was never ordered - drawings not available within the procurement window</div>
-        <div class="blocked-desc">To order steel for June, JSSL needed drawings available by 1 March 2026 (90-day procurement window). For 360.6 MT of the June plan, drawings were either not received or received too late for JSSL to raise an MTO and subsequently a PO within the required window. Without an MTO there is no PO, without a PO there is no steel. 360.6 MT - 36% of the June plan - has no RM ordered against it. Source: Indent 887, PO tracker vs June plan.</div>
+        <div class="blocked-title">June - 360.6 MT of steel was never ordered - drawings not available within the 90-day 'drawing received-to-steel delivered' window</div>
+        <div class="blocked-desc">To order steel for June, JSSL needed drawings available by 1 March 2026 (90-day 'drawing received-to-steel delivered' window). For 360.6 MT of the June plan, drawings were either not received or received too late for JSSL to raise an MTO and subsequently a PO within the required window. Without an MTO there is no PO, without a PO there is no steel. 360.6 MT - 36% of the June plan - has no RM ordered against it. Source: Indent 887, PO tracker vs June plan.</div>
         <div class="blocked-actions">
           <button class="ba-btn external" onclick="openActionModal('B1')">&#9654; See Actions</button>
         </div>
@@ -603,6 +749,34 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     <div class="hbc-insight">
       <strong>53% of all holds hit after production had started.</strong> Of the 635 post-production holds: 418 reached Fab Completed or Welded stage, 112 were Dispatched to site, 33 were Treated (painted), 10 were Assembled. Real cost already incurred at each stage. Source: DT8 + MOIG Hold Lists, C218 Assembly Hold Register (Nov 2025 update).
     </div>
+    <button class="hbc-expand-btn" id="hbcExpandBtn" onclick="toggleOutcome()">
+      &#43; See outcome breakdown
+    </button>
+    <div class="hbc-outcome" id="hbcOutcome">
+      <div class="hbc-outcome-grid">
+        <div class="hbc-outcome-card mod">
+          <div class="hbc-oc-num mod">739</div>
+          <div class="hbc-oc-lbl">Modified</div>
+          <div class="hbc-oc-sub">Rework required after DLF issued revised design</div>
+          <div class="hbc-oc-zone">DT8: 273 &middot; MOIG: 466</div>
+        </div>
+        <div class="hbc-outcome-card del">
+          <div class="hbc-oc-num del">268</div>
+          <div class="hbc-oc-lbl">Deleted</div>
+          <div class="hbc-oc-sub">Member scrapped - DLF removed it from design entirely</div>
+          <div class="hbc-oc-zone">DT8: 65 &middot; MOIG: 203</div>
+        </div>
+        <div class="hbc-outcome-card nc">
+          <div class="hbc-oc-num nc">195</div>
+          <div class="hbc-oc-lbl">No Change</div>
+          <div class="hbc-oc-sub">Hold placed, production stopped - revised design was identical</div>
+          <div class="hbc-oc-zone">DT8: 60 &middot; MOIG: 135</div>
+        </div>
+      </div>
+      <div class="hbc-callout">
+        <strong>195 members held for zero reason.</strong> DLF flagged these members as potentially affected, halting JSSL's fabrication or dispatch. When the revised design was submitted, no change was required. Production time was lost with no design justification whatsoever. Source: Col 4 outcome values, C218 Assembly Hold Register.
+      </div>
+    </div>
     <div class="hbc-tooltip" id="hbcTooltip"></div>
   </div>
 
@@ -612,7 +786,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     <div class="rm-hdr">
       <div>
         <div class="rm-hdr-title">Raw material coverage vs plan - June and July 2026</div>
-        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: PO Tracker Â· Indent 887 (June) Â· Indents 947, 920-931, 957 (July) Â· Matched to production plan phase requirements</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: PO Tracker · Indent 887 (June) · Indents 947, 920–931, 957 (July) · Matched to production plan phase requirements</div>
       </div>
     </div>
     <div class="rm-month-row">
@@ -623,38 +797,39 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <div class="rm-bar-wrap">
         <div class="rm-bar-bg">
           <div class="rm-seg grn" style="flex:589"></div>
-          <div class="rm-seg red" style="flex:29"></div>
+          <div class="rm-seg amb" style="flex:21"></div>
           <div style="flex:361;background:var(--deep-pale2)"></div>
         </div>
         <div class="rm-bar-note">
-          <strong style="color:var(--grn)">589.1 MT received</strong> Â·
-          <strong style="color:var(--amber)">21.2 MT in transit</strong> Â·
+          <strong style="color:var(--grn)">589.1 MT received</strong> ·
+          <strong style="color:var(--amber)">21.2 MT in transit</strong> ·
           <strong style="color:var(--txt3)">360.6 MT not ordered - drawings not available within procurement window</strong>
         </div>
       </div>
       <div class="rm-month-val">
-        <div class="rm-val-num" style="color:var(--amber)">59%</div>
+        <div class="rm-val-num" style="color:var(--amber)">61%</div>
         <div class="rm-val-lbl">of plan covered</div>
       </div>
     </div>
     <div class="rm-month-row">
       <div>
         <div class="rm-month-lbl">July</div>
-        <div class="rm-month-sub">Plan: 1,500 MT<br>Indents: 947, 920-931, 957</div>
+        <div class="rm-month-sub">Plan: 1,500 MT<br>Indents: 947, 920–931, 957</div>
       </div>
       <div class="rm-bar-wrap">
         <div class="rm-bar-bg">
           <div class="rm-seg grn" style="flex:1292"></div>
+          <div class="rm-seg amb" style="flex:14"></div>
           <div style="flex:194;background:var(--deep-pale2)"></div>
         </div>
         <div class="rm-bar-note">
-          <strong style="color:var(--grn)">1,292.3 MT received</strong> Â·
-          <strong style="color:var(--amber)">13.9 MT in transit</strong> Â·
+          <strong style="color:var(--grn)">1,292.3 MT received</strong> ·
+          <strong style="color:var(--amber)">13.9 MT in transit</strong> ·
           <strong style="color:var(--txt3)">193.7 MT not ordered - drawings pending from DLF</strong>
         </div>
       </div>
       <div class="rm-month-val">
-        <div class="rm-val-num" style="color:var(--grn)">86%</div>
+        <div class="rm-val-num" style="color:var(--grn)">87%</div>
         <div class="rm-val-lbl">of plan covered</div>
       </div>
     </div>
@@ -673,11 +848,11 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <div class="action-num">1</div>
       <div class="action-body">
         <div class="action-title">Resequence the C218 shop floor - fabricate phases where RM is already at plant</div>
-        <div class="action-desc">C218 has 6,834 MT of raw material sitting at the plant right now. June and July plans were structured around specific phases - but the 360 MT and 193 MT gaps are specific phases whose RM hasn't arrived, not the whole plant. PPC and Production Planning must immediately identify which C218 phases have RM in hand and weren't in the June/July sequence, and pull those into the vacant fabrication slots. The factory stays at capacity. Output still counts toward C218 tonnage. No idle bays, no idle labour.</div>
-        <div class="action-contact">Escalate to: <strong>Vinay Kumar Singh</strong> (C218 PM) + <strong>PPC Head</strong></div>
+        <div class="action-desc">C218 has 6,778 MT of raw material sitting at the plant right now. June and July plans were structured around specific phases - but the 360 MT and 193 MT gaps are specific phases whose RM hasn't arrived, not the whole plant. PPC and Production Planning must immediately identify which C218 phases have RM in hand and weren't in the June/July sequence, and pull those into the vacant fabrication slots. The factory stays at capacity. Output still counts toward C218 tonnage. No idle bays, no idle labour.</div>
+        <div class="action-contact">Escalate to: <strong>Ajay Kumar</strong> (C218 PM) + <strong>PPC Head</strong></div>
         <div class="action-btn-row">
-          <a class="action-btn mail" href="mailto:vinay.kumar@jssl.in?cc=ppc.head@jssl.in&subject=C218 - Shop Floor Resequencing Required - June/July RM Gap&body=Vinay,%0A%0AJSSL has 6%2C778 MT of C218 RM at plant. June plan has a 360 MT gap and July has a 193 MT gap due to delayed DLF drawings. Shop floor must be resequenced immediately to fabricate C218 phases where RM is in hand.%0A%0ARequired:%0A1. Identify all C218 phases with RM received but not in June/July schedule%0A2. Pull those phases into vacant June/July fabrication slots%0A3. Confirm revised production schedule by 18 May 2026%0A%0AThis prevents idle capacity and keeps C218 output on track.%0A%0ARegards">&#9993; Mail Vinay + PPC</a>
-          <a class="action-btn internal" href="mailto:ppc.head@jssl.in?subject=C218 - Urgent: RM Phase Mapping Required&body=PPC Head%2C%0A%0APlease map all C218 phases against current RM stock (6%2C778 MT at plant as of 12 May 2026). Identify phases with RM available but not scheduled in June/July. Share list by 17 May 2026.">&#9881; Task PPC - Phase Mapping</a>
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C218 - Shop Floor Resequencing Required - '+TODAY_STR;const b='Ajay,\n\nJSSL has 6,778 MT of C218 RM at plant as of '+TODAY_STR+'. June plan has a 360.6 MT gap and July has a 193.7 MT gap. Shop floor must be resequenced to fabricate C218 phases where RM is in hand.\n\nRequired by '+IN_3_DAYS+':\n1. Identify all C218 phases with RM received but not in June/July schedule\n2. Pull those phases into vacant fabrication slots\n3. Confirm revised production schedule\n\nRegards';window.location.href='mailto:ajay.singh@jssl.in?cc=ppc.head@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Ajay + PPC</a>
+          <a class="action-btn internal" href="javascript:void(0)" onclick="(function(){const s='C218 - Urgent: RM Phase Mapping Required - '+TODAY_STR;const b='PPC Head,\n\nPlease map all C218 phases against current RM stock (6,778 MT at plant as of '+TODAY_STR+'). Share list by '+IN_3_DAYS+'.';window.location.href='mailto:ppc.head@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9881; Task PPC - Phase Mapping</a>
         </div>
       </div>
     </div>
@@ -687,10 +862,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <div class="action-body">
         <div class="action-title">Pre-schedule the 554.3 MT delayed RM into August - lock the slots now</div>
         <div class="action-desc">The 360 MT June gap and 193 MT July gap steel will arrive in August-September when the delayed drawings are eventually released and MTOs raised. Rather than letting that steel land without a production slot, Production Planning must lock August fabrication slots for these phases now. This prevents a pile-up in August where delayed C218 steel competes with regular August production. Schedule it, resource it, and commit the bays in advance so when the RM lands, fabrication starts same week.</div>
-        <div class="action-contact">Escalate to: <strong>Vinay Kumar Singh</strong> (C218 PM) + <strong>Production Planning Head</strong></div>
+        <div class="action-contact">Escalate to: <strong>Ajay Kumar</strong> (C218 PM) + <strong>Production Planning Head</strong></div>
         <div class="action-btn-row">
-          <a class="action-btn mail" href="mailto:vinay.kumar@jssl.in?subject=C218 - Pre-Schedule August Slots for Delayed June/July RM&body=Vinay%2C%0A%0AThe 360 MT June gap and 193 MT July gap (total 554.3 MT) will arrive in August-September once DLF releases outstanding drawings and MTOs are raised.%0A%0AAction required:%0A1. Reserve August fabrication slots for these 554.3 MT now%0A2. Pre-assign bays%2C manpower and crane allocation%0A3. Ensure August plan can absorb this without disrupting regular August schedule%0A%0ATarget: Production plan updated by 20 May 2026.%0A%0ARegards">&#9993; Mail Vinay - Lock August Slots</a>
-          <a class="action-btn internal" href="mailto:production.planning@jssl.in?subject=C218 - August Capacity Pre-Allocation for 554.3 MT Delayed RM&body=Production Planning%2C%0A%0AApprox 554.3 MT of C218 RM (June gap 360 MT + July gap 193 MT) will arrive August-September. Please pre-allocate fabrication capacity in August to absorb this without disrupting the regular August plan. Confirm availability by 20 May 2026.">&#9881; Task Production Planning</a>
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C218 - Pre-Schedule August Slots for Delayed RM - '+TODAY_STR;const b='Ajay,\n\n554.3 MT of C218 RM (360.6 MT June gap + 193.7 MT July gap) will arrive August-September. Please reserve August fabrication slots now. Confirm by '+IN_5_DAYS+'.\n\nRegards';window.location.href='mailto:ajay.singh@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Ajay - Lock August Slots</a>
+          <a class="action-btn internal" href="javascript:void(0)" onclick="(function(){const s='C218 - August Capacity Pre-Allocation - '+TODAY_STR;const b='Production Planning,\n\n554.3 MT of C218 RM will arrive August-September. Pre-allocate fabrication capacity in August. Confirm by '+IN_5_DAYS+'.';window.location.href='mailto:production.planning@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9881; Task Production Planning</a>
         </div>
       </div>
     </div>
@@ -700,10 +875,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <div class="action-body">
         <div class="action-title">Start the monthly DLF delay update - first one goes today</div>
         <div class="action-desc">Send a factual, data-driven monthly update to the DLF Project Manager and client today. No accusation, no legal language - just numbers, dates, and a simple request to do better next month. This month: drawings overdue by 44 days, 360 MT June production blocked, 635 members on hold awaiting return approvals, 8,982 DO hours consumed in rework. The goal is to build a timestamped email thread that accumulates over the project life. When JSSL raises the variation claim based on ECN hours at project close, this thread becomes the evidence that DLF was informed every month and chose to continue the same behaviour.</div>
-        <div class="action-contact">Send via: <strong>Vinay Kumar Singh</strong> (C218 PM) to DLF Project Coordinator Â· CC: <strong>Deepak</strong> (JSSL Reporting)</div>
+        <div class="action-contact">Send via: <strong>Ajay Kumar</strong> (C218 PM) to DLF Project Coordinator · CC: <strong>Deepak</strong> (JSSL Reporting)</div>
         <div class="action-btn-row">
-          <a class="action-btn escalate" href="mailto:dlf.projectcoordinator@dlf.in?cc=vinay.kumar@jssl.in,deepak@jssl.in&subject=C218 - Monthly Project Update - May 2026 - Drawing Delays and Production Impact&body=Dear Sir/Madam%2C%0A%0AThis is JSSL's monthly project update for C218 - DLF Downtown Phase 2%2C Mall of India%2C Gurugram.%0A%0ASTATUS AS OF 15 MAY 2026%0A%0A1. DRAWINGS%0A- Drawings for June production phases (Indent 887) were due by 1 March 2026%0A- Status: Not received as of 15 May 2026 (44 days overdue)%0A- Impact: 360 MT of June production plan cannot be executed%0A%0A2. ASSEMBLY HOLDS%0A- 1%2C202 members currently on hold across DT8 and MOIG zones%0A- 635 members held after production had started - labour already expended%0A- Awaiting return approvals from DLF on held drawings%0A%0A3. DESIGN OFFICE REWORK%0A- 8%2C982 man-hours consumed in rework due to 24 ECN/DCN change events since Jan 2025%0A- All change events attributed to client-issued revisions%0A%0AREQUESTS FOR JUNE 2026%0A- Release of outstanding drawings for Indent 887 phases immediately%0A- Return approvals on all 635 post-production hold members by 22 May 2026%0A%0AWe look forward to your support in resolving these items.%0A%0ARegards%0AVinay Kumar Singh%0AProject Manager - C218%0AJSSL">&#128394; Send Monthly Update to DLF</a>
-          <a class="action-btn mail" href="mailto:deepak@jssl.in?cc=vinay.kumar@jssl.in&subject=C218 - Monthly Update Sent to DLF - May 2026&body=Deepak%2C%0A%0AMonthly delay update for C218 has been sent to DLF Project Coordinator today (15 May 2026).%0A%0AKey items flagged:%0A- 44 days drawing delay (Indent 887 phases)%0A- 360 MT June production blocked%0A- 635 post-production holds awaiting return approvals%0A- 8%2C982 DO rework hours (24 ECN events)%0A%0AThis is part of the monthly communication trail being built for the variation claim at project close.%0A%0ARegards">&#9993; Inform Deepak (Reporting)</a>
+          <a class="action-btn escalate" href="javascript:void(0)" onclick="(function(){const s='C218 - Monthly Project Update - '+TODAY_STR;const b='Dear Sir/Madam,\n\nThis is JSSL monthly project update for C218 - DLF Downtown Phase 2.\n\nSTATUS AS OF '+TODAY_STR+':\n1. DRAWINGS - 360.6 MT of June plan affected due to drawings not available within 90-day 'drawing received-to-steel delivered' window\n2. ASSEMBLY HOLDS - 1,202 members were put on hold across DT8 and MOIG zones. 635 had already been in active fabrication when revision was issued.\n3. DESIGN OFFICE REWORK - 8,982 man-hours consumed in rework due to 24 ECN/DCN change events since Jan 2025\n\nREQUESTS:\n- Release of outstanding drawings for Indent 887 phases immediately\n- Return approvals on all post-production hold members by '+IN_7_DAYS+'\n\nRegards\nAjay Kumar Singh\nProject Manager - C218\nJSSL';window.location.href='mailto:dlf.projectcoordinator@dlf.in?cc=ajay.singh@jssl.in,deepak@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#128394; Send Monthly Update to DLF</a>
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C218 - Monthly Update Sent to DLF - '+TODAY_STR;const b='Deepak,\n\nMonthly delay update for C218 sent to DLF today ('+TODAY_STR+').\n\nKey items flagged:\n- 360.6 MT June production gap\n- 1,202 hold events, 635 post-production\n- 8,982 DO rework hours (24 ECN events)\n\nThis is part of the evidence trail for the variation claim at project close.\n\nRegards';window.location.href='mailto:deepak@jssl.in?cc=ajay.singh@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Inform Deepak (Reporting)</a>
         </div>
       </div>
     </div>
@@ -713,10 +888,10 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   <!-- FORMAL NOTICE -->
   <div id="sec-notice" class="sec-hdr"><div class="sec-hdr-title">Formal notice to be issued to DLF</div></div>
   <div class="notice-card">
-    <div class="notice-label">Draft Notice Â· DN/C218/2026/001</div>
+    <div class="notice-label">Draft Notice · DN/C218/2026/001</div>
     <div class="notice-body" id="noticeText">
       <strong>To:</strong> DLF Project Coordinator, B.L. Kashyap &amp; Sons Ltd<br>
-      <strong>CC:</strong> Vinay Kumar Singh (C218 Project Manager, JSSL) &middot; Deepak (JSSL Reporting)<br>
+      <strong>CC:</strong> Ajay Kumar (C218 Project Manager, JSSL) &middot; Deepak (JSSL Reporting)<br>
       <strong>Subject:</strong> Formal Record of Client-Caused Rework Burden - C218 DLF Downtown Phase 2<br>
       <strong>Ref:</strong> DN/C218/2026/001 &nbsp;|&nbsp; Date: 15 May 2026<br><br>
 
@@ -725,7 +900,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       This notice formally records the cumulative impact of client-issued drawing revisions and change orders on JSSL's Design Office and production operations for the above project, from January 2025 to date.<br><br>
 
       <strong>1. DRAWING RELEASE DELAY - CURRENT</strong><br>
-      Structural drawings for June 2026 production phases (Indent 887) were required to be available by 1 March 2026 to allow JSSL to raise MTOs and POs within the 90-day steel procurement window. For <strong>360.6 MT</strong> of the June plan, drawings were either not received or received after this window had closed. As a direct consequence, no RM has been ordered for these phases and JSSL's June production plan is short by <strong>360.6 MT</strong> with no recovery path within the month.<br><br>
+      Structural drawings for June 2026 production phases (Indent 887) were required to be available by 1 March 2026 to allow JSSL to raise MTOs and POs within the 90-day 'drawing received-to-steel delivered' window. For <strong>360.6 MT</strong> of the June plan, drawings were either not received or received after this window had closed. As a direct consequence, no RM has been ordered for these phases and JSSL's June production plan is short by <strong>360.6 MT</strong> with no recovery path within the month.<br><br>
 
       <strong>2. DESIGN OFFICE REWORK - CUMULATIVE BURDEN</strong><br>
       Since January 2025, DLF has issued 9 formal Engineering Change Notices (ECNs) and 15 additional informal change events against this project. The cumulative impact on JSSL's Design Office:<br><br>
@@ -772,7 +947,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       JSSL reserves all rights in connection with the above and will raise formal variation claims for recoverable costs in accordance with the contract. This notice serves as a formal record that DLF has been made aware of these cumulative impacts.<br><br>
 
       For JSW Severfield Structures Ltd<br>
-      Vinay Kumar Singh | Project Manager - C218
+      Ajay Kumar | Project Manager - C218
     </div>
     <div class="notice-footer">
       <div class="notice-note">&#9432; Issue this notice to protect JSSL's position</div>
@@ -824,7 +999,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     </div>
   </div>
 
-  <div class="page-footer">C218 Â· DLF Downtown Ph.2, Mall of India Â· JSW Severfield Structures Ltd Â· 15 May 2026</div>
+  <div class="page-footer">C218 · DLF Downtown Ph.2, Mall of India · JSW Severfield Structures Ltd · 15 May 2026</div>
 </div>
 
 <div class="toast-wrap" id="toastWrap"></div>
@@ -846,7 +1021,7 @@ function copyNotice() {
   const btn = document.getElementById('copyNoticeBtn');
   try { navigator.clipboard.writeText(txt); } catch(e) {}
   btn.classList.add('copied');
-  btn.innerHTML = 'âœ“ Copied';
+  btn.innerHTML = '✓ Copied';
   setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = '&#128203; Copy Notice'; }, 2500);
   showToast('Notice copied - ready to send');
 }
@@ -854,7 +1029,7 @@ function copyNotice() {
 function fireNotice() {
   const btn = document.getElementById('noticeFire');
   btn.className = 'sit-btn fired';
-  btn.innerHTML = 'âœ“ Notice issued and logged';
+  btn.innerHTML = '✓ Notice issued and logged';
   showToast('Formal notice issued and recorded');
 }
 
@@ -862,44 +1037,63 @@ function showToast(msg) {
   const w = document.getElementById('toastWrap');
   const t = document.createElement('div');
   t.className = 'toast';
-  t.innerHTML = `<span>âœ“</span><span>${msg}</span>`;
+  t.innerHTML = `<span>✓</span><span>${msg}</span>`;
   w.appendChild(t);
   setTimeout(() => { t.style.transition = 'opacity .3s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3200);
 }
 
 
-// â”€â”€ ACTION MODAL DATA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+// ── IST DATE UTILITIES ────────────────────────────────────────────────────
+function getIST() {
+  return new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
+}
+function fmtDate(d) {
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+}
+function addDays(d, n) { const r = new Date(d); r.setDate(r.getDate() + n); return r; }
+const _T = getIST();
+const TODAY_STR    = fmtDate(_T);
+const IN_3_DAYS    = fmtDate(addDays(_T, 3));
+const IN_5_DAYS    = fmtDate(addDays(_T, 5));
+const IN_7_DAYS    = fmtDate(addDays(_T, 7));
+const IN_10_DAYS   = fmtDate(addDays(_T, 10));
+const IN_14_DAYS   = fmtDate(addDays(_T, 14));
+const MONTH_END    = fmtDate(new Date(_T.getFullYear(), _T.getMonth()+1, 0));
+
+// ── ACTION MODAL DATA ──────────────────────────────────────────────────────
 const ACTION_PLANS = {
   B1: {
     eyebrow: `June RM Gap - 360.6 MT Unordered`,
-    title: `June - 360.6 MT of steel was never ordered - drawings not available within the procurement window`,
+    title: `June - 360.6 MT of steel was never ordered - drawings not available within the 90-day 'drawing received-to-steel delivered' window`,
     internal: [
       {
         who: `Design Office Head`,
-        what: `DLF did release drawings for some phases under Indent 887 on time - and JSSL ordered that steel (639.4 MT received or in transit). The 360.6 MT gap is specifically the phases where drawings were either not released or released too late for JSSL to raise an MTO within the procurement window. Prepare a gap list: which phases are missing, what drawing sheet numbers were expected, and the original committed date. This is JSSL's evidence - it must distinguish between phases DLF delivered on and phases they did not.`,
-        when: `By 29 May 2026`, color: `red`
+        what: `DLF did release drawings for some phases under Indent 887 on time - and JSSL ordered that steel (639.4 MT received or in transit). The 360.6 MT gap is specifically the phases where drawings were either not released or released too late for JSSL to raise an MTO within the 90-day 'drawing received-to-steel delivered' window. Prepare a gap list: which phases are missing, what drawing sheet numbers were expected, and the original committed date. This is JSSL's evidence - it must distinguish between phases DLF delivered on and phases they did not.`,
+        when: `By ${IN_3_DAYS}`, color: `red`
       },
       {
         who: `Procurement / PPC`,
-        what: `The procurement chain is sequential and cannot be bypassed - drawings must first complete Detailing, then MTO is raised, then Indent, then PR, then Price Approval, and only then PO. Each step depends on the one before it. The only step that can be pre-positioned today: initiate internal price approvals with shortlisted mills for the likely HR plate profiles based on adjacent phases already ordered. Get indicative quotes and run them through the internal approval process now, so when the PR is eventually raised, price approval is not a bottleneck. Also request mills to hold tentative capacity for an expected indent.`,
-        when: `By 31 May 2026`, color: `red`
+        what: `The procurement chain is sequential and cannot be bypassed - drawings must first complete Detailing, then MTO is raised, then Indent, then PR, then Price Approval, and only then PO. Each step depends on the one before it. The only step that can be pre-positioned today: initiate price approvals with shortlisted mills for the likely HR plate profiles based on adjacent phases already ordered. Get indicative quotes and run them through the mill approval process now, so when the PR is eventually raised, price approval from the mill is not a bottleneck.`,
+        when: `By ${IN_5_DAYS}`, color: `red`
       },
       {
         who: `Production Planning`,
         what: `Replan June around 610.3 MT (589.1 MT received + 21.2 MT in transit). Remove the 360.6 MT gap phases from the June schedule - no production slots, no resource allocation. The freed-up shop floor capacity must not sit idle - immediately identify other projects whose RM is already at plant and pull their phases into the vacant June slots. As of 12 May 2026, significant RM is available at plant for C229 (1,961 MT), C233 (1,641 MT), C255 (1,661 MT), C258 (1,308 MT) and C240 (1,038 MT). Coordinate with respective project PMs to confirm which phases can be advanced and slot them into the C218 gap weeks.`,
-        when: `By 30 May 2026`, color: `red`
+        when: `By ${IN_3_DAYS}`, color: `red`
       }
     ],
     external: [
       {
         who: `Project Manager (C218)`,
         what: `Issue a targeted Delay Notice to DLF. Be precise: JSSL acknowledges drawings released on time for phases that are covered (639.4 MT ordered and received). However, for the remaining Indent 887 phases, drawings were either not received or received after the 1 March 2026 window required for JSSL to raise MTOs and POs in time for June production. These specific missing phases have resulted in 360.6 MT of June plan being unorderable. Request immediate release of the outstanding drawings at the earliest.`,
-        when: `Today - 15 May 2026`, color: `red`
+        when: `Today - ${TODAY_STR}`, color: `red`
       },
       {
         who: `Project Manager (C218)`,
         what: `Follow up directly with DLF's structural consultant to check if outstanding drawings are stuck in their internal review. Sometimes drawings are ready but held in the client's approval process. If so, escalate within DLF - the bottleneck may be an internal sign-off, not a design issue.`,
-        when: `By 29 May 2026`, color: `warn`
+        when: `By ${IN_3_DAYS}`, color: `warn`
       }
     ]
   },
@@ -910,24 +1104,24 @@ const ACTION_PLANS = {
       {
         who: `Shop Floor / Production`,
         what: `Generate a current hold list with 3 columns: (1) members actively on hold awaiting DLF return approval, (2) members where DLF has sent revised drawings but FD rework is pending, (3) members fully deleted by DLF (286 members, 123.1 MT). The third category is done - no recovery. The first two need to be sequenced for fastest release once approvals come in.`,
-        when: `By 29 May 2026`, color: `red`
+        when: `By ${IN_3_DAYS}`, color: `red`
       },
       {
         who: `Design Office Head`,
         what: `For every held member awaiting return approval from DLF, log: (1) the drawing issue number sent to DLF for approval, (2) date sent, (3) days elapsed without response. Any item over 14 days without response should be escalated immediately. The DO should not restart work on any held member without written return approval in hand.`,
-        when: `Ongoing - report weekly`, color: `warn`
+        when: `Weekly from ${TODAY_STR}`, color: `warn`
       },
       {
         who: `Commercial Team`,
         what: `Quantify the hold cost: idle labour hours on held members, crane standby time, yard occupation cost per MT per day for the 123.1 MT of deleted steel. This is the starting point for any future claim. The deleted steel (123.1 MT, 286 members, all fully fabricated) is the strongest single item - DLF cannot dispute that JSSL built what DLF asked for and then removed it.`,
-        when: `By 5 June 2026`, color: `warn`
+        when: `By ${IN_10_DAYS}`, color: `warn`
       }
     ],
     external: [
       {
         who: `Project Manager (C218)`,
         what: `Write to DLF with a Hold Status Report: total members on hold, which zones (DT8 and MOIG), how long each has been held, and which items are waiting for DLF's return approval. Request DLF to provide return approvals for all pending items within 7 days. Be factual, not accusatory - the data speaks for itself.`,
-        when: `By 31 May 2026`, color: `red`
+        when: `By ${IN_5_DAYS}`, color: `red`
       }
     ]
   },
@@ -937,25 +1131,25 @@ const ACTION_PLANS = {
     internal: [
       {
         who: `Design Office Head`,
-        what: `Track drawing release status for the phases under Indents 947, 920-931, 957. These indents cover July phases 5, 9, 13, 31-41. For each missing drawing, record the committed release date and how many days overdue it is. Update weekly. Note: July production for these 193.7 MT is already lost - the 90-day procurement window passed on 1 April 2026. The purpose of tracking now is to build the evidence record and plan for August-September recovery.`,
-        when: `Weekly from 15 May`, color: `warn`
+        what: `Track drawing release status for the phases under Indents 947, 920-931, 957. These indents cover July phases 5, 9, 13, 31-41. For each missing drawing, record the committed release date and how many days overdue it is. Update weekly. Note: July production for these 193.7 MT is already lost - the 90-day 'drawing received-to-steel delivered' window passed on 1 April 2026. The purpose of tracking now is to build the evidence record and plan for August-September recovery.`,
+        when: `Weekly from ${TODAY_STR}`, color: `warn`
       },
       {
         who: `Procurement / PPC`,
-        what: `July production for the 193.7 MT gap is already lost regardless of when drawings arrive. However, to minimise further slippage into August-September, initiate price approvals internally with mills now for the likely profiles under Indents 947, 920-931, 957 based on adjacent phases already ordered. This is the only step that can be pre-positioned before drawings arrive. When drawings do arrive, ensure Detailing, MTO, Indent and PR are completed without delay so the pre-approved prices can be used immediately.`,
-        when: `Price approvals by 25 May`, color: `warn`
+        what: `July production for the 193.7 MT gap is already lost regardless of when drawings arrive. However, to minimise further slippage into August-September, initiate price approvals with mills now for the likely profiles under Indents 947, 920-931, 957 based on adjacent phases already ordered. This is the only step that can be pre-positioned before drawings arrive. When drawings do arrive, ensure Detailing, MTO, Indent and PR are completed without delay so the pre-approved prices can be used immediately.`,
+        when: `Price approvals by ${IN_10_DAYS}`, color: `warn`
       },
       {
         who: `Production Planning`,
         what: `July plan is currently 87% covered - a manageable position. Confirm that the 1,292.3 MT received is correctly phased against the July production sequence. Identify if any of the 193.7 MT gap is on the critical path - if so, escalate immediately.`,
-        when: `By 2 June 2026`, color: `warn`
+        when: `By ${IN_5_DAYS}`, color: `warn`
       }
     ],
     external: [
       {
         who: `Project Manager (C218)`,
-        what: `Write to DLF formally recording that the 193.7 MT July production gap exists because drawings for Indents 947, 920-931, 957 were not available within the procurement window. State clearly: July production for these phases is already lost. The purpose of this letter is to formally put on record that the shortfall is attributable to delayed drawing release, not to JSSL's fabrication or procurement performance. Request drawings at the earliest to limit further slippage into August and beyond.`,
-        when: `By 2 June 2026`, color: `warn`
+        what: `Write to DLF formally recording that the 193.7 MT July production gap exists because drawings for Indents 947, 920-931, 957 were not available within the 90-day 'drawing received-to-steel delivered' window. State clearly: July production for these phases is already lost. The purpose of this letter is to formally put on record that the shortfall is attributable to delayed drawing release, not to JSSL's fabrication or procurement performance. Request drawings at the earliest to limit further slippage into August and beyond.`,
+        when: `By ${IN_5_DAYS}`, color: `warn`
       }
     ]
   }
@@ -997,7 +1191,20 @@ function openActionModal(id) {
   });
   bodyHTML += '</div></div>';
 
+  // On mobile, inject tab bar and hide external track by default
+  const isMob = window.innerWidth <= 430;
+  if (isMob) {
+    bodyHTML = `<div class="am-tab-bar">
+      <button class="am-tab internal active" onclick="switchAmTab('internal',this)">&#9881; Internal</button>
+      <button class="am-tab external" onclick="switchAmTab('external',this)">&#128394; External (PM)</button>
+    </div>` + bodyHTML;
+  }
   document.getElementById('amBody').innerHTML = bodyHTML;
+  // On mobile, hide external track initially
+  if (isMob) {
+    const tracks = document.querySelectorAll('#amBody .am-track');
+    if (tracks.length >= 2) tracks[1].classList.add('mob-hidden');
+  }
   document.getElementById('amCopyBtn').classList.remove('copied');
   document.getElementById('amCopyBtn').innerHTML = '&#128203; Copy All Actions';
   document.getElementById('amOverlay').classList.add('open');
@@ -1038,12 +1245,71 @@ function copyAMContent() {
 
 
 
-// â”€â”€ SCROLL TO TOP BUTTON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+// ── MOBILE DRAWER ─────────────────────────────────────────────────────────
+function openMobDrawer() {
+  const d = document.getElementById('mobDrawer');
+  if (!d) return;
+  d.classList.add('open');
+  // Update dates in drawer
+  const dd = document.getElementById('drawerDataDate');
+  const dt = document.getElementById('drawerToday');
+  if (dd) { const el = document.getElementById('dataAsOf');
+    dd.textContent = el ? el.textContent.replace('Data as of ','') : TODAY_STR; }
+  if (dt) {
+    const ist = getIST();
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    dt.textContent = days[ist.getDay()] + ', ' + ist.getDate() + ' ' + months[ist.getMonth()] + ' ' + ist.getFullYear();
+  }
+}
+function closeMobDrawer() {
+  const d = document.getElementById('mobDrawer');
+  if (!d) return;
+  d.classList.remove('open');
+}
+function mobSwitchProj(code, name, status, el) {
+  // Update active state in drawer
+  document.querySelectorAll('.mob-proj-opt').forEach(o => o.classList.remove('active'));
+  el.classList.add('active');
+  // Delegate to main switchProj
+  const mainEl = document.querySelector('.proj-opt[onclick*="' + code + '"]');
+  switchProj(code, name, status, mainEl || el);
+  closeMobDrawer();
+}
+
+
+// ── PASSWORD GATE ─────────────────────────────────────────────────────────
+const _PW_HASH = '69613311238673e8d3d8033d0927360a99d0ba06389f26ce34bb740153445b40';
+async function checkPw() {
+  const val = document.getElementById('pwInput').value;
+  const err = document.getElementById('pwErr');
+  if (!val) { err.textContent = 'Please enter the password.'; return; }
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(val));
+  const hex = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  if (hex === _PW_HASH) {
+    document.getElementById('pwGate').classList.add('unlocked');
+  } else {
+    err.textContent = 'Incorrect password. Please try again.';
+    document.getElementById('pwInput').value = '';
+    document.getElementById('pwInput').focus();
+  }
+}
+// Focus input on load
+document.addEventListener('DOMContentLoaded', function() {
+  const inp = document.getElementById('pwInput');
+  if (inp) inp.focus();
+});
+
+// ── SCROLL TO TOP BUTTON ───────────────────────────────────────────────────
 window.addEventListener('scroll', function() {
   const btn = document.getElementById('scrollTopBtn');
   if (btn) btn.classList.toggle('visible', window.scrollY > 300);
 });
-// â”€â”€ SMOOTH SCROLL TO SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeMobDrawer(); closeActionModal(); }
+});
+// ── SMOOTH SCROLL TO SECTION ──────────────────────────────────────────────
 function smoothScrollTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -1051,11 +1317,38 @@ function smoothScrollTo(id) {
   window.scrollTo({ top: top, behavior: 'smooth' });
 }
 
-// â”€â”€ HOLD BAR TOOLTIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+
+// ── HOLD OUTCOME TOGGLE ────────────────────────────────────────────────────
+function toggleOutcome() {
+  const panel = document.getElementById('hbcOutcome');
+  const btn   = document.getElementById('hbcExpandBtn');
+  const open  = panel.classList.toggle('open');
+  btn.innerHTML = open ? '&#8722; Hide outcome breakdown' : '&#43; See outcome breakdown';
+}
+
+
+// ── MODAL TAB SWITCHER (mobile) ────────────────────────────────────────────
+function switchAmTab(which, btn) {
+  // Update tab active states
+  document.querySelectorAll('.am-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  // Show/hide tracks
+  const tracks = document.querySelectorAll('#amBody .am-track');
+  if (tracks.length < 2) return;
+  if (which === 'internal') {
+    tracks[0].classList.remove('mob-hidden');
+    tracks[1].classList.add('mob-hidden');
+  } else {
+    tracks[0].classList.add('mob-hidden');
+    tracks[1].classList.remove('mob-hidden');
+  }
+}
+
+// ── HOLD BAR TOOLTIP ───────────────────────────────────────────────────────
 document.querySelectorAll('.hbc-seg').forEach(seg => {
   seg.addEventListener('mouseenter', function(e) {
     const tip = document.getElementById('hbcTooltip');
-    tip.innerHTML = `<strong>${this.dataset.label} - ${this.dataset.count} members (${this.dataset.pct}%)</strong><br>${this.dataset.desc}`;
+    tip.innerHTML = `<strong>${this.dataset.label} — ${this.dataset.count} members (${this.dataset.pct}%)</strong><br>${this.dataset.desc}`;
     tip.style.display = 'block';
   });
   seg.addEventListener('mousemove', function(e) {
@@ -1069,7 +1362,7 @@ document.querySelectorAll('.hbc-seg').forEach(seg => {
   });
 });
 
-// â”€â”€ BLOCKED ACTION HANDLER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── BLOCKED ACTION HANDLER ─────────────────────────────────────────────────
 function fireBlockedAction(btn, to, msg) {
   btn.classList.add('fired');
   btn.innerHTML = '&#10003; Sent';
@@ -1095,7 +1388,7 @@ function updateISTDate() {
 updateISTDate();
 setInterval(updateISTDate, 60000);
 
-// â”€â”€ PROJECT SWITCHER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// ── PROJECT SWITCHER ────────────────────────────────────────────
 function toggleProjDD() {
   const dd = document.getElementById('projDD');
   const sel = document.getElementById('projSel');
@@ -1112,262 +1405,48 @@ document.addEventListener('click', function(e) {
 function switchProj(code, name, status, el) {
   document.getElementById('projCode').textContent = code;
   document.getElementById('projName').textContent = name;
+  // Update mobile bar
+  const mc = document.getElementById('mobProjCode');
+  const mn = document.getElementById('mobProjName');
+  if (mc) mc.textContent = code;
+  if (mn) mn.textContent = name;
   document.getElementById('projDot').style.background = status === 'red' ? 'var(--red)' : 'var(--amber)';
   document.querySelectorAll('.proj-opt').forEach(o => o.classList.remove('active'));
   el.classList.add('active');
   document.getElementById('projDD').classList.remove('show');
   document.getElementById('projSel').classList.remove('open');
-  const mainSnap = document.querySelector('.snapshot');
-  const mainPage = document.querySelector('.page');
-  const c244Div = document.getElementById('c244-page');
+    if (code === 'C229') {
+    var snap = document.querySelector('.snapshot');
+    var page = document.querySelector('.page');
+    if (snap) snap.style.display = 'none';
+    if (page) page.style.display = 'none';
+    var c218p = document.getElementById('c218-page'); if (c218p) c218p.style.display = 'none';
+    var c244p = document.getElementById('c244-page'); if (c244p) c244p.style.display = 'none';
+    var c229p = document.getElementById('c229-page'); if (c229p) c229p.style.display = 'block';
+    return;
+  }
   if (code === 'C244') {
-    if (mainSnap) mainSnap.style.display = 'none';
-    if (mainPage) mainPage.style.display = 'none';
-    if (c244Div) c244Div.style.display = 'block';
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
+    if (snap) snap.style.display = 'none';
+    if (page) page.style.display = 'none';
+    let c244 = document.getElementById('c244-page');
+    if (c244) {
+      c244.style.display = 'flex';
+    } else {
+      const el = document.getElementById('c244-page');
+      if (el) el.style.display = 'flex';
+    }
   } else {
-    if (mainSnap) mainSnap.style.display = '';
-    if (mainPage) mainPage.style.display = '';
-    if (c244Div) c244Div.style.display = 'none';
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
+    if (snap) snap.style.display = '';
+    if (page) page.style.display = '';
+    const c244 = document.getElementById('c244-page');
+    if (c244) c244.style.display = 'none';
   }
 }
 </script>
-
-
-<!-- C244 PROJECT PAGE -->
-<div id="c244-page" style="display:none">
-  <div class="snapshot">
-    <div class="snap-col">
-      <div class="snap-lbl">Client</div>
-      <div class="snap-val">Ashoka University</div>
-      <div class="snap-sub">PMC: Colliers International</div>
-    </div>
-    <div class="snap-col">
-      <div class="snap-lbl">Project Manager</div>
-      <div class="snap-val">Aftab Ansari</div>
-      <div class="snap-sub">C244 - JSSL</div>
-    </div>
-    <div class="snap-col">
-      <div class="snap-lbl">Total Scope</div>
-      <div class="snap-val">1,697 MT</div>
-      <div class="snap-sub">MTO01-08 active (MTO09 cancelled)</div>
-    </div>
-    <div class="snap-col">
-      <div class="snap-lbl">Scope Pipeline - 1,697 MT</div>
-      <div class="pipe">
-        <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">1,697 MT pending - fabrication not yet started</div>
-      </div>
-      <div class="pipe-legend">
-        <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div>
-        <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--amber)"></div>In-House + Subcon</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="page">
-    <div class="situation">
-      <div class="sit-headline">
-        C244 Ashoka University - RM ordered but ETAs are<br>
-        <span class="amber">July 2026</span> - June 418 MT production window at risk
-      </div>
-      <div class="sit-body" id="c244-briefText">
-        JSSL placed POs for June production in April 2026, but delivery ETAs are mostly July 2026, putting the <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('c244-sec-rm')"><strong>June plan of 418 MT (300 MT In-House + 118 MT Subcon) at risk</strong></a>. Both Indent 932 (In-House beams, PO 17 Apr) and Indent 933 (Subcon columns, PO 21 Apr) were raised only 41-45 days before June - inside the RED procurement risk window. A <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('c244-sec-cards')"><strong>formal ECN-002 was raised in May 2026</strong></a> by Ashoka University indicating active design changes. Client RFI responses for staircase and lift core drawings remain pending, affecting MTO completeness for future months.
-      </div>
-      <div class="sit-actions">
-        <button class="sit-btn primary" onclick="copyC244Brief()">&#128203; Copy this briefing</button>
-        <button class="sit-btn ghost" onclick="smoothScrollTo('c244-sec-actions')">&#9654; Actions to Take Ahead</button>
-      </div>
-    </div>
-
-    <div class="big3" id="c244-sec-cards">
-      <div class="big-card amber">
-        <div class="big-num">2</div>
-        <div class="big-label">ECNs raised to date</div>
-        <div class="big-sub">2 ECNs issued by Ashoka University as of May 2026. ECN-002 (May 2026) is the most recent. Rework hours being compiled - manhour register not yet available.</div>
-      </div>
-      <div class="big-card red">
-        <div class="big-num">418 MT</div>
-        <div class="big-label">June production at risk</div>
-        <div class="big-sub">300 MT In-House + 118 MT Subcon planned for June 2026. RM is ordered (P2 risk) but ETAs are primarily July. Material arriving after 30 June cannot be fabricated in June.</div>
-      </div>
-      <div class="big-card blue">
-        <div class="big-num">7+</div>
-        <div class="big-label">Client RFIs pending</div>
-        <div class="big-sub">Staircase and lift core drawings outstanding from client since Jan 2026. Without response by 31 May, August production enters the 90-day risk window.</div>
-      </div>
-    </div>
-
-    <div id="c244-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
-    <div class="blocked-list">
-      <div class="blocked-item crit">
-        <div class="blocked-icon icon-red">&#128683;</div>
-        <div class="blocked-body">
-          <div class="blocked-title">June In-House - 300 MT planned, RM ordered but ETAs July (Indent 932, PO 17 Apr - 45 days before June)</div>
-          <div class="blocked-desc">RED procurement risk classification. Most ETAs fall 25 Jun - 20 Jul. Of the 300 MT In-House plan, approximately 205 MT will not arrive before 30 June. Only ~95 MT received to date. June In-House fabrication window is substantially lost.</div>
-        </div>
-      </div>
-      <div class="blocked-item crit">
-        <div class="blocked-icon icon-red">&#128683;</div>
-        <div class="blocked-body">
-          <div class="blocked-title">June Subcon - 118 MT planned columns, RM ordered but ETAs July (Indent 933, PO 21 Apr - 41 days before June)</div>
-          <div class="blocked-desc">RED procurement risk. Subcon fabricator requires RM delivery before fabrication can begin. ETAs in July mean the entire 118 MT June subcon window is lost. Subcon July slot must be confirmed urgently with the fabricator.</div>
-        </div>
-      </div>
-      <div class="blocked-item high">
-        <div class="blocked-icon icon-amber">&#9888;</div>
-        <div class="blocked-body">
-          <div class="blocked-title">7+ RFIs pending from client - staircase and lift core drawings not received (since Jan 2026)</div>
-          <div class="blocked-desc">Reminders R1-R5 sent Jan-May 2026. Without these drawing packages, MTO for remaining phases cannot be completed. The 90-day window for August production requires drawing receipt by 31 May 2026.</div>
-        </div>
-      </div>
-    </div>
-
-    <div id="c244-sec-holds" class="sec-hdr"><div class="sec-hdr-title">Assembly holds status</div></div>
-    <div style="background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:20px 22px;box-shadow:var(--sh);margin-bottom:28px">
-      <div style="font-size:13px;font-weight:600;color:var(--txt);margin-bottom:8px">No assembly holds yet - project in pre-fabrication stage</div>
-      <div style="font-size:12px;color:var(--txt3);line-height:1.7">Fabrication has not yet started (RM ETAs June-July 2026). No holds logged. This section will populate when holds are first recorded.<br><br><strong style="color:var(--txt)">ECN status as of May 2026:</strong> 2 ECNs raised to date. ECN-002 (May 2026) issued by Ashoka University. Rework hours and affected tonnage are being compiled - manhour register upload pending from Design Office.</div>
-    </div>
-
-    <div id="c244-sec-rm" class="sec-hdr"><div class="sec-hdr-title">Raw material coverage vs plan - June and July 2026</div></div>
-    <div class="rm-card">
-      <div class="rm-hdr">
-        <div>
-          <div class="rm-hdr-title">RM coverage - C244 Ashoka University (In-House and Subcon separate)</div>
-          <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: PO Tracker - Indent 932 In-House beams - Indent 933 Subcon columns - Production Plan June-July 2026 - Data as of 12 May 2026</div>
-        </div>
-      </div>
-      <div class="rm-month-row">
-        <div>
-          <div class="rm-month-lbl">Jun</div>
-          <div class="rm-month-sub">In-House<br>300 MT<br>Ind: 932</div>
-        </div>
-        <div class="rm-bar-wrap">
-          <div class="rm-bar-bg">
-            <div class="rm-seg grn" style="flex:95"></div>
-            <div class="rm-seg amb" style="flex:205"></div>
-          </div>
-          <div class="rm-bar-note">
-            <strong style="color:var(--grn)">~95 MT received</strong> -
-            <strong style="color:var(--amber)">~205 MT ordered, ETAs July - PO 17 Apr, 45 days to June (RED)</strong>
-          </div>
-        </div>
-        <div class="rm-month-val">
-          <div class="rm-val-num" style="color:var(--red)">32%</div>
-          <div class="rm-val-lbl">in time</div>
-        </div>
-      </div>
-      <div class="rm-month-row">
-        <div>
-          <div class="rm-month-lbl">Jun</div>
-          <div class="rm-month-sub">Subcon<br>118 MT<br>Ind: 933</div>
-        </div>
-        <div class="rm-bar-wrap">
-          <div class="rm-bar-bg">
-            <div class="rm-seg amb" style="flex:118"></div>
-          </div>
-          <div class="rm-bar-note">
-            <strong style="color:var(--amber)">118 MT ordered, ETAs July - PO 21 Apr, 41 days to June (RED)</strong> -
-            <strong style="color:var(--txt3)">subcon cannot start until RM arrives</strong>
-          </div>
-        </div>
-        <div class="rm-month-val">
-          <div class="rm-val-num" style="color:var(--red)">0%</div>
-          <div class="rm-val-lbl">in time</div>
-        </div>
-      </div>
-      <div class="rm-month-row">
-        <div>
-          <div class="rm-month-lbl">Jul</div>
-          <div class="rm-month-sub">In-House<br>300 MT<br>Ind: 932</div>
-        </div>
-        <div class="rm-bar-wrap">
-          <div class="rm-bar-bg">
-            <div class="rm-seg grn" style="flex:255"></div>
-            <div style="flex:45;background:var(--deep-pale2)"></div>
-          </div>
-          <div class="rm-bar-note">
-            <strong style="color:var(--grn)">~255 MT ETAs arriving Jul - plan achievable if ETAs hold</strong> -
-            <strong style="color:var(--txt3)">~45 MT ETA late Jul, minor risk</strong>
-          </div>
-        </div>
-        <div class="rm-month-val">
-          <div class="rm-val-num" style="color:var(--amber)">85%</div>
-          <div class="rm-val-lbl">est. coverage</div>
-        </div>
-      </div>
-      <div class="rm-month-row">
-        <div>
-          <div class="rm-month-lbl">Jul</div>
-          <div class="rm-month-sub">Subcon<br>100 MT<br>Ind: 933,934</div>
-        </div>
-        <div class="rm-bar-wrap">
-          <div class="rm-bar-bg">
-            <div class="rm-seg grn" style="flex:80"></div>
-            <div style="flex:20;background:var(--deep-pale2)"></div>
-          </div>
-          <div class="rm-bar-note">
-            <strong style="color:var(--grn)">~80 MT ETAs in July window</strong> -
-            <strong style="color:var(--txt3)">~20 MT late - subcon lead time adds 1-2 weeks after RM receipt</strong>
-          </div>
-        </div>
-        <div class="rm-month-val">
-          <div class="rm-val-num" style="color:var(--amber)">80%</div>
-          <div class="rm-val-lbl">est. coverage</div>
-        </div>
-      </div>
-      <div class="rm-legend">
-        <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--grn)"></div>Received / ETA in time</div>
-        <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--amber)"></div>Ordered - ETA post month-end</div>
-        <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--deep-pale2)"></div>Uncertain / gap</div>
-      </div>
-    </div>
-
-    <div id="c244-sec-actions" class="sec-hdr"><div class="sec-hdr-title">What needs to happen now</div></div>
-    <div class="action-list">
-      <div class="action-item">
-        <div class="action-num">1</div>
-        <div class="action-body">
-          <div class="action-title">Accept June gap - replan around available RM and lock July shop floor capacity</div>
-          <div class="action-desc">June production is constrained - RM ETAs are July. Aftab Ansari to formally replan June around the ~95 MT In-House RM already received. Reserve shop floor bay and fabrication slots for July immediately so the full 418 MT July window is captured when material arrives. Document the ETA delay for JSSL project records.</div>
-          <div class="action-deadline">PM: Aftab Ansari - By 2 June 2026</div>
-        </div>
-      </div>
-      <div class="action-item">
-        <div class="action-num">2</div>
-        <div class="action-body">
-          <div class="action-title">Confirm subcon fabricator July slot - Indent 933 columns (Santosh Budanur)</div>
-          <div class="action-desc">Subcon fabricator needs advance notice to hold July capacity for Indent 933 columns. Contact santosh.budanur@jssl.in to confirm the fabrication slot is reserved. RM arrives July - without prior slot confirmation, subcon July production will slip to August.</div>
-          <div class="action-deadline">PM: Aftab Ansari - By 5 June 2026</div>
-        </div>
-      </div>
-      <div class="action-item">
-        <div class="action-num">3</div>
-        <div class="action-body">
-          <div class="action-title">Issue formal written reminder for staircase and lift core drawings to Colliers and Ashoka University</div>
-          <div class="action-desc">Reminders R1-R5 sent Jan-May 2026 - still no response. Issue a formal written notice to davneet.singh@colliers.com and devendra.gupta@ashoka.edu.in. Clearly state: JSSL requires these drawings by 31 May 2026. If not received, August production will be impacted and JSSL reserves the right to record this as a client-attributable delay.</div>
-          <div class="action-deadline">PM: Aftab Ansari - By 31 May 2026</div>
-        </div>
-      </div>
-    </div>
-
-    <div id="c244-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Evidence timeline</div></div>
-    <div class="proof-strip">
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">Dec 2025</div><div class="proof-text">First input drawings received from Ashoka University / Colliers International</div></div></div>
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">Jan 2026</div><div class="proof-text">JSSL issued GA drawing for approval. Reminder 1 sent for outstanding drawing packages (staircase, lift core)</div></div></div>
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">Feb - Mar 2026</div><div class="proof-text">Reminders R2-R5 sent for outstanding drawing packages. No response received from client.</div></div></div>
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">3 Apr 2026</div><div class="proof-text">MTO01-09 released by Design Office</div></div></div>
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">9 Apr 2026</div><div class="proof-text">Indents 932, 933, 934 raised by PPC. Total: 1,726.8 MT across all MTOs</div></div></div>
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">17-21 Apr 2026</div><div class="proof-text">POs placed - Indent 932 (17 Apr, In-House beams), Indent 933 and 934 (21 Apr, Subcon columns). Both in RED procurement risk zone for June.</div></div></div>
-      <div class="proof-step"><div class="proof-dot"></div><div class="proof-content"><div class="proof-date">4 May 2026</div><div class="proof-text">MTO-09 (bent plate) cancelled by client. Net scope: ~1,697 MT</div></div></div>
-      <div class="proof-step"><div class="proof-dot dot-red"></div><div class="proof-content"><div class="proof-date">7 May 2026</div><div class="proof-text"><strong>ECN-002 raised by Ashoka University</strong> - design change instruction. Rework hours and tonnage impact being compiled by Design Office.</div></div></div>
-      <div class="proof-step"><div class="proof-dot dot-amber"></div><div class="proof-content"><div class="proof-date">26 May 2026</div><div class="proof-text">467.1 MT received to date. June ETAs primarily July. Subcon July slot not yet confirmed. RFI responses still outstanding from client.</div></div></div>
-    </div>
-
-    <div class="page-footer" style="font-size:11px;color:var(--txt3);padding:20px 0 40px;text-align:center">
-      C244 Ashoka University - Data as of 12 May 2026 - Source: PO Tracker, Master Planning, ECN-002 document, Production Plan June-July 2026
-    </div>
-  </div>
-</div>
-<!-- END C244 PAGE -->
 
 <!-- ACTION MODAL -->
 <div class="am-overlay" id="amOverlay" onclick="closeAM(event)">
@@ -1386,6 +1465,307 @@ function switchProj(code, name, status, el) {
 
 
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+
+<!-- C244 PENDING PAGE -->
+<!-- C229 PROJECT PAGE -->
+<div id="c229-page" style="display:none">
+  <div class="snapshot">
+    <div class="snap-col">
+      <div class="snap-lbl">Client</div>
+      <div class="snap-val">DLF Limited</div>
+      <div class="snap-sub">DLF City Center Ltd.</div>
+    </div>
+    <div class="snap-col">
+      <div class="snap-lbl">Project Manager</div>
+      <div class="snap-val">Ajay Kumar Singh</div>
+      <div class="snap-sub">C229 - JSSL Design Office</div>
+    </div>
+    <div class="snap-col">
+      <div class="snap-lbl">Total Scope</div>
+      <div class="snap-val">11,024 MT</div>
+      <div class="snap-sub">Net of cancellations per MTO Register</div>
+    </div>
+    <div class="snap-col">
+      <div class="snap-lbl">Scope Pipeline - 11,024 MT</div>
+      <div class="pipe">
+        <div class="pipe-seg" style="width:40.6%;background:var(--grn)">4,476 MT produced</div>
+        <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">6,548 MT pending</div>
+      </div>
+      <div class="pipe-legend">
+        <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--grn)"></div>Produced</div>
+        <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <div class="situation">
+      <div class="sit-headline">
+        DLF City Center has accumulated <span class="red">3,829 hours</span> of Design Office rework across 10 change events since January 2025.
+      </div>
+      <div class="sit-body" id="c229-briefText">
+        Since January 2025, DLF City Center Ltd. has issued <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-cards')"><strong>10 change events consuming 3,829 Design Office hours</strong></a> and disrupting <strong>2,338 MT</strong> of steel in production. The most impacted item was a revised connection affecting 1,968 MT of steel in a single change event. A total of <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-holds')"><strong>349 steel members were placed on hold</strong></a> due to DLF drawing revisions - all holds were resolved by October 2025. No raw material coverage data is available for this project yet as a PO Tracker has not been uploaded to the data warehouse.
+      </div>
+      <div class="sit-actions">
+        <button class="sit-btn primary" onclick="(function(){var t=document.getElementById('c229-briefText');try{navigator.clipboard.writeText(t.innerText)}catch(e){}showToast('C229 briefing copied to clipboard')})()">&#128203; Copy this briefing</button>
+        <button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-notice')">&#128394; Issue Formal Notice to DLF</button>
+      </div>
+    </div>
+
+    <div class="big3" id="c229-sec-cards">
+      <div class="big-card red">
+        <div class="big-num">3,829 hrs</div>
+        <div class="big-label">Design hours lost to rework</div>
+        <div class="big-sub">Across 10 change events since January 2025, all caused by DLF City Center drawing revisions and structural changes.</div>
+      </div>
+      <div class="big-card amber">
+        <div class="big-num">2,338 MT</div>
+        <div class="big-label">Steel disrupted by design changes</div>
+        <div class="big-sub">Tonnage of steel that had to be stopped, revised, or reprocessed due to DLF changing the structural design after fabrication had started.</div>
+      </div>
+      <div class="big-card blue">
+        <div class="big-num">349</div>
+        <div class="big-label">Hold events raised on site steel</div>
+        <div class="big-sub">All 349 members placed on hold by DLF were resolved by October 2025. All holds were client-attributed drawing revisions.</div>
+      </div>
+    </div>
+
+    <div id="c229-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
+    <div class="blocked-list">
+      <div class="blocked-item high">
+        <div class="blocked-icon icon-amber">&#128202;</div>
+        <div class="blocked-body">
+          <div class="blocked-title">PO Tracker not in data warehouse - RM coverage status unknown for current production months</div>
+          <div class="blocked-desc">The data warehouse does not contain a PO Tracker for this project. Without it, JSSL cannot compute raw material received, in transit, or unordered for current production months. The production plan shows C229 is an active project. Upload the C229 PO Tracker to data_warehouse/C229/ to unlock RM coverage bars and blocked item MT computations. Source: data_warehouse scan - no PO Tracker file found in C229 folder.</div>
+        </div>
+        <div class="blocked-right">
+          <div class="blocked-mt amber" style="font-size:14px">RM Unknown</div>
+          <div class="blocked-mt-lbl">tracker not uploaded</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="c229-sec-holds" class="sec-hdr"><div class="sec-hdr-title">349 members on hold - all resolved by October 2025</div></div>
+    <div class="hold-bar-card">
+      <div class="hbc-bar-wrap">
+        <div class="hbc-bar">
+          <div class="hbc-seg" style="flex:7;background:#c8d8f0"></div>
+          <div class="hbc-seg" style="flex:342;background:var(--grn)"></div>
+        </div>
+        <div class="hbc-labels">
+          <div class="hbc-lbl-seg" style="flex:7">
+            <span class="hbc-count" style="color:var(--deep)">7</span>
+            <span class="hbc-name">Pre-Production</span>
+          </div>
+          <div class="hbc-lbl-seg" style="flex:342">
+            <span class="hbc-count" style="color:var(--grn)">342</span>
+            <span class="hbc-name">Post-Production (all resolved)</span>
+          </div>
+        </div>
+      </div>
+      <div class="hbc-insight">
+        All 349 assembly holds have been released as of October 2025. 342 members were in active fabrication when the hold was placed. 7 members were held before production started. 5 members were cancelled (deleted by DLF). Source: C229_DLF_OFFICE_Assembly Hold List - 2025-10-03.
+      </div>
+    </div>
+
+    <div id="c229-sec-rm" class="sec-hdr"><div class="sec-hdr-title">How much of our planned production is actually ready to run</div></div>
+    <div class="rm-card">
+      <div class="rm-hdr">
+        <div>
+          <div class="rm-hdr-title">Raw material coverage - data pending</div>
+          <div style="font-size:11px;color:var(--txt3);margin-top:2px">PO Tracker not yet uploaded to data warehouse. Upload to data_warehouse/C229/ to enable RM coverage bars.</div>
+        </div>
+      </div>
+      <div style="padding:28px 22px;text-align:center;color:var(--txt3);font-size:12px">
+        <div style="font-size:32px;margin-bottom:10px">&#128202;</div>
+        <div style="font-size:13px;font-weight:600;color:var(--txt);margin-bottom:6px">PO Tracker not available</div>
+        <div>Upload the C229 PO Tracker file to the data warehouse to enable RM coverage bars, ETA analysis, and procurement risk classification.</div>
+      </div>
+    </div>
+
+    <div id="c229-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions to take right now</div></div>
+    <div class="action-list">
+      <div class="action-item">
+        <div class="action-num">1</div>
+        <div class="action-body">
+          <div class="action-title">Upload C229 PO Tracker to data warehouse to unlock RM coverage</div>
+          <div class="action-desc">The data warehouse has no PO Tracker for this project. Without it, RM bars, ETA analysis, and procurement risk classification cannot be computed. Upload the latest PO Tracker file to data_warehouse/C229/ and rerun the refresh. This will immediately unlock June and July RM coverage bars and blocked item MT figures.</div>
+          <div class="action-contact">Owner: <strong>Ajay Kumar Singh</strong> (C229 PM) - request from PPC team</div>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-num">2</div>
+        <div class="action-body">
+          <div class="action-title">Issue a formal record of 3,829 DO hours to DLF City Center for variation claim basis</div>
+          <div class="action-desc">10 change events have consumed 3,829 hours of Design Office time since January 2025, disrupting 2,338 MT of steel. This is the rework evidence basis for a future variation claim. Issue a formal notice now recording the cumulative impact - before the project closes - while the evidence is fresh and DLF can still confirm the dates and details.</div>
+          <div class="action-contact">Send via: <strong>Ajay Kumar Singh</strong> (C229 PM) to DLF City Center Ltd.</div>
+          <div class="action-btn-row">
+            <a class="action-btn escalate" href="javascript:void(0)" onclick="(function(){var s='C229 - Formal Record of Design Office Rework Burden - DLF City Center';var b='Dear Sir/Madam,\n\nThis notice formally records the cumulative rework burden on JSSL Design Office for C229 - DLF City Center:\n\n- 10 change events since January 2025\n- 3,829 Design Office hours consumed\n- 2,338 MT of steel disrupted in production\n- 349 hold events raised (all resolved Oct 2025)\n\nJSSL reserves all rights to recover these costs through formal variation at project close.\n\nRegards\nAjay Kumar Singh\nProject Manager - C229\nJSSL';window.location.href='mailto:ajay.singh@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#128394; Draft Notice to DLF</a>
+          </div>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-num">3</div>
+        <div class="action-body">
+          <div class="action-title">Confirm any outstanding ECN events not yet in the manhour register</div>
+          <div class="action-desc">The manhour register was last updated in October 2025. Any change events raised after October 2025 are not reflected. Confirm with the Design Office whether any new ECNs have been issued since then, and update the manhour register before the project closes. Incomplete records weaken the variation claim.</div>
+          <div class="action-contact">Owner: <strong>Ajay Kumar Singh</strong> (C229 PM) + DO team</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="c229-sec-notice" class="sec-hdr"><div class="sec-hdr-title">Formal notice to be issued to DLF City Center</div></div>
+    <div class="notice-card">
+      <div class="notice-label">Draft Notice - DN/C229/2026/001</div>
+      <div class="notice-body" id="c229-noticeText">
+        <strong>To:</strong> DLF City Center Ltd. Project Coordinator<br>
+        <strong>CC:</strong> Ajay Kumar Singh (C229 Project Manager, JSSL) - Deepak Mishra (JSSL Reporting)<br>
+        <strong>Subject:</strong> Formal Record of Client-Caused Rework Burden - C229 DLF Office<br>
+        <strong>Ref:</strong> DN/C229/2026/001 - Date: 26 May 2026<br><br>
+
+        Dear Sir/Madam,<br><br>
+
+        This notice formally records the cumulative impact of client-issued drawing revisions and change orders on JSSL's Design Office and production operations for the above project, from January 2025 to date.<br><br>
+
+        <strong>1. DESIGN OFFICE REWORK - CUMULATIVE BURDEN</strong><br>
+        Since January 2025, DLF City Center Ltd. has issued 10 change events against this project. The cumulative impact on JSSL's Design Office:<br><br>
+
+        <table style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px">
+          <thead>
+            <tr style="background:rgba(39,74,155,.08)">
+              <th style="padding:6px 10px;text-align:left;border:1px solid var(--bdr);color:var(--txt)">Event</th>
+              <th style="padding:6px 10px;text-align:left;border:1px solid var(--bdr);color:var(--txt)">Description</th>
+              <th style="padding:6px 10px;text-align:right;border:1px solid var(--bdr);color:var(--txt)">Man-Hours</th>
+              <th style="padding:6px 10px;text-align:right;border:1px solid var(--bdr);color:var(--txt)">Tonnage Affected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">DCN-1 (Jan 2025)</td><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">Revised GFC - Column location, MTO, orientation</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">387</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">-</td></tr>
+            <tr style="background:rgba(39,74,155,.02)"><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">DCN-2 (Mar 2025)</td><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">Revised GFC - Column location, framing, wall location</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">927</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">-</td></tr>
+            <tr><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">DCN-3 (Mar 2025)</td><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">Revised Connection</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">684</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,968 MT</td></tr>
+            <tr style="background:rgba(39,74,155,.02)"><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">DCN-4 to 10</td><td style="padding:5px 10px;border:1px solid var(--bdr);color:var(--txt2)">Multiple revisions (studs, columns, beams, ramp, escalator, staircase)</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,831</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">370 MT</td></tr>
+            <tr><td style="padding:5px 10px;border:1px solid var(--bdr);font-weight:700;color:var(--txt)">Total</td><td style="padding:5px 10px;border:1px solid var(--bdr);font-weight:700;color:var(--txt)">10 events (Jan 2025 - Jul 2025)</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;font-weight:700;color:var(--red)">3,829 hrs</td><td style="padding:5px 10px;border:1px solid var(--bdr);text-align:right;font-weight:700;color:var(--red)">2,338 MT</td></tr>
+          </tbody>
+        </table>
+
+        <strong>2. ASSEMBLY HOLDS</strong><br>
+        Between April 2025 and September 2025, <strong>349 steel members</strong> were placed on assembly hold following DLF drawing revisions. All holds have since been resolved (latest release: 3 October 2025). The holds caused production disruption in Phases 1 through 8 across both DT-05 and DT-07 zones. 5 members were cancelled (deleted by DLF after being held).<br><br>
+
+        JSSL reserves all rights in connection with the above and will raise formal variation claims for recoverable costs in accordance with the contract.<br><br>
+
+        For JSW Severfield Structures Ltd<br>
+        Ajay Kumar Singh - Project Manager - C229
+      </div>
+      <div class="notice-footer">
+        <div class="notice-note">&#9432; Issue this notice to protect JSSL's position</div>
+        <button class="copy-btn" onclick="(function(){var t=document.getElementById('c229-noticeText');var btn=this;try{navigator.clipboard.writeText(t.innerText)}catch(e){}btn.classList.add('copied');btn.innerHTML='&#10003; Copied';setTimeout(function(){btn.classList.remove('copied');btn.innerHTML='&#128203; Copy Notice'},2500);showToast('C229 notice copied - ready to send')}).call(this)">&#128203; Copy Notice</button>
+      </div>
+    </div>
+
+    <div id="c229-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events - how we got here</div></div>
+    <div class="proof-strip">
+      <div class="proof-hdr">
+        <div class="proof-hdr-title">A chronology of DLF City Center delays on C229</div>
+        <div class="proof-hdr-sub">Every date below is documented</div>
+      </div>
+      <div class="proof-body">
+        <div class="proof-timeline">
+          <div class="proof-line"></div>
+          <div class="proof-step">
+            <div class="proof-dot blue"></div>
+            <div class="proof-step-title">December 2024 - Project starts, first MTOs released</div>
+            <div class="proof-step-body">First MTOs (MTO-01, MTO-02, MTO-03) released in December 2024 covering main frame steel for DT-05 and DT-07 zones.</div>
+          </div>
+          <div class="proof-step">
+            <div class="proof-dot amber"></div>
+            <div class="proof-step-title">January 2025 - First change event: column locations revised</div>
+            <div class="proof-step-body">DLF issues the first revision (DCN-1). Column locations, MTO sequences, and orientations are revised. JSSL Design Office absorbs <strong>387 hours</strong> of rework.</div>
+          </div>
+          <div class="proof-step">
+            <div class="proof-dot red"></div>
+            <div class="proof-step-title">March 2025 - Largest single change: 1,968 MT connection revision</div>
+            <div class="proof-step-body">DCN-3 forces a connection revision affecting <strong>1,968 MT</strong> of steel in production - the single largest disruption event on this project. Fabricated beams are revised and some members deleted.</div>
+          </div>
+          <div class="proof-step">
+            <div class="proof-dot amber"></div>
+            <div class="proof-step-title">April 2025 - Assembly holds begin across Phases 1-8</div>
+            <div class="proof-step-body">DLF drawing revisions trigger production holds across multiple phases. <strong>349 members</strong> across DT-05 and DT-07 zones are placed on hold over the following months.</div>
+          </div>
+          <div class="proof-step">
+            <div class="proof-dot blue"></div>
+            <div class="proof-step-title">October 2025 - All holds resolved</div>
+            <div class="proof-step-body">All 349 assembly holds are released by 3 October 2025. 5 members were cancelled by DLF after being placed on hold. Fabrication resumes.</div>
+          </div>
+          <div class="proof-step">
+            <div class="proof-dot blue"></div>
+            <div class="proof-step-title">Today - 26 May 2026 - Evidence documented for variation claim</div>
+            <div class="proof-step-body">3,829 DO hours and 2,338 MT disruption recorded. No formal variation notice yet issued. This page documents the evidence trail for DLF.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">C229 - DLF Office - JSW Severfield Structures Ltd - 26 May 2026</div>
+  </div>
+</div>
+
+<div id="c244-page" style="display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 116px);background:var(--bg)">
+  <div style="text-align:center;padding:40px;max-width:480px">
+    <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--deep);margin-bottom:8px">C244 - Ashoka University</div>
+    <div style="font-size:13px;color:var(--txt3);font-family:'Outfit',sans-serif;margin-bottom:28px;letter-spacing:.05em;text-transform:uppercase;font-weight:600">Data Update Pending</div>
+    <div style="background:var(--white);border:1.5px solid var(--bdr);border-radius:14px;padding:32px 36px;box-shadow:var(--sh2)">
+      <div style="font-size:44px;margin-bottom:14px">&#9203;</div>
+      <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--txt);margin-bottom:10px">No data loaded yet</div>
+      <div style="font-size:12.5px;color:var(--txt3);line-height:1.75;font-family:'Outfit',sans-serif">Project data for C244 has not been uploaded to ApexView yet. Once the project files are linked, this page will auto-populate with the full risk register view.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MOBILE DRAWER -->
+<div class="mob-drawer" id="mobDrawer">
+  <div class="mob-drawer-overlay" onclick="closeMobDrawer()"></div>
+  <div class="mob-drawer-panel">
+    <div class="mob-drawer-hdr">
+      <div class="mob-drawer-title">ApexView</div>
+      <button class="mob-drawer-close" onclick="closeMobDrawer()">&#10005;</button>
+    </div>
+    <div class="mob-drawer-body">
+      <div class="mob-drawer-section">
+        <div class="mob-drawer-label">Data as of</div>
+        <div class="mob-drawer-val" id="drawerDataDate">26 May 2026</div>
+      </div>
+      <div class="mob-drawer-section">
+        <div class="mob-drawer-label">Today</div>
+        <div class="mob-drawer-val" id="drawerToday">Monday, 18 May 2026</div>
+      </div>
+      <div class="mob-drawer-divider"></div>
+      <div class="mob-drawer-section">
+        <div class="mob-drawer-label">Select Project</div>
+        <div class="mob-proj-opt active" id="mobOpt-C218"
+             onclick="mobSwitchProj('C218','DLF Downtown Ph.2, Mall of India','red',this)">
+          <span class="mob-proj-opt-code">C218</span>
+          <span class="mob-proj-opt-name">DLF Downtown Ph.2, Mall of India</span>
+          <span class="mob-proj-opt-dot" style="background:var(--red)"></span>
+        </div>
+        <div class="mob-proj-opt" id="mobOpt-C244"
+             onclick="mobSwitchProj('C244','Ashoka University','amber',this)">
+          <span class="mob-proj-opt-code">C244</span>
+          <span class="mob-proj-opt-name">Ashoka University</span>
+          <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
+        </div>
+        <div class="mob-proj-opt" id="mobOpt-C229"
+             onclick="mobSwitchProj('C229','DLF Office','amber',this)">
+          <span class="mob-proj-opt-code">C229</span>
+          <span class="mob-proj-opt-name">DLF Office, Delhi</span>
+          <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
 
