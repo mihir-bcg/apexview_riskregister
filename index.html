@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -580,7 +580,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     </div>
   </div>
   <div class="top-right">
-    <div class="data-chip" id="dataAsOf">Data as of 26 May 2026</div>
+    <div class="data-chip" id="dataAsOf">Data as of 15 May 2026</div>
     <div class="date-chip" id="istDateChip"></div>
     <div class="proj-wrap">
       <div class="proj-sel" id="projSel" onclick="toggleProjDD()">
@@ -595,15 +595,20 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
           <span class="proj-opt-name">DLF Downtown Ph.2, Mall of India</span>
           <span class="proj-opt-dot" style="background:var(--red)"></span>
         </div>
+        <div class="proj-opt" onclick="switchProj('C229','DLF Office, Gurugram','amber',this)">
+          <span class="proj-opt-code">C229</span>
+          <span class="proj-opt-name">DLF Office, Gurugram</span>
+          <span class="proj-opt-dot" style="background:var(--grn)"></span>
+        </div>
+        <div class="proj-opt" onclick="switchProj('C255','Airtel Nxtra DC','blue',this)">
+          <span class="proj-opt-code">C255</span>
+          <span class="proj-opt-name">Airtel Nxtra DC</span>
+          <span class="proj-opt-dot" style="background:var(--amber)"></span>
+        </div>
         <div class="proj-opt" onclick="switchProj('C244','Ashoka University','amber',this)">
           <span class="proj-opt-code">C244</span>
           <span class="proj-opt-name">Ashoka University</span>
           <span class="proj-opt-dot" style="background:var(--amber)"></span>
-        </div>
-        <div class="proj-opt" onclick="switchProj(\\'C229\\',\\'DLF DT7 Office\\',\\'red\\',this)">
-          <span class="proj-opt-code">C229</span>
-          <span class="proj-opt-name">DLF DT7 Office</span>
-          <span class="proj-opt-dot" style="background:var(--red)"></span>
         </div>
       </div>
     </div>
@@ -893,7 +898,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <strong>To:</strong> DLF Project Coordinator, B.L. Kashyap &amp; Sons Ltd<br>
       <strong>CC:</strong> Ajay Kumar (C218 Project Manager, JSSL) &middot; Deepak (JSSL Reporting)<br>
       <strong>Subject:</strong> Formal Record of Client-Caused Rework Burden - C218 DLF Downtown Phase 2<br>
-      <strong>Ref:</strong> DN/C218/2026/001 &nbsp;|&nbsp; Date: 26 May 2026<br><br>
+      <strong>Ref:</strong> DN/C218/2026/001 &nbsp;|&nbsp; Date: 15 May 2026<br><br>
 
       Dear Sir/Madam,<br><br>
 
@@ -939,7 +944,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       By activity: Modelling <strong>2,401 hrs</strong> &middot; Editing <strong>2,793 hrs</strong> &middot; Checking <strong>1,711 hrs</strong> &middot; RFI/Coordination <strong>121 hrs</strong> &middot; Miscellaneous <strong>1,956 hrs</strong><br><br>
 
       <strong>3. ASSEMBLY HOLDS</strong><br>
-      As of 26 May 2026, <strong>1,202 steel members</strong> are on assembly hold across DT8 and MOIG zones. Of these, <strong>635 members were in active production</strong> when the hold was placed - meaning labour had already been expended before DLF's revision was received. JSSL requests return approvals on all outstanding held items by 22 May 2026.<br><br>
+      As of 15 May 2026, <strong>1,202 steel members</strong> are on assembly hold across DT8 and MOIG zones. Of these, <strong>635 members were in active production</strong> when the hold was placed - meaning labour had already been expended before DLF's revision was received. JSSL requests return approvals on all outstanding held items by 27 May 2026.<br><br>
 
       <strong>4. DELETED STEEL</strong><br>
       <strong>286 members (123.1 MT)</strong> were fully fabricated before DLF removed them from the structural design entirely - comprising 169 members (78.7 MT) from the Assembly Hold Register and 117 members (44.3 MT) from VF005 Annexure III, all confirmed fabrication-completed prior to deletion.<br><br>
@@ -999,7 +1004,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     </div>
   </div>
 
-  <div class="page-footer">C218 · DLF Downtown Ph.2, Mall of India · JSW Severfield Structures Ltd · 26 May 2026</div>
+  <div class="page-footer">C218 · DLF Downtown Ph.2, Mall of India · JSW Severfield Structures Ltd · 15 May 2026</div>
 </div>
 
 <div class="toast-wrap" id="toastWrap"></div>
@@ -1415,7 +1420,21 @@ function switchProj(code, name, status, el) {
   el.classList.add('active');
   document.getElementById('projDD').classList.remove('show');
   document.getElementById('projSel').classList.remove('open');
-  if (code === 'C244') {
+  if (code === 'C229') {
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
+    if (snap) snap.style.display = 'none';
+    if (page) page.style.display = 'none';
+    const c229 = document.getElementById('c229-page');
+    if (c229) c229.style.display = 'block';
+  } else if (code === 'C255') {
+    const snap = document.querySelector('.snapshot');
+    const page = document.querySelector('.page');
+    if (snap) snap.style.display = 'none';
+    if (page) page.style.display = 'none';
+    const c255 = document.getElementById('c255-page');
+    if (c255) c255.style.display = 'block';
+  } else {    if (code === 'C244') {
     const snap = document.querySelector('.snapshot');
     const page = document.querySelector('.page');
     if (snap) snap.style.display = 'none';
@@ -1427,15 +1446,6 @@ function switchProj(code, name, status, el) {
       const el = document.getElementById('c244-page');
       if (el) el.style.display = 'flex';
     }
-  } else if (code === 'C229') {
-    const snap = document.querySelector('.snapshot');
-    const page = document.querySelector('.page');
-    if (snap) snap.style.display = 'none';
-    if (page) page.style.display = 'none';
-    const c244el = document.getElementById('c244-page');
-    if (c244el) c244el.style.display = 'none';
-    const c229el = document.getElementById('c229-page');
-    if (c229el) c229el.style.display = 'block';
   } else {
     const snap = document.querySelector('.snapshot');
     const page = document.querySelector('.page');
@@ -1465,164 +1475,704 @@ function switchProj(code, name, status, el) {
 
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
-<!-- C229 PAGE -->
-<div id="c229-page" style="display:none">
-<div style="background:var(--white);border-bottom:1.5px solid var(--bdr);padding:14px 32px;display:grid;grid-template-columns:1fr 1fr 1fr 2.5fr;gap:0;align-items:start">
-<div style="padding:0 28px 0 0"><div class="snap-lbl">Client</div><div class="snap-val">DLF Limited</div><div class="snap-sub">DT7 Office Complex</div></div>
-<div style="padding:0 28px 0 0"><div class="snap-lbl">Project Manager</div><div class="snap-val">PM: Updating</div><div class="snap-sub">C229 - JSSL Design Office</div></div>
-<div style="padding:0 28px 0 0"><div class="snap-lbl">Total Scope</div><div class="snap-val">Scope: TBC</div><div class="snap-sub">MTO register pending upload</div></div>
-<div><div class="snap-lbl">Scope Pipeline</div><div class="pipe"><div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">Scope pending - data being compiled</div></div><div class="pipe-legend"><div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div></div></div>
-</div>
-<div class="page">
-
-<div class="situation">
-<div class="sit-headline">DLF DT7 has accumulated <span class="red">6,352 hours</span> of Design Office rework<br>across <span class="amber">19 change events</span> since project start.</div>
-<div class="sit-body" id="c229-briefText">Since project kick-off, DLF has issued 19 drawing revision events against C229 - DLF DT7 Office Complex, consuming <strong>6,352 Design Office man-hours</strong> across modelling, editing, checking and RFI coordination. These are client-attributable changes that represent direct productivity loss to JSSL. Raw material procurement data is not yet available - once the PO Tracker is uploaded, RM coverage bars will appear. Assembly holds were tracked and all released as of October 2025 - no active holds currently exist for this project.</div>
-<div class="sit-actions">
-<button class="sit-btn primary" onclick="(function(){var txt=document.getElementById('c229-briefText').innerText;try{navigator.clipboard.writeText(txt);}catch(e){}})()">&#128203; Copy this briefing</button>
-<button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-cards')">&#9654; See Rework Metrics</button>
-<button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-notice')">&#128394; Issue Formal Notice</button>
-</div>
-</div>
-
-<div class="big3" id="c229-sec-cards">
-<div class="big-card red">
-<div class="big-num">6,352 hrs</div>
-<div class="big-label">Design hours lost to rework</div>
-<div class="big-sub">19 change events since project start. Modelling, editing, checking and RFI coordination all impacted by DLF revising drawings after JSSL detailing had begun. Source: C229-Man-hour Details.xls</div>
-</div>
-<div class="big-card amber">
-<div class="big-num">19</div>
-<div class="big-label">Change events raised to date</div>
-<div class="big-sub">Includes GFC Issue 20 (11 Apr 2025), GFC Issue 21 (14 Apr 2025), Mail Issue 29 (Jun 2025), T07C08 Column revision, and further GFC re-issues through Aug-Oct 2025. Mix of formal DCN and informal revisions.</div>
-</div>
-<div class="big-card blue">
-<div class="big-num">0</div>
-<div class="big-label">Active assembly holds</div>
-<div class="big-sub">Hold register recorded holds across phases 1-8. All items released by 3 Oct 2025. No members currently frozen. Widget will re-activate when new holds are logged. Source: C229_DLF_OFFICE_Assembly_Hold_List-2025-10-03.xls</div>
-</div>
-</div>
-
-<div id="c229-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
-<div class="blocked-list">
-<div class="blocked-item high">
-<div class="blocked-icon icon-amber">&#9888;</div>
-<div class="blocked-body">
-<div class="blocked-title">RM procurement status unknown - PO Tracker not yet uploaded to data warehouse</div>
-<div class="blocked-desc">No PO Tracker file has been found for C229 in data_warehouse/C229/. Without it, JSSL cannot confirm how much raw material has been ordered, received, or is in transit. Upload the C229 PO Tracker to data_warehouse/C229/ and re-run this refresh script to unlock RM coverage bars. Source: data_warehouse/C229/ folder scan as of 26 May 2026.</div>
-<div class="blocked-actions"><button class="ba-btn internal" onclick="smoothScrollTo('c229-sec-actions')">&#9654; See Actions</button></div>
-</div>
-<div class="blocked-right"><div class="blocked-mt amber">-</div><div class="blocked-mt-lbl">RM unknown</div></div>
-</div>
-</div>
-
-<div id="c229-sec-holds" class="sec-hdr"><div class="sec-hdr-title">Assembly hold status</div></div>
-<div class="hold-bar-card">
-<div class="hbc-insight"><strong>No active assembly holds for C229.</strong> The hold register (last updated 3 Oct 2025) documented holds across phases 1-8 - stud additions, column location revisions, beam framings, GFC re-issues. All items have been released. Once new holds are placed on C229 members, this widget will populate from the updated hold list file in data_warehouse/C229/.</div>
-</div>
-
-<div id="c229-sec-rm" class="sec-hdr"><div class="sec-hdr-title">How much of our planned production is actually ready to run</div></div>
-<div class="rm-card">
-<div class="rm-hdr"><div><div class="rm-hdr-title">Raw material coverage - PO Tracker not uploaded</div><div style="font-size:11px;color:var(--txt3);margin-top:2px">Upload C229 PO Tracker to data_warehouse/C229/ to unlock RM bars</div></div></div>
-<div style="padding:28px 22px;text-align:center;color:var(--txt3);font-size:12px;font-family:'Outfit',sans-serif;line-height:1.7">No PO Tracker found for C229 in the data warehouse.<br>Once uploaded, this section shows received, in-transit and gap MT per production month.</div>
-</div>
-
-<div id="c229-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions to take right now</div></div>
-<div class="action-list">
-<div class="action-item">
-<div class="action-num">1</div>
-<div class="action-body">
-<div class="action-title">Upload the C229 PO Tracker to the data warehouse to unlock RM visibility</div>
-<div class="action-desc">data_warehouse/C229/ contains the manhour register and hold list only. The PO Tracker - showing indents, received MT, in-transit MT and ETAs - is missing. Upload the latest C229 PO Tracker and re-run the refresh script to generate RM coverage bars and blocked production cards for this project.</div>
-<div class="action-contact">Owner: <strong>C229 Project Manager</strong> + <strong>PPC / Procurement</strong></div>
-<div class="action-btn-row">
-<a class="action-btn mail" href="javascript:void(0)" onclick="(function(){var s='C229 - PO Tracker Upload Required for ApexView Dashboard';var b='Please upload the latest C229 PO Tracker (indent numbers, PO dates, received MT, in-transit MT, ETAs) to the ApexView data warehouse at data_warehouse/C229/ and notify once done.\n\nRegards';window.location.href='mailto:deepak.mishra@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Request Upload</a>
-</div>
-</div>
-</div>
-<div class="action-item">
-<div class="action-num">2</div>
-<div class="action-body">
-<div class="action-title">Issue a formal rework notice to DLF for the 6,352 hours accumulated on C229</div>
-<div class="action-desc">19 change events have consumed 6,352 DO hours. This needs to be formally communicated to DLF to build the evidence trail for a variation claim at project close. The manhour register documents each event with dates and descriptions - the formal notice draft below can be issued immediately.</div>
-<div class="action-contact">Send via: <strong>C229 Project Manager</strong> to DLF DT7 Project Coordinator - CC: Deepak Mishra</div>
-<div class="action-btn-row">
-<a class="action-btn escalate" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-notice')">&#128394; See Formal Notice</a>
-</div>
-</div>
-</div>
-<div class="action-item">
-<div class="action-num">3</div>
-<div class="action-body">
-<div class="action-title">Update Master Planning with PM name and confirmed scope MT for C229</div>
-<div class="action-desc">The Project Manager for C229 is showing as 'PM: Updating' because the Master Planning sheet could not be read during this refresh. Update Col C for project code C229 with the correct PM name, and confirm total scope MT. This enables PM name in action email buttons and scope pipeline bar.</div>
-<div class="action-contact">Owner: <strong>Project Admin</strong></div>
-<div class="action-btn-row">
-<a class="action-btn mail" href="javascript:void(0)" onclick="(function(){var s='C229 - Master Planning Update Required';var b='Please update 20260120_Master_Planning_Sheet_vS3.xlsx with:\n1. PM name for project code C229\n2. Total confirmed scope MT for C229\n\nThis is required for the ApexView risk dashboard.\n\nRegards';window.location.href='mailto:deepak.mishra@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Request Update</a>
-</div>
-</div>
-</div>
-</div>
-
-<div id="c229-sec-notice" class="sec-hdr"><div class="sec-hdr-title">Formal notice to be issued to DLF - C229</div></div>
-<div class="notice-card">
-<div class="notice-label">Draft Notice - DN/C229/2026/001</div>
-<div class="notice-body" id="c229-noticeText">
-<strong>To:</strong> DLF Limited - DT7 Project Coordinator<br>
-<strong>CC:</strong> C229 Project Manager (JSSL) &middot; Deepak Mishra (JSSL Reporting)<br>
-<strong>Subject:</strong> Formal Record of Design Office Rework Burden - C229 DLF DT7 Office Complex<br>
-<strong>Ref:</strong> DN/C229/2026/001 &nbsp;|&nbsp; Date: 26 May 2026<br><br>
-Dear Sir/Madam,<br><br>
-This notice formally records the cumulative impact of client-issued drawing revisions on JSSL's Design Office operations for C229 - DLF DT7 Office Complex.<br><br>
-<strong>DESIGN OFFICE REWORK - CUMULATIVE BURDEN</strong><br>
-Since project commencement, DLF has issued 19 drawing revision and change events against this project:<br><br>
-<table style="width:100%;border-collapse:collapse;font-size:11px;margin-bottom:10px">
-<thead><tr style="background:rgba(39,74,155,.08)"><th style="padding:6px 10px;text-align:left;border:1px solid var(--bdr);color:var(--txt)">Category</th><th style="padding:6px 10px;text-align:center;border:1px solid var(--bdr);color:var(--txt)">Events</th><th style="padding:6px 10px;text-align:right;border:1px solid var(--bdr);color:var(--txt)">Total Man-Hours</th></tr></thead>
-<tbody>
-<tr><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">GFC Re-issues and Drawing Markups</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:center;color:var(--txt2)">16</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">4,392 hrs</td></tr>
-<tr style="background:rgba(39,74,155,.03)"><td style="padding:6px 10px;border:1px solid var(--bdr);color:var(--txt2)">Connection, stud and RCC wall change events</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:center;color:var(--txt2)">3</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;color:var(--txt2)">1,960 hrs</td></tr>
-<tr><td style="padding:6px 10px;border:1px solid var(--bdr);font-weight:700;color:var(--txt)">Total</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:center;font-weight:700;color:var(--txt)">19</td><td style="padding:6px 10px;border:1px solid var(--bdr);text-align:right;font-weight:700;color:var(--red)">6,352 hrs</td></tr>
-</tbody></table>
-Key events: GFC Issue 20 (11 Apr 2025) - column locations, framing, wall revisions; GFC Issue 21 (14 Apr 2025) - multiple phase revisions; Mail Issue 29 (Jun 2025) - beam and column revisions; T07C08 column revision (Jun 2025); multiple GFC re-issues Aug-Oct 2025.<br><br>
-JSSL reserves all rights in connection with the above and will raise formal variation claims for recoverable costs at the appropriate stage.<br><br>
-For JSW Severfield Structures Ltd<br>
-Project Manager - C229
-</div>
-<div class="notice-footer">
-<div class="notice-note">&#9432; Issue this notice to protect JSSL's position</div>
-<button class="copy-btn" id="c229CopyNoticeBtn" onclick="(function(){var txt=document.getElementById('c229-noticeText').innerText;var btn=document.getElementById('c229CopyNoticeBtn');try{navigator.clipboard.writeText(txt);}catch(e){}btn.classList.add('copied');btn.innerHTML='&#10003; Copied';setTimeout(function(){btn.classList.remove('copied');btn.innerHTML='&#128203; Copy Notice';},2500);})()">&#128203; Copy Notice</button>
-</div>
-</div>
-
-<div id="c229-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events - C229 DLF DT7</div></div>
-<div class="proof-strip">
-<div class="proof-hdr"><div class="proof-hdr-title">Key events from manhour register</div><div class="proof-hdr-sub">Source: C229-Man-hour Details.xls - data_warehouse/C229/</div></div>
-<div class="proof-body"><div class="proof-timeline"><div class="proof-line"></div>
-<div class="proof-step"><div class="proof-dot blue"></div><div class="proof-step-title">23 Jan 2025 - First GFC revision issued by DLF</div><div class="proof-step-body">DLF issues first revised GFC. JSSL Design Office begins rework on drawings already in progress.</div></div>
-<div class="proof-step"><div class="proof-dot amber"></div><div class="proof-step-title">11 Apr 2025 - GFC Issue 20 - large-scale revision affecting phases 1-8</div><div class="proof-step-body">DLF issues GFC Issue 20, affecting column locations, framing, wall locations and structural GA across multiple phases. Holds placed on affected members. Significant rework triggered.</div></div>
-<div class="proof-step"><div class="proof-dot amber"></div><div class="proof-step-title">14 Apr 2025 - GFC Issue 21 - follow-on revision within days</div><div class="proof-step-body">DLF issues GFC markup Issue 21, further column and beam revisions across multiple phases within days of Issue 20.</div></div>
-<div class="proof-step"><div class="proof-dot red"></div><div class="proof-step-title">Jun-Jul 2025 - Mail Issue 29 and T07C08 column revision</div><div class="proof-step-body">DLF issues Mail Issue 29 (column and beam revisions, phases 5-8) and T07C08 column revision. Fabricated beams and columns affected.</div></div>
-<div class="proof-step"><div class="proof-dot amber"></div><div class="proof-step-title">Aug-Oct 2025 - Final GFC revisions and all holds released by 3 Oct 2025</div><div class="proof-step-body">Further GFC revisions issued (RCC wall shifts, fin plate additions, flange plate additions). All outstanding holds released by 3 Oct 2025. Total: 19 change events, 6,352 man-hours.</div></div>
-<div class="proof-step"><div class="proof-dot blue"></div><div class="proof-step-title">26 May 2026 - Status today</div><div class="proof-step-body">All holds released. Manhour register: 6,352 hours across 19 events. <strong>PO Tracker upload pending - RM status unknown.</strong> Formal notice to DLF not yet issued - draft ready above.</div></div>
-</div></div></div>
-
-<div class="page-footer">C229 - DLF DT7 Office Complex - JSW Severfield Structures Ltd - 26 May 2026</div>
-</div>
-</div>
 <!-- C244 PENDING PAGE -->
-<div id="c244-page" style="display:none;flex:1;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 116px);background:var(--bg)">
-  <div style="text-align:center;padding:40px;max-width:480px">
-    <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--deep);margin-bottom:8px">C244 - Ashoka University</div>
-    <div style="font-size:13px;color:var(--txt3);font-family:'Outfit',sans-serif;margin-bottom:28px;letter-spacing:.05em;text-transform:uppercase;font-weight:600">Data Update Pending</div>
-    <div style="background:var(--white);border:1.5px solid var(--bdr);border-radius:14px;padding:32px 36px;box-shadow:var(--sh2)">
-      <div style="font-size:44px;margin-bottom:14px">&#9203;</div>
-      <div style="font-family:'DM Serif Display',serif;font-size:20px;color:var(--txt);margin-bottom:10px">No data loaded yet</div>
-      <div style="font-size:12.5px;color:var(--txt3);line-height:1.75;font-family:'Outfit',sans-serif">Project data for C244 has not been uploaded to ApexView yet. Once the project files are linked, this page will auto-populate with the full risk register view.</div>
+<div id="c244-page" style="display:none">
+
+<!-- C244 SNAPSHOT -->
+<div class="snapshot">
+  <div class="snap-col">
+    <div class="snap-lbl">Client</div>
+    <div class="snap-val">Ashoka University</div>
+    <div class="snap-sub">PMC: Colliers International</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Project Manager</div>
+    <div class="snap-val">Aftab Ansari</div>
+    <div class="snap-sub">C244 &middot; In-House &amp; Subcon</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Total Scope</div>
+    <div class="snap-val">1,697.6 MT</div>
+    <div class="snap-sub">MTO01-08 net (MTO09 cancelled)</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Scope Pipeline - 1,697.6 MT</div>
+    <div class="pipe">
+      <div class="pipe-seg pale" style="flex:1;background:var(--deep-pale2);color:var(--txt3)">1,697.6 MT pending - fabrication not started</div>
+    </div>
+    <div class="pipe-legend">
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Pending</div>
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--amber)"></div>In-House &amp; Subcon</div>
     </div>
   </div>
 </div>
 
+<div class="page">
 
+  <!-- C244 CHAIRMAN BRIEF -->
+  <div class="situation">
+    <div class="sit-headline">
+      C244 RM is ordered but <span class="amber">delivery ETAs are July</span> -<br>
+      June production is at risk before it has started.
+    </div>
+    <div class="sit-body">
+      All POs for C244 were placed in April 2026 - only 41-45 days before the June production start, placing both In-House (Indent 932) and Subcon (Indent 933) in the RED procurement zone. Of the 300 MT In-House June plan, <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('c244-sec-rm')"><strong>83% is covered by received or in-transit material</strong></a> - but 51.2 MT has ETAs in July and will miss June entirely. For the 118 MT Subcon plan, receipts already cover the plan quantity at 176.5 MT received - but the key structural profiles (RHS columns) are arriving at the subcon fabricator in July, meaning <a class="bl red" href="javascript:void(0)" onclick="smoothScrollTo('c244-sec-rm')"><strong>subcon fabrication cannot start until July</strong></a>. In addition, <strong>ECN-002 was raised on 7 May 2026</strong> for MEP revision and stair profile changes, and 7+ RFI responses remain pending from Ashoka University - blocking MTO completeness for staircase and lift core phases.
+    </div>
+    <div class="sit-actions">
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c244-sec-rm')">&#9654; RM Coverage</button>
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c244-sec-actions')">&#9654; Actions</button>
+    </div>
+  </div>
+
+  <!-- C244 METRIC CARDS -->
+  <div class="big3" id="c244-sec-cards">
+    <div class="big-card blue">
+      <div class="big-num">2</div>
+      <div class="big-label">ECNs raised to date</div>
+      <div class="big-sub">ECN-002 raised 7 May 2026 - MEP revision and stair profile change. Manhour register not yet available. Source: ECN-002.docx, data_warehouse/C244.</div>
+    </div>
+    <div class="big-card amber">
+      <div class="big-num">51.2 MT</div>
+      <div class="big-label">In-House RM at risk for June</div>
+      <div class="big-sub">51.2 MT of Indent 932 (beams) has ETAs in July - this material is ordered but cannot be used for June production. Source: Dummy_C244_PO_Tracker.xlsx, Indent 932.</div>
+    </div>
+    <div class="big-card red">
+      <div class="big-num">7+</div>
+      <div class="big-label">RFI responses pending from client</div>
+      <div class="big-sub">Staircase and lift core drawings not yet received from Ashoka University / Colliers. Blocking MTO completeness for MTO-07 phases (146 MT). Source: email trail Jan-May 2026.</div>
+    </div>
+  </div>
+
+  <!-- C244 BLOCKED ITEMS -->
+  <div id="c244-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
+  <div class="blocked-list">
+
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#128197;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">June In-House - 51.2 MT ordered but ETAs are July - will miss June production</div>
+        <div class="blocked-desc">Indent 932 (In-House beams) POs were placed 17 Apr 2026 - only 45 days before June start, landing in the RED procurement zone. Of the 300 MT plan, 248.8 MT (83%) will arrive on or before 30 June. The remaining 51.2 MT has ETAs ranging 06-Jul to 16-Jul and cannot be used for June fabrication. The steel is ordered and on its way - but mills cannot deliver in time. Source: Dummy_C244_PO_Tracker.xlsx, Indent 932 rows.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c244-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">51.2 MT</div>
+        <div class="blocked-mt-lbl">at risk - June</div>
+      </div>
+    </div>
+
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#127968;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">June Subcon - Column profiles (Indent 933) arriving July - subcon fabrication cannot start in June</div>
+        <div class="blocked-desc">Indent 933 (Subcon columns, phases 1,3,5,7,9,11,13) POs placed 21 Apr - 41 days before June start. While 176.5 MT has been received against the 118 MT plan (plan quantity covered), the key RHS column profiles (RHS 250x400 ETA 20-Jul, RHS 400x600 ETA 05-Jul, HR Plate 8mm ETA 04-Jul) are arriving at the subcon fabricator in July. Subcon column fabrication will not start before July. Source: Dummy_C244_PO_Tracker.xlsx, Indent 933 rows.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c244-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">118 MT</div>
+        <div class="blocked-mt-lbl">subcon - July start</div>
+      </div>
+    </div>
+
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#128196;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">7+ RFI responses pending - staircase and lift core drawings not received from Ashoka University</div>
+        <div class="blocked-desc">Drawing requests sent from January 2026. Staircase (MTO-07, ~146 MT) and lift core drawings remain unreleased by the client. Without these, MTO completeness cannot be achieved and the procurement chain for those phases cannot be triggered. Each day without these drawings pushes the earliest production start for those phases further out. Source: email trail Jan-May 2026, ECN-002 reference to stair drawing revision.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c244-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">146 MT</div>
+        <div class="blocked-mt-lbl">staircase - pending drawings</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- C244 RM BARS -->
+  <div id="c244-sec-rm" class="sec-hdr"><div class="sec-hdr-title">Raw material coverage - June and July 2026</div></div>
+  <div class="rm-card">
+    <div class="rm-hdr">
+      <div>
+        <div class="rm-hdr-title">In-House and Subcon RM coverage vs plan</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: Dummy_C244_PO_Tracker.xlsx &middot; Indent 932 (In-House) &middot; Indent 933 (Subcon) &middot; Production Plan June-July 2026</div>
+      </div>
+    </div>
+
+    <!-- June In-House -->
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl" style="font-size:14px">June</div>
+        <div class="rm-month-sub">In-House<br>Plan: 300 MT<br>Indent: 932</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:79"></div>
+          <div class="rm-seg amb" style="flex:169"></div>
+          <div style="flex:51;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">79.0 MT received</strong> &middot;
+          <strong style="color:var(--amber)">169.8 MT in transit (ETA &#8804;30 Jun)</strong> &middot;
+          <strong style="color:var(--txt3)">51.2 MT ETA July - will miss June</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--amber)">83%</div>
+        <div class="rm-val-lbl">of plan covered</div>
+      </div>
+    </div>
+
+    <!-- June Subcon -->
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl" style="font-size:14px">June</div>
+        <div class="rm-month-sub">Subcon<br>Plan: 118 MT<br>Indent: 933</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:118"></div>
+          <div style="flex:1;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">176.5 MT received</strong> (plan quantity covered) &middot;
+          <strong style="color:var(--txt3)">Key RHS column profiles arriving July - subcon fabrication starts July</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--amber)">RM&#10003;</div>
+        <div class="rm-val-lbl">ETA risk</div>
+      </div>
+    </div>
+
+    <!-- July In-House -->
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl" style="font-size:14px">July</div>
+        <div class="rm-month-sub">In-House<br>Plan: 300 MT<br>Indent: 932</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:79"></div>
+          <div class="rm-seg amb" style="flex:170"></div>
+          <div style="flex:51;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">79.0 MT received</strong> &middot;
+          <strong style="color:var(--amber)">Balance arriving Jun-Jul</strong> &middot;
+          <strong style="color:var(--txt3)">Procurement zone: AMBER (75 days before July start)</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--grn)">AMBER</div>
+        <div class="rm-val-lbl">watch zone</div>
+      </div>
+    </div>
+
+    <div class="rm-legend">
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--grn)"></div>Received at plant</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--amber)"></div>In transit - ETA before month end</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--deep-pale2)"></div>ETA post-month or quantity at risk</div>
+    </div>
+  </div>
+
+  <!-- C244 ACTIONS -->
+  <div id="c244-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions for C244</div></div>
+  <div class="action-list">
+
+    <div class="action-item">
+      <div class="action-num">1</div>
+      <div class="action-body">
+        <div class="action-title">Expedite ESSAR (Indent 932 Row 14) - 87 MT HR Plate 16mm ETA 08 July</div>
+        <div class="action-desc">The single largest at-risk item for C244 June In-House is 87 MT of HR Plate 16mm from ESSAR (Indent 932, Row 14) with ETA 08-Jul. This one line item accounts for the majority of the June shortfall. Contact ESSAR to request partial dispatch or expedited delivery. Even bringing forward 40-50 MT would meaningfully improve June output.</div>
+        <div class="action-contact">Escalate to: <strong>Aftab Ansari</strong> (C244 PM) + <strong>Procurement</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C244 - Expedite HR Plate 16mm Delivery - ESSAR Indent 932';const b='Dear Team,\n\nFor C244 Ashoka University, Indent 932 Row 14 (HR Plate 16mm, 87 MT) currently has ETA 08 July 2026. This is causing a June production gap.\n\nPlease contact ESSAR immediately to request:\n1. Partial dispatch of 40-50 MT before 30 June\n2. Revised ETA confirmation\n\nRegards\nAftab Ansari\nC244 PM, JSSL';window.location.href='mailto:aftab.a@jssl.in?cc=ppc.head@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Aftab Ansari + Procurement</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-item">
+      <div class="action-num">2</div>
+      <div class="action-body">
+        <div class="action-title">Confirm with subcon fabricator (Santosh Budanur) that July slot is locked</div>
+        <div class="action-desc">Subcon column fabrication (phases 1,3,5,7,9,11,13) will start in July when RHS profiles arrive. The subcon fabricator needs to have a confirmed production slot for these phases. Confirm with Santosh Budanur that July capacity is reserved and that material arrival dates (04-Jul to 20-Jul) are communicated to his team so fabrication starts same week as delivery.</div>
+        <div class="action-contact">Escalate to: <strong>Aftab Ansari</strong> (C244 PM) + <strong>Subcon Fabricator</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C244 - Confirm July Fabrication Slot - Subcon Columns';const b='Aftab,\n\nPlease confirm with the subcon fabricator (Santosh Budanur) that July fabrication slots are locked for C244 column phases 1,3,5,7,9,11,13.\n\nKey material ETAs:\n- RHS 400x600: 05-Jul\n- HR Plate 8mm: 04-Jul\n- RHS 250x400: 20-Jul\n\nFabrication should start same week as material arrival.\n\nRegards';window.location.href='mailto:aftab.a@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Mail Aftab Ansari</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-item">
+      <div class="action-num">3</div>
+      <div class="action-body">
+        <div class="action-title">Chase Ashoka University / Colliers for staircase and lift core drawings</div>
+        <div class="action-desc">Staircase (MTO-07, ~146 MT) and lift core drawings have been pending from the client since January 2026. Without these, the MTO chain and procurement for those phases cannot start. Each week of delay pushes the staircase phases further into August-September. Issue a formal written request to Colliers (PMC) and Ashoka University referencing the original drawing request dates and the impact on the production schedule.</div>
+        <div class="action-contact">Send via: <strong>Aftab Ansari</strong> (C244 PM) to Colliers + Ashoka University</div>
+        <div class="action-btn-row">
+          <a class="action-btn escalate" href="javascript:void(0)" onclick="(function(){const s='C244 - Formal Request for Staircase and Lift Core Drawings - Ashoka University';const b='Dear Sir/Madam,\n\nJSSL has been awaiting staircase and lift core structural drawings for C244 - Ashoka University since January 2026.\n\nImpact:\n- MTO-07 (Staircase ~146 MT) cannot be raised without approved staircase drawings\n- Lift core phases similarly blocked\n- Every week of delay pushes these phases into August-September production\n\nWe request release of these drawings at the earliest to allow JSSL to initiate the procurement chain.\n\nRegards\nAftab Ansari\nProject Manager - C244\nJSSL';window.location.href='mailto:davneet.singh@colliers.com?cc=aftab.a@jssl.in,devendra.gupta@ashoka.edu.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#128394; Write to Colliers + Ashoka</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- C244 EVIDENCE TIMELINE -->
+  <div id="c244-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events - C244 Ashoka University</div></div>
+  <div class="proof-strip">
+    <div class="proof-hdr">
+      <div class="proof-hdr-title">How C244 has progressed from award to current state</div>
+      <div class="proof-hdr-sub">Every date below is documented</div>
+    </div>
+    <div class="proof-body">
+      <div class="proof-timeline">
+        <div class="proof-line"></div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">December 2025 - First input drawings received from client</div>
+          <div class="proof-step-body">JSSL receives initial structural drawings from Ashoka University / Colliers. Design Office begins GA drawing preparation.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot amber"></div>
+          <div class="proof-step-title">20 January 2026 - JSSL issues GA drawings for client approval</div>
+          <div class="proof-step-body">GA drawings submitted to Colliers for return approval. First RFI also raised - staircase drawings, column termination levels, MEP coordination details still pending from client.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot amber"></div>
+          <div class="proof-step-title">February - March 2026 - Multiple reminders sent to client</div>
+          <div class="proof-step-body">JSSL sends Reminders 2 through 5 for pending drawing inputs. Staircase and lift core drawings remain unreleased by Ashoka University / Colliers.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">3 April 2026 - MTOs 01-03 released</div>
+          <div class="proof-step-body">First 3 MTOs released by Design Office - columns, beams, periphery beams. Staircase and lift core MTOs still blocked pending client drawings.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">9 April 2026 - Indents 932, 933, 934 raised</div>
+          <div class="proof-step-body">PPC raises indents for In-House beams (932) and Subcon columns (933, 934). POs placed 17-21 April - only 41-45 days before June production start. Both In-House and Subcon enter the RED procurement zone for June.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot red"></div>
+          <div class="proof-step-title">7 May 2026 - ECN-002 raised by client</div>
+          <div class="proof-step-body">Ashoka University issues ECN-002: MEP revision and stair profile change. This is the 2nd ECN on C244. Manhour impact being compiled. Affected phases and tonnage under review.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot red"></div>
+          <div class="proof-step-title">22 May 2026 - Today - RM ordered, delivery arriving July</div>
+          <div class="proof-step-body">Total ordered: 1,726.8 MT. Received: 467.1 MT. In transit: 548.0 MT. June production at risk due to July ETAs. Staircase and lift core drawings still pending. Fabrication has not started.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">C244 &middot; Ashoka University, Sonipat &middot; JSW Severfield Structures Ltd &middot; 22 May 2026</div>
+</div>
+</div>
+
+<div id="c229-page" style="display:none">
+
+<!-- C229 SNAPSHOT -->
+<div class="snapshot">
+  <div class="snap-col">
+    <div class="snap-lbl">Client</div>
+    <div class="snap-val">DLF Limited</div>
+    <div class="snap-sub">DLF Office, Gurugram</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Project Manager</div>
+    <div class="snap-val">Madhumani SS</div>
+    <div class="snap-sub">C229 &middot; In-House</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Total Scope</div>
+    <div class="snap-val">29,932 MT</div>
+    <div class="snap-sub">All POs placed Jan&ndash;Sep 2025</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">RM Pipeline &ndash; 11,185 MT ordered</div>
+    <div class="pipe">
+      <div class="pipe-seg" style="flex:10474;background:var(--grn)">10,473.5 MT received</div>
+      <div class="pipe-seg" style="flex:659;background:var(--amber)">659 MT transit</div>
+      <div class="pipe-seg pale" style="flex:52;background:var(--deep-pale2);color:var(--txt3)">52.5</div>
+    </div>
+    <div class="pipe-legend">
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--grn)"></div>Received</div>
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--amber)"></div>In Transit</div>
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Balance</div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- C229 CHAIRMAN BRIEF -->
+  <div class="situation">
+    <div class="sit-headline">
+      C229 RM is fully secured &ndash; <span class="amber">16 DLF change events</span><br>
+      consumed 6,352 hours and disrupted 678 MT.
+    </div>
+    <div class="sit-body">
+      C229 is in a strong procurement position: <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-rm')"><strong>all July RM is received or in transit</strong></a>, with POs placed as early as January 2025 - well within the 90-day window. However, DLF has caused significant Design Office disruption through <a class="bl red" href="javascript:void(0)" onclick="smoothScrollTo('c229-sec-cards')"><strong>16 change events consuming 6,352 hours</strong></a> and affecting <strong>678 MT</strong> of fabricated steel. All 700+ assembly holds placed during these changes have since been released (by October 2025), confirming the disruption was real but is now resolved at the production level. The outstanding risk is the formal variation claim for the 6,352 DO hours and 678 MT rework cost - this has not yet been raised.
+    </div>
+    <div class="sit-actions">
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-rm')">&#9654; RM Coverage</button>
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c229-sec-actions')">&#9654; Actions</button>
+    </div>
+  </div>
+
+  <!-- C229 METRIC CARDS -->
+  <div class="big3" id="c229-sec-cards">
+    <div class="big-card red">
+      <div class="big-num">6,352 hrs</div>
+      <div class="big-label">Design Office hours lost to DLF rework</div>
+      <div class="big-sub">16 change events (DOC001 + 15 DCN events) since Jan 2025. Source: C229-Man-hour Details.xls, data_warehouse/C229.</div>
+    </div>
+    <div class="big-card amber">
+      <div class="big-num">678 MT</div>
+      <div class="big-label">Steel disrupted by DLF design changes</div>
+      <div class="big-sub">Tonnage affected across 16 change events. All fabrication holds now released (Oct 2025). Rework completed. Source: C229-Man-hour Details.xls.</div>
+    </div>
+    <div class="big-card blue">
+      <div class="big-num">100%</div>
+      <div class="big-label">July RM plan covered</div>
+      <div class="big-sub">1,000 MT July plan (phases 1-10 and 51-59). Indents 853/865/866/867 placed Jan 2025 - 6+ months in advance. Virtually all received. Source: Dummy_C229_PO_Tracker.xlsx.</div>
+    </div>
+  </div>
+
+  <!-- C229 RM BARS -->
+  <div id="c229-sec-rm" class="sec-hdr"><div class="sec-hdr-title">Raw material coverage &ndash; July 2026</div></div>
+  <div class="rm-card">
+    <div class="rm-hdr">
+      <div>
+        <div class="rm-hdr-title">C229 In-House RM coverage vs July plan</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: Dummy_C229_PO_Tracker.xlsx &middot; Indents 853, 865, 866, 867, 890 &middot; POs from Jan&ndash;Sep 2025 &middot; Production Plan July 2026</div>
+      </div>
+    </div>
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl">July</div>
+        <div class="rm-month-sub">In-House<br>Plan: 1,000 MT<br>Ph 1&ndash;10, 51&ndash;59</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:970"></div>
+          <div class="rm-seg amb" style="flex:30"></div>
+          <div style="flex:0;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">~970 MT received at plant</strong> &middot;
+          <strong style="color:var(--amber)">~30 MT in transit</strong> &middot;
+          <strong style="color:var(--grn)">No gap &ndash; GREEN zone (POs placed Jan 2025)</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--grn)">100%</div>
+        <div class="rm-val-lbl">July plan covered</div>
+      </div>
+    </div>
+    <div class="rm-legend">
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--grn)"></div>Received at plant</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--amber)"></div>In transit</div>
+    </div>
+  </div>
+
+  <!-- C229 ACTIONS -->
+  <div id="c229-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 3 actions for C229</div></div>
+  <div class="action-list">
+    <div class="action-item">
+      <div class="action-num">1</div>
+      <div class="action-body">
+        <div class="action-title">Raise the formal variation claim for 6,352 DO rework hours before project close</div>
+        <div class="action-desc">C229 has a fully documented 6,352 man-hour rework burden across 16 change events. All holds are resolved. The evidence is complete. The commercial team must now prepare and raise the formal variation claim while the project is still active and the documentation is current. Delay increases the risk of DLF disputing the claim at project close.</div>
+        <div class="action-contact">Escalate to: <strong>Madhumani SS</strong> (C229 PM) + <strong>Commercial Team</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C229 - Variation Claim Preparation - '+TODAY_STR;const b='Team,
+
+C229 has a documented 6,352 man-hour rework burden across 16 DLF change events (DOC001 + 15 DCNs). All holds resolved Oct 2025. Please initiate formal variation claim preparation. Documentation available in data_warehouse/C229.
+
+Regards';window.location.href='mailto:deepak.mishra@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Raise with Commercial Team</a>
+        </div>
+      </div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">2</div>
+      <div class="action-body">
+        <div class="action-title">Confirm July production sequence is locked against received RM</div>
+        <div class="action-desc">July plan (1,000 MT, phases 1-10 and 51-59) is 100% covered by RM already at plant. PPC must confirm the July production sequence is finalised, shop floor slots are allocated, and fabrication is scheduled to start on time. No procurement issues - this is purely a production planning confirmation.</div>
+        <div class="action-contact">Escalate to: <strong>Madhumani SS</strong> (C229 PM) + <strong>PPC Head</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C229 - July Production Schedule Confirmation - '+TODAY_STR;const b='Team,
+
+C229 July RM is 100% secured (1,000 MT plan, phases 1-10 and 51-59). Please confirm July production sequence is finalised and shop floor slots allocated.
+
+Regards';window.location.href='mailto:ppc.head@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Confirm with PPC</a>
+        </div>
+      </div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">3</div>
+      <div class="action-body">
+        <div class="action-title">Expedite the 52.5 MT balance (later phases) to avoid any August bottleneck</div>
+        <div class="action-desc">52.5 MT of C229 RM balance is yet to be dispatched from mills (later phase indents 887-908). These are not in the July 1,000 MT plan but will be needed for August onwards. Procurement should follow up with mills to ensure these quantities are dispatched on schedule to avoid a bottleneck in August production.</div>
+        <div class="action-contact">Escalate to: <strong>Procurement Team</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C229 - Expedite 52.5 MT Balance Dispatch - '+TODAY_STR;const b='Procurement,
+
+C229 has 52.5 MT of RM balance pending dispatch from mills (later phase indents). Please follow up for August delivery.
+
+Regards';window.location.href='mailto:production.planning@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Follow Up with Procurement</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C229 TIMELINE -->
+  <div id="c229-sec-timeline" class="sec-hdr"><div class="sec-hdr-title">Timeline of events &ndash; C229 DLF Office</div></div>
+  <div class="proof-strip">
+    <div class="proof-hdr">
+      <div class="proof-hdr-title">Key events from project start to today</div>
+      <div class="proof-hdr-sub">Every date documented in source files</div>
+    </div>
+    <div class="proof-body">
+      <div class="proof-timeline">
+        <div class="proof-line"></div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">January 2025 &ndash; First POs placed, project production begins</div>
+          <div class="proof-step-body">Indents 853-867 raised. POs placed 06-23 Jan 2025. Phase 1-10 and 51-59 RM ordered. Earliest PO in project history &ndash; procurement well within 90-day window.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot red"></div>
+          <div class="proof-step-title">January 2025 &ndash; First DLF change event (DOC001)</div>
+          <div class="proof-step-body">DLF issues first change event. Affects column location, beam framing, additional cut-outs. Stud additions noted. Design Office absorbs initial rework hours.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot amber"></div>
+          <div class="proof-step-title">March 2025 &ndash; Multiple DCN events issued by DLF</div>
+          <div class="proof-step-body">Revised connections, column locations, framing changes. Running total of change events grows to 5+ by end of March. Manhour burden accumulates.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot red"></div>
+          <div class="proof-step-title">April&ndash;July 2025 &ndash; Holds placed on fabricating members</div>
+          <div class="proof-step-body">Assembly holds placed on 700+ members across phases. GFC Issue-20 (Apr) and Issue-21 (Apr) trigger large batches of holds. Some members already in fabrication when hold is placed.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">July 2025 &ndash; Phase 11-18 RM ordered</div>
+          <div class="proof-step-body">Indent 883 PO placed 17-Jul-2025. Phase 11-18 steel ordered well ahead of production schedule.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">October 2025 &ndash; All holds released</div>
+          <div class="proof-step-body">Final hold release batch: 03-Oct-2025. All 700+ assembly holds cleared. Production resumes on held members. Source: C229_DLF_OFFICE_Assembly Hold List-2025-10-03.xls.</div>
+        </div>
+        <div class="proof-step">
+          <div class="proof-dot blue"></div>
+          <div class="proof-step-title">27 May 2026 &ndash; Today &ndash; July RM 100% secured</div>
+          <div class="proof-step-body">Total ordered: 11,185 MT. Received: 10,473.5 MT. In transit: 659 MT. July 1,000 MT plan fully covered. Variation claim for 6,352 DO hours pending formal raise.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">C229 &middot; DLF Office, Gurugram &middot; JSW Severfield Structures Ltd &middot; 27 May 2026</div>
+</div>
+</div>
+
+<div id="c255-page" style="display:none">
+
+<!-- C255 SNAPSHOT -->
+<div class="snapshot">
+  <div class="snap-col">
+    <div class="snap-lbl">Client</div>
+    <div class="snap-val">Airtel Nxtra</div>
+    <div class="snap-sub">Data Centre, URC</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Project Manager</div>
+    <div class="snap-val">TBC</div>
+    <div class="snap-sub">C255 &middot; In-House only</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">Total Scope</div>
+    <div class="snap-val">5,820 MT</div>
+    <div class="snap-sub">MTO01&ndash;10 | POs from Feb 2026</div>
+  </div>
+  <div class="snap-col">
+    <div class="snap-lbl">RM Pipeline &ndash; 5,820 MT ordered</div>
+    <div class="pipe">
+      <div class="pipe-seg" style="flex:4900;background:var(--grn)">4,900 MT received</div>
+      <div class="pipe-seg" style="flex:406;background:var(--amber)">406 MT transit</div>
+      <div class="pipe-seg pale" style="flex:514;background:var(--deep-pale2);color:var(--txt3)">514</div>
+    </div>
+    <div class="pipe-legend">
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--grn)"></div>Received</div>
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--amber)"></div>In Transit</div>
+      <div class="pipe-leg"><div class="pipe-leg-dot" style="background:var(--deep-pale2)"></div>Balance</div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- C255 CHAIRMAN BRIEF -->
+  <div class="situation">
+    <div class="sit-headline">
+      C255 June plan is fully covered &ndash; <span class="amber">Phase 201&ndash;204 material</span><br>
+      is arriving June&ndash;July and needs a production slot.
+    </div>
+    <div class="sit-body">
+      C255 is a new project with no rework or hold history. The June plan (1,200 MT, phases 1&ndash;24) is <a class="bl" href="javascript:void(0)" onclick="smoothScrollTo('c255-sec-rm')"><strong>100% covered by received RM</strong></a> &ndash; Indent 903 was placed on 03-Feb-2026, giving 118 days before June production start, well within the GREEN zone. The July plan (1,000 MT) is similarly well covered. However, phases 201&ndash;204 are a watch item: <a class="bl amb" href="javascript:void(0)" onclick="smoothScrollTo('c255-sec-rm')"><strong>406 MT in transit with ETAs spanning June to mid-July</strong></a> (Indent 983&ndash;984, PO 18-Apr-2026). These are the later structural phases and need pre-allocated fabrication slots to avoid an August bottleneck when this material arrives.
+    </div>
+    <div class="sit-actions">
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c255-sec-rm')">&#9654; RM Coverage</button>
+      <button class="sit-btn ghost" onclick="smoothScrollTo('c255-sec-actions')">&#9654; Actions</button>
+    </div>
+  </div>
+
+  <!-- C255 METRIC CARDS -->
+  <div class="big3" id="c255-sec-cards">
+    <div class="big-card blue">
+      <div class="big-num">5,820 MT</div>
+      <div class="big-label">Total RM ordered</div>
+      <div class="big-sub">10 MTOs raised. All POs placed Feb&ndash;Apr 2026. 84% already received at plant. Source: Dummy_C255_PO_Tracker.xlsx.</div>
+    </div>
+    <div class="big-card blue">
+      <div class="big-num">100%</div>
+      <div class="big-label">June plan covered (phases 1&ndash;24)</div>
+      <div class="big-sub">1,200 MT June plan (Indent 903, phases 12,11,13,14). PO date 03-Feb-2026 = 118 days before June start = GREEN zone. Virtually all received.</div>
+    </div>
+    <div class="big-card amber">
+      <div class="big-num">406 MT</div>
+      <div class="big-label">In transit &ndash; phases 201&ndash;204</div>
+      <div class="big-sub">Indent 983-984 (PO 18-Apr-2026). ETAs range 11-Jun to 16-Jul 2026. Fabrication slots needed for when this material arrives. Source: Dummy_C255_PO_Tracker.xlsx.</div>
+    </div>
+  </div>
+
+  <!-- C255 BLOCKED ITEMS -->
+  <div id="c255-sec-blocked" class="sec-hdr"><div class="sec-hdr-title">Watch items</div></div>
+  <div class="blocked-list">
+    <div class="blocked-item high">
+      <div class="blocked-icon icon-amber">&#128197;</div>
+      <div class="blocked-body">
+        <div class="blocked-title">Phase 201&ndash;204 &ndash; 406 MT in transit, ETAs 11 Jun to 16 Jul &ndash; pre-allocate fabrication slots now</div>
+        <div class="blocked-desc">Indents 983&ndash;984 (phases 201&ndash;204) were placed on 18-Apr-2026 &ndash; 43 days before June start, placing them in the AMBER/RED procurement zone. The 406 MT is dispatched and en route with ETAs spread across June and July. When this material arrives, fabrication must start immediately. Pre-allocate shop floor slots now so there is no delay between material receipt and fabrication start. Source: Dummy_C255_PO_Tracker.xlsx, Indents 983&ndash;984.</div>
+        <div class="blocked-actions">
+          <button class="ba-btn internal" onclick="smoothScrollTo('c255-sec-actions')">&#9654; See Actions</button>
+        </div>
+      </div>
+      <div class="blocked-right">
+        <div class="blocked-mt amber">406 MT</div>
+        <div class="blocked-mt-lbl">in transit &ndash; ETA Jun-Jul</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- C255 RM BARS -->
+  <div id="c255-sec-rm" class="sec-hdr"><div class="sec-hdr-title">Raw material coverage &ndash; June and July 2026</div></div>
+  <div class="rm-card">
+    <div class="rm-hdr">
+      <div>
+        <div class="rm-hdr-title">C255 In-House RM coverage vs plan</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: Dummy_C255_PO_Tracker.xlsx &middot; Indent 903 (June phases 1&ndash;24) &middot; Indents 983&ndash;984 (Ph 201&ndash;204) &middot; Production Plan June&ndash;July 2026</div>
+      </div>
+    </div>
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl">June</div>
+        <div class="rm-month-sub">In-House<br>Plan: 1,200 MT<br>Indent: 903+960</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:1164"></div>
+          <div class="rm-seg amb" style="flex:36"></div>
+          <div style="flex:0;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">1,164 MT received</strong> &middot;
+          <strong style="color:var(--amber)">36 MT in transit</strong> &middot;
+          <strong style="color:var(--grn)">GREEN &ndash; Indent 903 PO 03-Feb-2026 (118 days before June)</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--grn)">100%</div>
+        <div class="rm-val-lbl">of plan covered</div>
+      </div>
+    </div>
+    <div class="rm-month-row">
+      <div>
+        <div class="rm-month-lbl">July</div>
+        <div class="rm-month-sub">In-House<br>Plan: 1,000 MT<br>Indents: 903&ndash;984</div>
+      </div>
+      <div class="rm-bar-wrap">
+        <div class="rm-bar-bg">
+          <div class="rm-seg grn" style="flex:55"></div>
+          <div class="rm-seg amb" style="flex:406"></div>
+          <div style="flex:539;background:var(--deep-pale2)"></div>
+        </div>
+        <div class="rm-bar-note">
+          <strong style="color:var(--grn)">55.5 MT received (Ph 201&ndash;204)</strong> &middot;
+          <strong style="color:var(--amber)">406 MT in transit (ETAs 11 Jun &ndash; 16 Jul)</strong> &middot;
+          <strong style="color:var(--txt3)">Phases 1&ndash;24 already covered from prior receipts</strong>
+        </div>
+      </div>
+      <div class="rm-month-val">
+        <div class="rm-val-num" style="color:var(--amber)">AMBER</div>
+        <div class="rm-val-lbl">Ph 201-204 watch</div>
+      </div>
+    </div>
+    <div class="rm-legend">
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--grn)"></div>Received at plant</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--amber)"></div>In transit &ndash; ETA before/around month end</div>
+      <div class="rm-leg"><div class="rm-leg-dot" style="background:var(--deep-pale2)"></div>Balance or ETA post-month</div>
+    </div>
+  </div>
+
+  <!-- C255 ACTIONS -->
+  <div id="c255-sec-actions" class="sec-hdr"><div class="sec-hdr-title">Top 2 actions for C255</div></div>
+  <div class="action-list">
+    <div class="action-item">
+      <div class="action-num">1</div>
+      <div class="action-body">
+        <div class="action-title">Pre-allocate fabrication slots for phase 201&ndash;204 RM arriving June&ndash;July</div>
+        <div class="action-desc">406 MT for phases 201&ndash;204 is en route with ETAs ranging from 11 June to 16 July. PPC must pre-allocate fabrication bays for these phases now. When material arrives, production starts same week. Do not wait for material to arrive before booking the slot &ndash; that causes idle days and August pile-up.</div>
+        <div class="action-contact">Escalate to: <strong>PPC Head</strong> + <strong>Production Planning</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C255 - Pre-Allocate Fabrication Slots for Ph 201-204 - '+TODAY_STR;const b='PPC,
+
+C255 phases 201-204 have 406 MT in transit with ETAs 11-Jun to 16-Jul 2026. Please pre-allocate fabrication slots now so production starts same week as material arrives.
+
+Regards';window.location.href='mailto:ppc.head@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Task PPC &ndash; Pre-allocate Slots</a>
+        </div>
+      </div>
+    </div>
+    <div class="action-item">
+      <div class="action-num">2</div>
+      <div class="action-body">
+        <div class="action-title">Confirm June production schedule is locked for phases 1&ndash;24</div>
+        <div class="action-desc">June plan (1,200 MT, phases 1&ndash;24) is fully covered. PPC must confirm the June production sequence is finalised and shop floor slots are committed. This is a production planning confirmation &ndash; no procurement action needed.</div>
+        <div class="action-contact">Escalate to: <strong>PPC Head</strong></div>
+        <div class="action-btn-row">
+          <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C255 - Confirm June Production Schedule - '+TODAY_STR;const b='PPC,
+
+C255 June plan (1,200 MT, phases 1-24) is 100% RM covered. Please confirm June production sequence is finalised and shop floor slots committed.
+
+Regards';window.location.href='mailto:ppc.head@jssl.in?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Confirm with PPC</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">C255 &middot; Airtel Nxtra DC, URC &middot; JSW Severfield Structures Ltd &middot; 27 May 2026</div>
+</div>
+</div>
 <!-- MOBILE DRAWER -->
 <div class="mob-drawer" id="mobDrawer">
   <div class="mob-drawer-overlay" onclick="closeMobDrawer()"></div>
@@ -1634,7 +2184,7 @@ Project Manager - C229
     <div class="mob-drawer-body">
       <div class="mob-drawer-section">
         <div class="mob-drawer-label">Data as of</div>
-        <div class="mob-drawer-val" id="drawerDataDate">26 May 2026</div>
+        <div class="mob-drawer-val" id="drawerDataDate">15 May 2026</div>
       </div>
       <div class="mob-drawer-section">
         <div class="mob-drawer-label">Today</div>
@@ -1649,13 +2199,24 @@ Project Manager - C229
           <span class="mob-proj-opt-name">DLF Downtown Ph.2, Mall of India</span>
           <span class="mob-proj-opt-dot" style="background:var(--red)"></span>
         </div>
+        <div class="mob-proj-opt" id="mobOpt-C229"
+             onclick="mobSwitchProj('C229','DLF Office, Gurugram','amber',this)">
+          <span class="mob-proj-opt-code">C229</span>
+          <span class="mob-proj-opt-name">DLF Office, Gurugram</span>
+          <span class="mob-proj-opt-dot" style="background:var(--grn)"></span>
+        </div>
+        <div class="mob-proj-opt" id="mobOpt-C255"
+             onclick="mobSwitchProj('C255','Airtel Nxtra DC','blue',this)">
+          <span class="mob-proj-opt-code">C255</span>
+          <span class="mob-proj-opt-name">Airtel Nxtra DC</span>
+          <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
+        </div>
         <div class="mob-proj-opt" id="mobOpt-C244"
              onclick="mobSwitchProj('C244','Ashoka University','amber',this)">
           <span class="mob-proj-opt-code">C244</span>
           <span class="mob-proj-opt-name">Ashoka University</span>
           <span class="mob-proj-opt-dot" style="background:var(--amber)"></span>
         </div>
-        <div class='mob-proj-opt' id='mobOpt-C229' onclick='mobSwitchProj("C229","DLF DT7 Office","red",this)'><span class='mob-proj-opt-code'>C229</span><span class='mob-proj-opt-name'>DLF DT7 Office</span><span class='mob-proj-opt-dot' style='background:var(--red)'></span></div>
       </div>
     </div>
   </div>
