@@ -20,7 +20,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ TOPBAR Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ TOPBAR â”€â”€ */
 .topbar{background:var(--white);border-bottom:1.5px solid var(--bdr);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:var(--sh)}
 .top-left{display:flex;align-items:center;gap:0}
 .jssl-logo{height:40px;width:auto;object-fit:contain;flex-shrink:0}
@@ -52,7 +52,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .data-chip{font-size:10px;color:var(--grn);background:rgba(26,153,84,.07);border:1px solid rgba(26,153,84,.2);padding:4px 12px;border-radius:20px;font-family:'DM Mono',monospace;white-space:nowrap}
 .data-chip{font-size:10px;color:var(--txt3);background:rgba(26,153,84,.08);border:1px solid rgba(26,153,84,.2);padding:4px 12px;border-radius:20px;font-family:'DM Mono',monospace;white-space:nowrap}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ SNAPSHOT BOX Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ SNAPSHOT BOX â”€â”€ */
 .snapshot{background:var(--white);border-bottom:1.5px solid var(--bdr);padding:14px 32px;display:grid;grid-template-columns:1fr 1fr 1fr 2.5fr;gap:0;align-items:start}
 .snap-col{padding:0 28px 0 0}
 .snap-col:last-child{padding-right:0;padding-left:0}
@@ -68,7 +68,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .pipe-leg-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
 .page{max-width:960px;margin:0 auto;padding:32px 24px 60px}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ SITUATION BANNER Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ SITUATION BANNER â”€â”€ */
 .situation{background:var(--deep);border-radius:14px;padding:28px 32px;margin-bottom:28px;box-shadow:var(--sh2)}
 .sit-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:14px}
 .sit-tag{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);font-family:'Outfit',sans-serif}
@@ -86,7 +86,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .sit-btn.ghost:hover{background:rgba(255,255,255,.2)}
 .sit-btn.fired{background:rgba(26,153,84,.2);color:#7fffc0;border:1px solid rgba(26,153,84,.3);cursor:default}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ BIG 3 NUMBERS Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ BIG 3 NUMBERS â”€â”€ */
 .big3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
 .big-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:22px 24px;box-shadow:var(--sh);position:relative;overflow:hidden}
 .big-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:12px 12px 0 0}
@@ -100,12 +100,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .big-label{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:4px}
 .big-sub{font-size:11px;color:var(--txt3);line-height:1.5}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ SECTION HEADER Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ SECTION HEADER â”€â”€ */
 .sec-hdr{display:flex;align-items:center;gap:10px;margin:32px 0 14px}
 .sec-hdr-title{font-family:'DM Serif Display',serif;font-size:18px;color:var(--txt)}
 .sec-hdr::after{content:'';flex:1;height:1px;background:var(--bdr)}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ WHAT'S BLOCKED Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ WHAT'S BLOCKED â”€â”€ */
 .blocked-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .blocked-item{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:18px 20px;box-shadow:var(--sh);display:grid;grid-template-columns:auto 1fr auto;align-items:start;gap:16px;transition:box-shadow .18s,border-color .18s;position:relative}
 .blocked-item:hover{box-shadow:var(--sh2);border-color:var(--bdr2)}
@@ -119,7 +119,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .blocked-body{min-width:0}
 .blocked-title{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:3px}
 .blocked-desc{font-size:12px;color:var(--txt3);line-height:1.6}
-/* action row Ã¢â‚¬â€ hidden until hover */
+/* action row â€” hidden until hover */
 .blocked-actions{display:flex;gap:7px;margin-top:11px;padding-top:10px;border-top:1px solid var(--bdr);opacity:0;transform:translateY(4px);transition:opacity .18s,transform .18s;pointer-events:none}
 .blocked-item:hover .blocked-actions{opacity:1;transform:translateY(0);pointer-events:all}
 .ba-btn{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:all .15s;white-space:nowrap}
@@ -134,7 +134,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .blocked-mt.amber{color:var(--amber)}
 .blocked-mt-lbl{font-size:10px;color:var(--txt3);margin-top:2px}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ PROOF STRIP Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ PROOF STRIP â”€â”€ */
 .proof-strip{background:var(--white);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:28px}
 .proof-hdr{padding:16px 22px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between}
 .proof-hdr-title{font-size:13px;font-weight:600;color:var(--txt)}
@@ -152,12 +152,12 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .proof-step-body{font-size:11.5px;color:var(--txt3);line-height:1.6}
 .proof-step-body strong{color:var(--txt);font-weight:600}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ REVISION CHART Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ REVISION CHART â”€â”€ */
 .chart-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:20px 22px;box-shadow:var(--sh);margin-bottom:28px}
 .chart-title{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:3px}
 .chart-sub{font-size:11px;color:var(--txt3);margin-bottom:16px;line-height:1.5}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ RM ZONE BAR Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ RM ZONE BAR â”€â”€ */
 .rm-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;box-shadow:var(--sh);margin-bottom:28px}
 .rm-hdr{padding:16px 22px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between}
 .rm-hdr-title{font-size:13px;font-weight:600;color:var(--txt)}
@@ -180,7 +180,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .rm-leg{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--txt3)}
 .rm-leg-dot{width:8px;height:8px;border-radius:50%}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ WHAT DLF MUST DO Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ WHAT DLF MUST DO â”€â”€ */
 .action-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
 .action-item{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:18px 20px;box-shadow:var(--sh);display:flex;align-items:flex-start;gap:16px}
 .action-num{width:32px;height:32px;border-radius:50%;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'DM Serif Display',serif;font-size:16px;flex-shrink:0;margin-top:1px}
@@ -190,7 +190,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .action-deadline{font-size:10px;font-weight:600;color:var(--red);margin-top:6px;font-family:'DM Mono',monospace}
 .action-right{flex-shrink:0}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ NOTICE CARD Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ NOTICE CARD â”€â”€ */
 .notice-card{background:var(--deep-pale);border:1px solid var(--bdr2);border-left:4px solid var(--deep);border-radius:10px;padding:20px 22px;margin-bottom:28px}
 .notice-label{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--deep);margin-bottom:10px;display:flex;align-items:center;gap:6px}
 .notice-label::after{content:'';flex:1;height:1px;background:var(--bdr2)}
@@ -202,13 +202,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .copy-btn:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
 .copy-btn.copied{background:var(--grn);color:#fff;border-color:var(--grn)}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ CHANGES COUNT VISUAL Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ CHANGES COUNT VISUAL â”€â”€ */
 .changes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
 .chg-card{background:var(--white);border:1px solid var(--bdr);border-radius:10px;padding:16px 18px;box-shadow:var(--sh);text-align:center}
 .chg-num{font-family:'DM Serif Display',serif;font-size:36px;color:var(--red);line-height:1;margin-bottom:4px}
 .chg-lbl{font-size:11px;font-weight:500;color:var(--txt2);line-height:1.4}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ HOLDS VISUAL Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ HOLDS VISUAL â”€â”€ */
 .holds-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:20px 22px;box-shadow:var(--sh);margin-bottom:28px}
 .hold-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--bdr)}
 .hold-row:last-child{border-bottom:none}
@@ -217,9 +217,9 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .hold-bar{height:10px;border-radius:4px;background:var(--red)}
 .hold-days{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;color:var(--red);width:56px;text-align:right;flex-shrink:0}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ FOOTER Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ FOOTER â”€â”€ */
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ ACTION MODAL Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ ACTION MODAL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .am-overlay{display:none;position:fixed;inset:0;background:rgba(15,20,40,.55);z-index:1000;align-items:center;justify-content:center;padding:24px}
 .am-overlay.open{display:flex}
 .am-box{background:var(--white);border-radius:14px;width:100%;max-width:740px;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 12px 48px rgba(39,74,155,.22);position:relative;z-index:1001}
@@ -257,7 +257,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 
 .page-footer{text-align:center;padding:24px;font-size:10px;color:var(--txt3);border-top:1px solid var(--bdr);margin-top:8px}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ TOAST Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ TOAST â”€â”€ */
 .toast-wrap{position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:7px}
 .toast{background:var(--white);border:1.5px solid var(--bdr2);border-left:3px solid var(--grn);padding:10px 16px;border-radius:8px;font-size:12px;color:var(--txt);min-width:260px;box-shadow:var(--sh2);display:flex;align-items:center;gap:8px;animation:slideIn .25s ease}
 @keyframes slideIn{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
@@ -265,7 +265,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 ::-webkit-scrollbar{width:4px;height:4px}
 ::-webkit-scrollbar-thumb{background:rgba(39,74,155,.15);border-radius:3px}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ HOLD STATUS BAR Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ HOLD STATUS BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hold-bar-card{background:var(--white);border:1px solid var(--bdr);border-radius:12px;padding:22px 24px;box-shadow:var(--sh);margin-bottom:28px}
 .hbc-bar-wrap{position:relative}
 .hbc-bar{display:flex;height:40px;border-radius:8px;overflow:hidden;cursor:pointer;gap:2px;margin-bottom:10px}
@@ -279,7 +279,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .hbc-insight strong{color:var(--red);font-weight:700}
 .hbc-tooltip{display:none;position:absolute;background:var(--white);border:1.5px solid var(--bdr2);border-radius:8px;padding:10px 14px;box-shadow:0 6px 20px rgba(39,74,155,.15);z-index:500;max-width:280px;font-size:11px;color:var(--txt2);line-height:1.6;pointer-events:none;top:-110px;left:0}
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ REVISED ACTION ITEMS Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ REVISED ACTION ITEMS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .action-btn-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
 .action-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;border:none;font-family:'Outfit',sans-serif;transition:all .15s;text-decoration:none;white-space:nowrap}
 .action-btn.mail{background:var(--deep-pale2);color:var(--deep);border:1.5px solid var(--bdr2)}
@@ -292,7 +292,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .action-contact strong{color:var(--txt2);font-weight:600}
 
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ SCROLL TO TOP Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ SCROLL TO TOP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .scroll-top{display:none;position:fixed;bottom:28px;right:28px;width:40px;height:40px;border-radius:50%;background:var(--deep);color:#fff;border:none;font-size:16px;cursor:pointer;box-shadow:0 4px 14px rgba(39,74,155,.35);z-index:500;align-items:center;justify-content:center;transition:all .2s;line-height:1}
 .scroll-top:hover{background:var(--deep-dk);transform:translateY(-2px);box-shadow:0 6px 18px rgba(39,74,155,.45)}
 .scroll-top.visible{display:flex}
@@ -305,13 +305,13 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .sit-body a.bl.amb:hover{border-bottom-color:rgba(255,213,128,.8)}
 
 
-/* Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â
-   MOBILE Ã¢â‚¬â€ iPhone 16 reference (393px viewport)
-   All rules scoped to max-width:430px Ã¢â‚¬â€ desktop untouched
-Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   MOBILE â€” iPhone 16 reference (393px viewport)
+   All rules scoped to max-width:430px â€” desktop untouched
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 430px) {
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ TOPBAR Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ TOPBAR â”€â”€ */
   .topbar{padding:0 14px;height:auto;min-height:52px;flex-wrap:nowrap;gap:8px}
   .top-left{gap:0;flex:1;min-width:0;overflow:hidden}
   .jssl-logo{height:30px}
@@ -325,7 +325,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .mob-menu-btn{display:flex !important;flex-shrink:0;margin-left:auto}
   .date-chip{font-size:9px;padding:4px 8px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ SNAPSHOT Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ SNAPSHOT â”€â”€ */
   .snapshot{grid-template-columns:1fr 1fr;gap:0;padding:12px 16px;row-gap:12px}
   .snap-col{padding:0 12px 0 0}
   .snap-col:nth-child(2){padding:0 0 0 12px;border-left:1px solid var(--bdr)}
@@ -335,25 +335,25 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .pipe{height:18px;margin:5px 0 5px}
   .pipe-seg{font-size:7.5px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ PAGE Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ PAGE â”€â”€ */
   .page{padding:18px 14px 60px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ BRIEF Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ BRIEF â”€â”€ */
   .situation{padding:20px 18px;border-radius:10px}
   .sit-headline{font-size:20px;line-height:1.3;margin-bottom:12px}
   .sit-body{font-size:12.5px;line-height:1.75;margin-bottom:16px}
   .sit-actions{flex-direction:column;gap:8px}
   .sit-btn{width:100%;justify-content:center;padding:10px 16px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ BIG 3 CARDS Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ BIG 3 CARDS â”€â”€ */
   .big3{grid-template-columns:1fr;gap:10px}
   .big-num{font-size:32px;word-break:break-word}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ SECTION HEADER Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ SECTION HEADER â”€â”€ */
   .sec-hdr{margin:22px 0 12px}
   .sec-hdr-title{font-size:14px;word-break:break-word}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ BLOCKED ITEMS Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ BLOCKED ITEMS â”€â”€ */
   .blocked-item{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:10px 12px;padding:14px 16px}
   .blocked-right{grid-column:2;grid-row:1;text-align:right}
   .blocked-body{grid-column:1/-1}
@@ -361,14 +361,14 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .blocked-actions{opacity:1;transform:none;pointer-events:all;flex-wrap:wrap}
   .ba-btn{font-size:10px;padding:6px 12px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ HOLD BAR Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ HOLD BAR â”€â”€ */
   .hold-bar-card{padding:16px}
   .hbc-bar{height:32px}
   .hbc-count{font-size:10px}
   .hbc-name{font-size:7.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   .hbc-insight{font-size:11px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ RM BARS Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ RM BARS â”€â”€ */
   .rm-month-row{grid-template-columns:70px 1fr;gap:10px;padding:12px 16px}
   .rm-month-val{display:none}
   .rm-month-lbl{font-size:16px}
@@ -378,7 +378,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .rm-legend{padding:10px 16px;gap:10px}
   .rm-leg{font-size:10px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ ACTION ITEMS Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ ACTION ITEMS â”€â”€ */
   .action-item{flex-direction:column;gap:10px;padding:16px}
   .action-num{width:28px;height:28px;font-size:14px}
   .action-title{font-size:12px}
@@ -387,7 +387,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .action-btn-row{flex-wrap:wrap}
   .action-btn{font-size:10px;padding:6px 10px;min-width:0}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ NOTICE CARD Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ NOTICE CARD â”€â”€ */
   .notice-card{padding:14px 16px}
   .notice-body{font-size:11.5px;line-height:1.75}
   .notice-footer{flex-direction:column;gap:8px;align-items:flex-start}
@@ -396,7 +396,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .notice-body table th,
   .notice-body table td{padding:5px 7px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ PROOF TIMELINE Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ PROOF TIMELINE â”€â”€ */
   .proof-strip{border-radius:8px}
   .proof-hdr{padding:12px 16px;flex-direction:column;align-items:flex-start;gap:4px}
   .proof-body{padding:14px 16px}
@@ -404,8 +404,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .proof-step-title{font-size:11.5px}
   .proof-step-body{font-size:11px;word-break:break-word}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ MODAL Ã¢â€â‚¬Ã¢â€â‚¬ */
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ ACTION MODAL MOBILE Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ MODAL â”€â”€ */
+  /* â”€â”€ ACTION MODAL MOBILE â”€â”€ */
   .am-overlay{padding:0;align-items:flex-end;padding-top:60px}
   .am-box{height:75vh;border-radius:14px 14px 0 0;width:100%;max-width:100%;display:flex;flex-direction:column}
   .am-hdr{padding:14px 48px 12px 16px}
@@ -435,19 +435,19 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   .am-copy-note{font-size:9px;text-align:center}
   .am-copy-btn{font-size:10px;padding:8px 12px;justify-content:center;width:100%}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ MOBILE PROJ DROPDOWN FIX Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ MOBILE PROJ DROPDOWN FIX â”€â”€ */
   .mob-proj-bar{display:flex}
   .proj-dd{position:fixed;top:auto;left:10px;right:10px;min-width:auto;z-index:500}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ SCROLL TOP Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ SCROLL TOP â”€â”€ */
   .scroll-top{width:36px;height:36px;font-size:14px;bottom:20px;right:16px}
 
-  /* Ã¢â€â‚¬Ã¢â€â‚¬ PAGE FOOTER Ã¢â€â‚¬Ã¢â€â‚¬ */
+  /* â”€â”€ PAGE FOOTER â”€â”€ */
   .page-footer{padding:16px;font-size:9px;text-align:center;line-height:1.6}
 }
 
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ HOLD OUTCOME BREAKDOWN Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ HOLD OUTCOME BREAKDOWN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hbc-expand-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:5px 14px;border-radius:5px;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--bdr2);background:var(--white);color:var(--deep);font-family:'Outfit',sans-serif;transition:all .15s}
 .hbc-expand-btn:hover{background:var(--deep);color:#fff;border-color:var(--deep)}
 .hbc-outcome{display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--bdr)}
@@ -471,7 +471,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 }
 
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ MOBILE PROJECT BAR (hidden on desktop) Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ MOBILE PROJECT BAR (hidden on desktop) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .mob-proj-bar{display:none;align-items:center;justify-content:space-between;
   background:var(--white);border-bottom:1px solid var(--bdr);
   padding:8px 16px;gap:10px}
@@ -485,7 +485,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .mob-proj-change:active{background:var(--deep);color:#fff}
 
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ MOBILE HAMBURGER MENU Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ MOBILE HAMBURGER MENU â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .mob-menu-btn{display:none;flex-direction:column;justify-content:center;
   align-items:center;gap:5px;width:40px;height:40px;cursor:pointer;
   flex-shrink:0;background:none;border:none;padding:0}
@@ -527,7 +527,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 .mob-proj-opt-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 
 
-/* Ã¢â€â‚¬Ã¢â€â‚¬ PASSWORD GATE Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */
+/* â”€â”€ PASSWORD GATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 #pwGate{position:fixed;inset:0;background:#f0f3fa;z-index:9999;
   display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif}
 #pwGate.unlocked{display:none}
@@ -558,7 +558,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 <div id="pwGate">
   <div class="pw-box">
     <div class="pw-logo">ApexView</div>
-    <div class="pw-sub">Risk Register &nbsp;Ã‚Â·&nbsp; JSSL</div>
+    <div class="pw-sub">Risk Register &nbsp;Â·&nbsp; JSSL</div>
     <input class="pw-input" id="pwInput" type="password"
       placeholder="Enter password"
       onkeydown="if(event.key==='Enter')checkPw()"
@@ -628,7 +628,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   <div class="snap-col">
     <div class="snap-lbl">Project Manager</div>
     <div class="snap-val">Ajay Kumar</div>
-    <div class="snap-sub">C218 Ã‚Â· JSSL Design Office</div>
+    <div class="snap-sub">C218 Â· JSSL Design Office</div>
   </div>
   <div class="snap-col">
     <div class="snap-lbl">Total Scope</div>
@@ -689,7 +689,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   <div id="sec-blocked" class="sec-hdr"><div class="sec-hdr-title">What is blocked right now</div></div>
   <div class="blocked-list">
     <div class="blocked-item crit">
-      <div class="blocked-icon icon-red">Ã°Å¸Å¡Â«</div>
+      <div class="blocked-icon icon-red">ðŸš«</div>
       <div class="blocked-body">
         <div class="blocked-title">June - 360.6 MT of steel was never ordered - drawings not available within the 90-day 'drawing received-to-steel delivered' window</div>
         <div class="blocked-desc">To order steel for June, JSSL needed drawings available by 1 March 2026 (90-day 'drawing received-to-steel delivered' window). For 360.6 MT of the June plan, drawings were either not received or received too late for JSSL to raise an MTO and subsequently a PO within the required window. Without an MTO there is no PO, without a PO there is no steel. 360.6 MT - 36% of the June plan - has no RM ordered against it. Source: Indent 887, PO tracker vs June plan.</div>
@@ -791,7 +791,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     <div class="rm-hdr">
       <div>
         <div class="rm-hdr-title">Raw material coverage vs plan - June and July 2026</div>
-        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: PO Tracker Ã‚Â· Indent 887 (June) Ã‚Â· Indents 947, 920Ã¢â‚¬â€œ931, 957 (July) Ã‚Â· Matched to production plan phase requirements</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:2px">Source: PO Tracker Â· Indent 887 (June) Â· Indents 947, 920â€“931, 957 (July) Â· Matched to production plan phase requirements</div>
       </div>
     </div>
     <div class="rm-month-row">
@@ -806,8 +806,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
           <div style="flex:361;background:var(--deep-pale2)"></div>
         </div>
         <div class="rm-bar-note">
-          <strong style="color:var(--grn)">589.1 MT received</strong> Ã‚Â·
-          <strong style="color:var(--amber)">21.2 MT in transit</strong> Ã‚Â·
+          <strong style="color:var(--grn)">589.1 MT received</strong> Â·
+          <strong style="color:var(--amber)">21.2 MT in transit</strong> Â·
           <strong style="color:var(--txt3)">360.6 MT not ordered - drawings not available within procurement window</strong>
         </div>
       </div>
@@ -819,7 +819,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     <div class="rm-month-row">
       <div>
         <div class="rm-month-lbl">July</div>
-        <div class="rm-month-sub">Plan: 1,500 MT<br>Indents: 947, 920Ã¢â‚¬â€œ931, 957</div>
+        <div class="rm-month-sub">Plan: 1,500 MT<br>Indents: 947, 920â€“931, 957</div>
       </div>
       <div class="rm-bar-wrap">
         <div class="rm-bar-bg">
@@ -828,8 +828,8 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
           <div style="flex:194;background:var(--deep-pale2)"></div>
         </div>
         <div class="rm-bar-note">
-          <strong style="color:var(--grn)">1,292.3 MT received</strong> Ã‚Â·
-          <strong style="color:var(--amber)">13.9 MT in transit</strong> Ã‚Â·
+          <strong style="color:var(--grn)">1,292.3 MT received</strong> Â·
+          <strong style="color:var(--amber)">13.9 MT in transit</strong> Â·
           <strong style="color:var(--txt3)">193.7 MT not ordered - drawings pending from DLF</strong>
         </div>
       </div>
@@ -880,7 +880,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
       <div class="action-body">
         <div class="action-title">Start the monthly DLF delay update - first one goes today</div>
         <div class="action-desc">Send a factual, data-driven monthly update to the DLF Project Manager and client today. No accusation, no legal language - just numbers, dates, and a simple request to do better next month. This month: drawings overdue by 58 days, 360 MT June production blocked, 635 members on hold awaiting return approvals, 8,982 DO hours consumed in rework. The goal is to build a timestamped email thread that accumulates over the project life. When JSSL raises the variation claim based on ECN hours at project close, this thread becomes the evidence that DLF was informed every month and chose to continue the same behaviour.</div>
-        <div class="action-contact">Send via: <strong>Ajay Kumar</strong> (C218 PM) to DLF Project Coordinator Ã‚Â· CC: <strong>Deepak</strong> (JSSL Reporting)</div>
+        <div class="action-contact">Send via: <strong>Ajay Kumar</strong> (C218 PM) to DLF Project Coordinator Â· CC: <strong>Deepak</strong> (JSSL Reporting)</div>
         <div class="action-btn-row">
           <a class="action-btn escalate" href="javascript:void(0)" onclick="(function(){const s='C218 - Monthly Project Update - '+TODAY_STR;const b='Dear Sir/Madam,\n\nThis is JSSL monthly project update for C218 - DLF Downtown Phase 2.\n\nSTATUS AS OF '+TODAY_STR+':\n1. DRAWINGS - 360.6 MT of June plan affected due to drawings not available within 90-day 'drawing received-to-steel delivered' window\n2. ASSEMBLY HOLDS - 1,202 members were put on hold across DT8 and MOIG zones. 635 had already been in active fabrication when revision was issued.\n3. DESIGN OFFICE REWORK - 8,982 man-hours consumed in rework due to 24 ECN/DCN change events since Jan 2025\n\nREQUESTS:\n- Release of outstanding drawings for Indent 887 phases immediately\n- Return approvals on all post-production hold members by '+IN_7_DAYS+'\n\nRegards\nAjay Kumar Singh\nProject Manager - C218\nJSSL';window.location.href='mailto:dlf.projectcoordinator@dlf.in?cc=ajay.singh@jssl.in,deepak@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#128394; Send Monthly Update to DLF</a>
           <a class="action-btn mail" href="javascript:void(0)" onclick="(function(){const s='C218 - Monthly Update Sent to DLF - '+TODAY_STR;const b='Deepak,\n\nMonthly delay update for C218 sent to DLF today ('+TODAY_STR+').\n\nKey items flagged:\n- 360.6 MT June production gap\n- 1,202 hold events, 635 post-production\n- 8,982 DO rework hours (24 ECN events)\n\nThis is part of the evidence trail for the variation claim at project close.\n\nRegards';window.location.href='mailto:deepak@jssl.in?cc=ajay.singh@jssl.in&subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(b)})()">&#9993; Inform Deepak (Reporting)</a>
@@ -893,7 +893,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   <!-- FORMAL NOTICE -->
   <div id="sec-notice" class="sec-hdr"><div class="sec-hdr-title">Formal notice to be issued to DLF</div></div>
   <div class="notice-card">
-    <div class="notice-label">Draft Notice Ã‚Â· DN/C218/2026/001</div>
+    <div class="notice-label">Draft Notice Â· DN/C218/2026/001</div>
     <div class="notice-body" id="noticeText">
       <strong>To:</strong> DLF Project Coordinator, B.L. Kashyap &amp; Sons Ltd<br>
       <strong>CC:</strong> Ajay Kumar (C218 Project Manager, JSSL) &middot; Deepak (JSSL Reporting)<br>
@@ -1004,7 +1004,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
     </div>
   </div>
 
-  <div class="page-footer">C218 Ã‚Â· DLF Downtown Ph.2, Mall of India Ã‚Â· JSW Severfield Structures Ltd Ã‚Â· 27 May 2026</div>
+  <div class="page-footer">C218 Â· DLF Downtown Ph.2, Mall of India Â· JSW Severfield Structures Ltd Â· 27 May 2026</div>
 </div>
 
 <div class="toast-wrap" id="toastWrap"></div>
@@ -1026,7 +1026,7 @@ function copyNotice() {
   const btn = document.getElementById('copyNoticeBtn');
   try { navigator.clipboard.writeText(txt); } catch(e) {}
   btn.classList.add('copied');
-  btn.innerHTML = 'Ã¢Å“â€œ Copied';
+  btn.innerHTML = 'âœ“ Copied';
   setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = '&#128203; Copy Notice'; }, 2500);
   showToast('Notice copied - ready to send');
 }
@@ -1034,7 +1034,7 @@ function copyNotice() {
 function fireNotice() {
   const btn = document.getElementById('noticeFire');
   btn.className = 'sit-btn fired';
-  btn.innerHTML = 'Ã¢Å“â€œ Notice issued and logged';
+  btn.innerHTML = 'âœ“ Notice issued and logged';
   showToast('Formal notice issued and recorded');
 }
 
@@ -1042,14 +1042,14 @@ function showToast(msg) {
   const w = document.getElementById('toastWrap');
   const t = document.createElement('div');
   t.className = 'toast';
-  t.innerHTML = `<span>Ã¢Å“â€œ</span><span>${msg}</span>`;
+  t.innerHTML = `<span>âœ“</span><span>${msg}</span>`;
   w.appendChild(t);
   setTimeout(() => { t.style.transition = 'opacity .3s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 300); }, 3200);
 }
 
 
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ IST DATE UTILITIES Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ IST DATE UTILITIES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function getIST() {
   return new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }));
 }
@@ -1067,7 +1067,7 @@ const IN_10_DAYS   = fmtDate(addDays(_T, 10));
 const IN_14_DAYS   = fmtDate(addDays(_T, 14));
 const MONTH_END    = fmtDate(new Date(_T.getFullYear(), _T.getMonth()+1, 0));
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ ACTION MODAL DATA Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ ACTION MODAL DATA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const ACTION_PLANS = {
   B1: {
     eyebrow: `June RM Gap - 360.6 MT Unordered`,
@@ -1251,7 +1251,7 @@ function copyAMContent() {
 
 
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ MOBILE DRAWER Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ MOBILE DRAWER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function openMobDrawer() {
   const d = document.getElementById('mobDrawer');
   if (!d) return;
@@ -1284,7 +1284,7 @@ function mobSwitchProj(code, name, status, el) {
 }
 
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ PASSWORD GATE Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ PASSWORD GATE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const _PW_HASH = '69613311238673e8d3d8033d0927360a99d0ba06389f26ce34bb740153445b40';
 async function checkPw() {
   const val = document.getElementById('pwInput').value;
@@ -1306,7 +1306,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (inp) inp.focus();
 });
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ SCROLL TO TOP BUTTON Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ SCROLL TO TOP BUTTON â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 window.addEventListener('scroll', function() {
   const btn = document.getElementById('scrollTopBtn');
   if (btn) btn.classList.toggle('visible', window.scrollY > 300);
@@ -1314,7 +1314,7 @@ window.addEventListener('scroll', function() {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') { closeMobDrawer(); closeActionModal(); }
 });
-// Ã¢â€â‚¬Ã¢â€â‚¬ SMOOTH SCROLL TO SECTION Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ SMOOTH SCROLL TO SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function smoothScrollTo(id) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -1323,7 +1323,7 @@ function smoothScrollTo(id) {
 }
 
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ HOLD OUTCOME TOGGLE Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ HOLD OUTCOME TOGGLE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function toggleOutcome() {
   const panel = document.getElementById('hbcOutcome');
   const btn   = document.getElementById('hbcExpandBtn');
@@ -1332,7 +1332,7 @@ function toggleOutcome() {
 }
 
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ MODAL TAB SWITCHER (mobile) Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ MODAL TAB SWITCHER (mobile) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function switchAmTab(which, btn) {
   // Update tab active states
   document.querySelectorAll('.am-tab').forEach(t => t.classList.remove('active'));
@@ -1349,11 +1349,11 @@ function switchAmTab(which, btn) {
   }
 }
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ HOLD BAR TOOLTIP Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ HOLD BAR TOOLTIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 document.querySelectorAll('.hbc-seg').forEach(seg => {
   seg.addEventListener('mouseenter', function(e) {
     const tip = document.getElementById('hbcTooltip');
-    tip.innerHTML = `<strong>${this.dataset.label} Ã¢â‚¬â€ ${this.dataset.count} members (${this.dataset.pct}%)</strong><br>${this.dataset.desc}`;
+    tip.innerHTML = `<strong>${this.dataset.label} â€” ${this.dataset.count} members (${this.dataset.pct}%)</strong><br>${this.dataset.desc}`;
     tip.style.display = 'block';
   });
   seg.addEventListener('mousemove', function(e) {
@@ -1367,7 +1367,7 @@ document.querySelectorAll('.hbc-seg').forEach(seg => {
   });
 });
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ BLOCKED ACTION HANDLER Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ BLOCKED ACTION HANDLER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function fireBlockedAction(btn, to, msg) {
   btn.classList.add('fired');
   btn.innerHTML = '&#10003; Sent';
@@ -1393,7 +1393,7 @@ function updateISTDate() {
 updateISTDate();
 setInterval(updateISTDate, 60000);
 
-// Ã¢â€â‚¬Ã¢â€â‚¬ PROJECT SWITCHER Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
+// â”€â”€ PROJECT SWITCHER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function toggleProjDD() {
   const dd = document.getElementById('projDD');
   const sel = document.getElementById('projSel');
