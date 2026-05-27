@@ -619,7 +619,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
 </div>
 
 <!-- SNAPSHOT BOX -->
-<div class="snapshot">
+<div class="snapshot" id="c218-snapshot">
   <div class="snap-col">
     <div class="snap-lbl">Client</div>
     <div class="snap-val">DLF Limited</div>
@@ -648,7 +648,7 @@ body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--txt);min-h
   </div>
 </div>
 
-<div class="page">
+<div class="page" id="c218-page">
 
   <!-- SITUATION BANNER -->
   <div class="situation">
@@ -1420,36 +1420,27 @@ function switchProj(code, name, status, el) {
   el.classList.add('active');
   document.getElementById('projDD').classList.remove('show');
   document.getElementById('projSel').classList.remove('open');
-  if (code === 'C229') {
-    const snap = document.querySelector('.snapshot');
-    const page = document.querySelector('.page');
-    if (snap) snap.style.display = 'none';
-    if (page) page.style.display = 'none';
-    const c229 = document.getElementById('c229-page');
+  // Hide ALL project views first (each has its own snapshot + page by ID)
+  var c218snap = document.getElementById('c218-snapshot');
+  var c218page = document.getElementById('c218-page');
+  var c229 = document.getElementById('c229-page');
+  var c244 = document.getElementById('c244-page');
+  var c255 = document.getElementById('c255-page');
+  if (c218snap) c218snap.style.display = 'none';
+  if (c218page) c218page.style.display = 'none';
+  if (c229) c229.style.display = 'none';
+  if (c244) c244.style.display = 'none';
+  if (c255) c255.style.display = 'none';
+  // Show the selected project
+  if (code === 'C218') {
+    if (c218snap) c218snap.style.display = '';
+    if (c218page) c218page.style.display = '';
+  } else if (code === 'C229') {
     if (c229) c229.style.display = 'block';
-  } else if (code === 'C255') {
-    const snap = document.querySelector('.snapshot');
-    const page = document.querySelector('.page');
-    if (snap) snap.style.display = 'none';
-    if (page) page.style.display = 'none';
-    const c255 = document.getElementById('c255-page');
-    if (c255) c255.style.display = 'block';
   } else if (code === 'C244') {
-    const snap = document.querySelector('.snapshot');
-    const page = document.querySelector('.page');
-    if (snap) snap.style.display = 'none';
-    if (page) page.style.display = 'none';
-    const c244 = document.getElementById('c244-page');
     if (c244) c244.style.display = 'block';
-  } else {
-    const snap = document.querySelector('.snapshot');
-    const page = document.querySelector('.page');
-    if (snap) snap.style.display = '';
-    if (page) page.style.display = '';
-    ['c244-page','c229-page','c255-page'].forEach(function(id){
-      const el = document.getElementById(id);
-      if (el) el.style.display = 'none';
-    });
+  } else if (code === 'C255') {
+    if (c255) c255.style.display = 'block';
   }
 }
 </script>
@@ -1476,7 +1467,7 @@ function switchProj(code, name, status, el) {
 <div id="c244-page" style="display:none">
 
 <!-- C244 SNAPSHOT -->
-<div class="snapshot">
+<div class="snapshot" id="c218-snapshot">
   <div class="snap-col">
     <div class="snap-lbl">Client</div>
     <div class="snap-val">Ashoka University</div>
@@ -1776,7 +1767,7 @@ function switchProj(code, name, status, el) {
 <div id="c229-page" style="display:none">
 
 <!-- C229 SNAPSHOT -->
-<div class="snapshot">
+<div class="snapshot" id="c218-snapshot">
   <div class="snap-col">
     <div class="snap-lbl">Client</div>
     <div class="snap-val">DLF Limited</div>
@@ -1986,7 +1977,7 @@ Regards';window.location.href='mailto:production.planning@jssl.in?subject='+enco
 <div id="c255-page" style="display:none">
 
 <!-- C255 SNAPSHOT -->
-<div class="snapshot">
+<div class="snapshot" id="c218-snapshot">
   <div class="snap-col">
     <div class="snap-lbl">Client</div>
     <div class="snap-val">Airtel Nxtra</div>
