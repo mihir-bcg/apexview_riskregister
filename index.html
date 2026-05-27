@@ -1434,25 +1434,22 @@ function switchProj(code, name, status, el) {
     if (page) page.style.display = 'none';
     const c255 = document.getElementById('c255-page');
     if (c255) c255.style.display = 'block';
-  } else {    if (code === 'C244') {
+  } else if (code === 'C244') {
     const snap = document.querySelector('.snapshot');
     const page = document.querySelector('.page');
     if (snap) snap.style.display = 'none';
     if (page) page.style.display = 'none';
-    let c244 = document.getElementById('c244-page');
-    if (c244) {
-      c244.style.display = 'flex';
-    } else {
-      const el = document.getElementById('c244-page');
-      if (el) el.style.display = 'flex';
-    }
+    const c244 = document.getElementById('c244-page');
+    if (c244) c244.style.display = 'block';
   } else {
     const snap = document.querySelector('.snapshot');
     const page = document.querySelector('.page');
     if (snap) snap.style.display = '';
     if (page) page.style.display = '';
-    const c244 = document.getElementById('c244-page');
-    if (c244) c244.style.display = 'none';
+    ['c244-page','c229-page','c255-page'].forEach(function(id){
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'none';
+    });
   }
 }
 </script>
